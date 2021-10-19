@@ -1,0 +1,15 @@
+name: app1cli
+version: 1.0.25
+summary: Run app1 from Terminal
+description: |
+  This is an exaple Pascal project used for compare and do some calculate.
+confinement: classic
+base: core18  
+parts:
+  app1cli:
+    plugin: dump
+    source: http://cdn.geekbench.com/Geekbench-$SNAPCRAFT_PROJECT_VERSION-Linux.tar.gz
+apps:
+  app1cli:
+    command: app1
+

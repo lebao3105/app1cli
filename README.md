@@ -21,7 +21,7 @@ In *NIX, try one of these commands:
 $ sudo apt update && sudo apt install fpc # for apt-based distros
 $ sudo dnf update && sudo dnf install fpc # for dnf-based distros
 $ sudo zypper install fpc # for zypper-based distros
-$ sudo brew install fpc # you also can use it for macOS (and BSD) with [brew](https://brew.sh) installed
+$ sudo brew install fpc # you also can use it for macOS (and BSD) with brew installed
 $ sudo pkg install fpc # usually used in BSD
 $ sudo pacman -Syu fpc # for pacman-based distros
 ```

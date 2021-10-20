@@ -6,6 +6,8 @@
 
 ## General info
 app1 (also called app1cli) is a (very) simple Pascal project
+![image](https://user-images.githubusercontent.com/77564176/138020987-e248b913-0680-40eb-8e90-d71848780e3f.png)
+
 	
 ## Features
 * Calculate some thing...

@@ -40,3 +40,5 @@ Congratulations, now you have compiled app1!
 
 ## What's new:
 *See in the latest release from [here](https://github.com/lebao3105/app1cli/releases/)*
+
+<b>Note: The snapcraft.yaml file is used for build and publish app1 to [Snap Store](snapcraft.io)

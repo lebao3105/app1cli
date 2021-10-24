@@ -23,7 +23,7 @@ In *NIX, try one of these commands:
 $ sudo apt update && sudo apt install fpc # for apt-based distros
 $ sudo dnf update && sudo dnf install fpc # for dnf-based distros
 $ sudo zypper install fpc # for zypper-based distros
-$ sudo brew install fpc # you also can use it for macOS (and BSD) with brew installed
+$ brew install fpc # you also can use it in macOS (and BSD, Linux) with brew installed
 $ sudo pkg install fpc # usually used in BSD
 $ sudo pacman -Syu fpc # for pacman-based distros
 ```
@@ -32,11 +32,12 @@ Next, "cd" to project folder (make sure you're cloned it first) and type the fol
 $ fpc app1.pas
 ```
 Ignore all warnings and errors unaffected to the compile progress. <br>
-Then, make our output excutable, then run it:
+Then, make our output excutable, and run it:
 ``` 
-$ chmod +x app1 # note that you dont need this in Windows and however, chmod is not available in Windows yet:)
+$ chmod +x app1 
 $ ./app1 # run it 
 ```
+You don't need to do this because the .exe, .bat,... files are automaticaly excutable before. However, Windows does not have chmod or chown anymore:)  
 You can use Free Pascal IDE to open the .pas file and compile it (of cource). <br>
 Congratulations, now you have compiled app1!
 

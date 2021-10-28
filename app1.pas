@@ -1,6 +1,7 @@
 Program App1;
 uses
-    crt;
+    crt,
+    sysutils; // use this to show the time
 
 label
     menu, sub_menu, exit_program, sub_menu_cal, cal;
@@ -23,6 +24,7 @@ begin
     TextColor(2);
     writeln('Version 1.0.26');
     TextColor(White);
+    writeln ('Today is : ',DateTimeToStr(Now));
     delay(1000);
     clrscr;
     writeln('Welcome to app1! Choose one function to use this app now:');
@@ -267,7 +269,18 @@ cal:
     writeln('The answer is: ', answer);
     goto sub_menu_cal;
    end;
-
+  
+  //a^3 - b^3 (ver 1.0.26)
+  if sub_choice_cal = 9 then
+   begin 
+    write('Type number 1 (a): '); TextColor(2); readln(number1);
+    TextColor(White);
+    write('Type number 2 (b): '); TextColor(2); readln(number2);
+    TextColor(White);
+    answer := number1*number1*number1 - number2*number2*number2;
+    writeln('Here is what you got: ', number1, '^3 + ',number2, '^3');
+    writeln('The answer is: ', answer);
+   end; 
   //Cancel:
   if sub_choice_cal = 8 then
    begin
@@ -288,7 +301,7 @@ cal:
     clrscr;
   //About
     writeln('About this app:');
-    writeln('App1 Version 1.0.25');
+    writeln('App1 Version 1.0.26');
     writeln('This application is written by Le Bao Nguyen in Pascal.');
     writeln('You can edit it, or redistribution it to everyone.');
     writeln('This software follows the GNU V3 license.');
@@ -299,8 +312,8 @@ cal:
     writeln('Whats new on this version:');
     writeln('Current Version: 1.0.26:');
     writeln('This version is a small update.');
-    writeln('Add new maths: (a-b)^3, (a+b)^3, a^3 + b^3');
-    writeln('');
+    writeln('Added new maths: (a-b)^3, (a+b)^3, a^3 + b^3');
+    writeln('Show the current time and date while starting the program (Thanks to tutorialspoint)');
     readln();
    //1.0.25
     writeln('Available old version (not too old yet): 1.0.25');

@@ -303,7 +303,7 @@ cal:
     writeln('');
     readln();
    //1.0.25
-    writeln('Available old version (not too old yet): 1.0.25')
+    writeln('Available old version (not too old yet): 1.0.25');
     writeln('1.TextColor now available! When you use the program, TextColor will change the text color to the green,red, or white (default). Id like to make this app use GUI, but I dont have enough time to do this.');
     writeln('2.Change label exit -> exit_program to avoid unexpected error(!?)');
     writeln('3.Now you can install this application (oh, this is not important because you can share the binary file to other without any installer) via .exe setup file (yes, of course). I will create another installer for *NIX (Linux, BSD and macOS:)');
@@ -331,7 +331,7 @@ cal:
     writeln('Press Enter...');
     Readln();
   //Know issuse(s)
-    writeln('1. When users wants to exit the program, they will see the blinking cursor and nothing more happended. See the video in Github (lebao3105/app1cli). User still can exit by type 2 and press Enter or use Alt + F4.
+    writeln('1. When users wants to exit the program, they will see the blinking cursor and nothing more happended. See the video in Github (lebao3105/app1cli). User still can exit by type 2 and press Enter or use Alt + F4.');
     writeln('2. *nothing more*');
     writeln('I will find and gather more bug and issuses here...');
     WriteLn('"All done. Press Enter to exit..."');

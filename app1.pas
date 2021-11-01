@@ -25,6 +25,13 @@ begin
     TextColor(2);
     writeln('Version 1.0.26');
     TextColor(White);
+    delay(1000);
+    clrscr;
+    writeln('Welcome to app1! Choose one function to use this app now:');
+//Main Menu
+  menu:
+   begin
+   // I think I shouldn't let these in startup, so I leave it here:
     writeln ('The current time is : ',DateTimeToStr(Now));
     //Show the current program's path 
     writeln({$ifDef Darwin} // If the current os is macOS (or Darwin)
@@ -32,13 +39,7 @@ begin
             {$else}
             'Program location: ', // Other oses
             {$endif}
-            paramStr(0));    
-    delay(1000);
-    clrscr;
-    writeln('Welcome to app1! Choose one function to use this app now:');
-//Main Menu
-  menu:
-   begin
+            paramStr(0));       
     TextColor(2);
     writeln('1.Compare numbers');
     writeln('2.Simple calculator');
@@ -329,7 +330,7 @@ cal:
     writeln('This version is a small update.');
     writeln('Added new maths: (a-b)^3, (a+b)^3, a^3 + b^3');
     writeln('Show the current time and date while starting the program (Thanks to tutorialspoint)');
-    writeln('Show the programs path in About section and startup')
+    writeln('Show the programs path in About section and home');
     readln();
    //1.0.25
     writeln('Available old version (not too old yet): 1.0.25');

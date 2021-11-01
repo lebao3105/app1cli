@@ -1,4 +1,5 @@
 Program App1;
+{$mode objFPC}
 uses
     crt,
     sysutils; // use this to show the time
@@ -24,7 +25,14 @@ begin
     TextColor(2);
     writeln('Version 1.0.26');
     TextColor(White);
-    writeln ('Today is : ',DateTimeToStr(Now));
+    writeln ('The current time is : ',DateTimeToStr(Now));
+    //Show the current program's path 
+    writeln({$ifDef Darwin} // If the current os is macOS (or Darwin)
+            'Program location: ',
+            {$else}
+            'Program location: ', // Other oses
+            {$endif}
+            paramStr(0));    
     delay(1000);
     clrscr;
     writeln('Welcome to app1! Choose one function to use this app now:');
@@ -148,12 +156,13 @@ cal:
     writeln('3.x^2 - a^2');
     writeln('4.(a+b)^2');
     writeln('5.(a-b)^2');
-    writeln('6.a^3 - b^3 (New)');
+    writeln('6.a^3 + b^3 (New)');
     writeln('7.(a+b)^3 (New)');
     writeln('8.(a-b)^3 (New)');
+    writeln('9.a^3 - b^3 (New)');
     TextColor(Red);
-    writeln('9.Cancel');
-    writeln('10.Force exit the program');
+    writeln('10.Cancel');
+    writeln('11.Force exit the program');
     TextColor(White);
     write('Enter your choice: '); TextColor(2); readln(sub_choice_cal);
     TextColor(White);
@@ -282,7 +291,7 @@ cal:
     writeln('The answer is: ', answer);
    end; 
   //Cancel:
-  if sub_choice_cal = 8 then
+  if sub_choice_cal = 10 then
    begin
     clrscr;
     delay(500);
@@ -290,7 +299,7 @@ cal:
    end;
 
   //Exit
-  if sub_choice_cal = 9 then
+  if sub_choice_cal = 11 then
    goto exit_program;
     end; //end for 6.Advanced
    end; //end for choice = 2
@@ -304,7 +313,13 @@ cal:
     writeln('App1 Version 1.0.26');
     writeln('This application is written by Le Bao Nguyen in Pascal.');
     writeln('You can edit it, or redistribution it to everyone.');
-    writeln('This software follows the GNU V3 license.');
+   //Show the current program's path 
+    writeln({$ifDef Darwin} // If the current os is macOS (or Darwin)
+            'Program location: ',
+            {$else}
+            'Program location: ', // Other oses
+            {$endif}
+            paramStr(0));
     writeln('"Press Enter to continue"');
     Readln();
   //News
@@ -314,6 +329,7 @@ cal:
     writeln('This version is a small update.');
     writeln('Added new maths: (a-b)^3, (a+b)^3, a^3 + b^3');
     writeln('Show the current time and date while starting the program (Thanks to tutorialspoint)');
+    writeln('Show the programs path in About section and startup')
     readln();
    //1.0.25
     writeln('Available old version (not too old yet): 1.0.25');

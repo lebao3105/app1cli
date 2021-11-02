@@ -8,26 +8,25 @@ label
     menu, sub_menu, exit_program, sub_menu_cal, cal;
 
 var
-   choice : 1 .. 4;
-   sub_choice_cal : 1 .. 10;
-   sub_choice : 1 .. 3;
-   number1, number2, y, answer : integer;
-   number3, number4, x : real;
+    choice : 1 .. 4;
+    sub_choice_cal : 1 .. 11;
+    sub_choice : 1 .. 3;
+    number1, number2, y, answer : integer;
+    number3, number4, x : real;
 
 begin
     TextColor(Red);
     writeln('Starting...');
     TextColor(White);
     delay(3000);
-    clrscr;
     writeln('App1 by Le Bao Nguyen.');
     delay(500);
     TextColor(2);
     writeln('Version 1.0.26');
+    writeln('Code link: https://github.com/lebao3105/app1cli');
     TextColor(White);
     delay(1000);
     clrscr;
-    writeln('Welcome to app1! Choose one function to use this app now:');
 //Main Menu
   menu:
    begin
@@ -37,9 +36,10 @@ begin
     writeln({$ifDef Darwin} // If the current os is macOS (or Darwin)
             'Program location: ',
             {$else}
-            'Program location: ', // Other oses
+            'Program location: ', // Other oses (?)
             {$endif}
-            paramStr(0));       
+            paramStr(0));
+    writeln('Welcome to app1! Choose a function to use this app now:');       
     TextColor(2);
     writeln('1.Compare numbers');
     writeln('2.Simple calculator');
@@ -288,7 +288,7 @@ cal:
     write('Type number 2 (b): '); TextColor(2); readln(number2);
     TextColor(White);
     answer := number1*number1*number1 - number2*number2*number2;
-    writeln('Here is what you got: ', number1, '^3 + ',number2, '^3');
+    writeln('Here is what you got: ', number1, '^3 - ',number2, '^3');
     writeln('The answer is: ', answer);
    end; 
   //Cancel:
@@ -296,7 +296,7 @@ cal:
    begin
     clrscr;
     delay(500);
-    goto menu;
+    goto cal; 
    end;
 
   //Exit
@@ -327,10 +327,12 @@ cal:
    //Curent
     writeln('Whats new on this version:');
     writeln('Current Version: 1.0.26:');
-    writeln('This version is a small update.');
+    writeln('This version is a update that come with new features, and major bug fix.');
     writeln('Added new maths: (a-b)^3, (a+b)^3, a^3 + b^3');
+    writeln('Removed warning the choice cant be under 1 in sub_menu (see in source code);');
     writeln('Show the current time and date while starting the program (Thanks to tutorialspoint)');
     writeln('Show the programs path in About section and home');
+    writeln('Fixed the exit bug by...add the exit command (oh I forgot it, sorry)!');
     readln();
    //1.0.25
     writeln('Available old version (not too old yet): 1.0.25');
@@ -350,19 +352,10 @@ cal:
     WriteLn('5.Adjust the "return" direction of the calculator');
     Writeln('"Press Enter to continue..."');
     readln();
-  //Q&A
-    writeln('Q&A:');
-    writeln('Q: What can it do?');
-    writeln('A: Well, this application can compare 2 numbers, be a calculator (with at least 2 numbers, yep), and... nothing more:). OK, its just use for Pascal newbies to see how Pascal work.');
-    writeln('Q: Can this app run on other operating system?');
-    writeln('A: Yes! You can run it on ANY operating system, like Linux, Windows, BSD (I dont know will it work, but maybe yes) and macOS. Just install a Pascal compiler, and compile the .pas file, then open the generated .exe file.');
-    writeln('Q: Will we have more features?');
-    writeln('A: Yes. App1 always get new updates with new freatures, fix-bug and improves. Just use and wait for our new releases. Enjoy!');
-    writeln('Press Enter...');
-    Readln();
+   // Seem like Q&A is not important, so I removed it. 
   //Know issuse(s)
     writeln('1. When users wants to exit the program, they will see the blinking cursor and nothing more happended. See the video in Github (lebao3105/app1cli). User still can exit by type 2 and press Enter or use Alt + F4.');
-    writeln('2. *nothing more*');
+    writeln('2. Some times after we entered some other numbers that bigger than the maxinum number (eg. 3) we will be switched to other question (like from "Are u want to try a new calculation" to "Are u sure want to exit?". I cant understand why?.).');
     writeln('I will find and gather more bug and issuses here...');
     WriteLn('"All done. Press Enter to exit..."');
     readln();
@@ -382,7 +375,6 @@ cal:
       TextColor(Red);
       writeln('2.Exit');
       TextColor(White);
-      WriteLn('Please note that your choice cant be under 1.');
       Write('Your choice: '); readln(sub_choice);
        if sub_choice = 1 then goto menu;
        if sub_choice = 2 then goto exit_program;
@@ -418,6 +410,12 @@ cal:
 exit_program:
    writeln('Are you sure want to exit the program? 1.Yes 2.No');
    write('Your choice: '); readln(sub_choice);
+    if sub_choice = 1 then
+     begin
+      writeln('Thank you for using my application. Exiting now.');
+      delay(1350);
+      exit;
+     end;    
     if sub_choice = 2 then
      begin
       writeln('Switching to menu...');
@@ -425,9 +423,4 @@ exit_program:
       goto menu;
      end;
     if sub_choice = 3 then writeln('Oh hey, just choose 1 or 2. 3 is not available. Try again:) '); readln(sub_choice);
-    if sub_choice = 1 then
-     begin
-      writeln('Thank you for using my application. Exiting now.');
-      delay(1350);
-     end;
   end.

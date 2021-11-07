@@ -5,15 +5,14 @@
 * [Images](#some-images)
 
 ## General info
-app1 (also called app1cli) is a (very) simple Pascal project. It can do:
-* Calculate some thing...
+app1 (also called app1cli) is a (very) simple project written in C# and Pascal. It can:
+* Be a calculator
 * Compare 2 numbers
 * And run it from Terminal:)
-I will add new features to app1GUI - a GUI version of app1.
 	
 ## Setup
 If you are in Windows/OSes that doesn't have a package manager, install [Free Pascal IDE](https://www.freepascal.org/download.html). <br>
-In *NIX, try one of these commands:
+In BSD and Linux, try one of these commands:
 
 ```
 $ sudo apt update && sudo apt install fpc # for apt-based distros
@@ -33,10 +32,19 @@ Then, make our output excutable, and run it:
 $ chmod +x app1 
 $ ./app1 # run it 
 ```
-You don't need to do this because the .exe, .bat,... files are automaticaly excutable before. 
-However, Windows does not have chmod or chown anymore:)  
+You don't need to do this because the .exe, .bat,... files are automaticaly excutable before. <br>
+However, Windows does not have chmod or chown anymore:)  <br>
 You can use Free Pascal IDE to open the .pas file and compile it (of cource). <br>
 Congratulations, now you have compiled app1!
+
+## What to use C# version? Try now!
+C# makes app1 smaller with ~300 lines of code and app1 still can run from Windows, macOS and Linux.<br>
+First, install .NET SDK with this [address](https://dotnet.microsoft.com/download)<br>
+Then, clone the repository and "open" it in Terminal (Command Prompt). Next type:
+```
+dotnet run
+```
+Wait and ejnoy!
 
 ## What's new:
 *See in the latest release from [here](https://github.com/lebao3105/app1cli/releases/)*

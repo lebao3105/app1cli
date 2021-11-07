@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Le Bao Roofs\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Le Bao Roofs\\.nuget\\packages"
+    ]
+  }
+}

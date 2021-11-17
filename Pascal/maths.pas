@@ -16,6 +16,8 @@ Function one_for_total(number1, number2, number3: integer): integer;
 Function one_for_minus(number1, number2, number3: integer): integer;
 Function ask_2numbers():integer;
 Function ask_3numbers():integer;
+Function a3_sub_b3(number1, number2, answer:integer):integer;
+Function a3_add_b3(number1, number2, answer: integer):integer;
 IMPLEMENTATION
 uses crt;
     Function Add(number1, number2: Integer): integer;
@@ -53,7 +55,18 @@ uses crt;
         answer := (number1 - number2) * number3;
         writeln('The answer is: ', answer);
     end;
+    Function a3_sub_b3(number1, number2, answer: integer): integer;
+    begin
+        answer := number1*number1*number1 - number2*number2*number2;
+        writeln('The answer is: ', answer);
+    end;
+    Function a3_add_b3(number1, number2, answer: integer): integer;
+    begin
+        answer := number1*number1*number1 + number2*number2*number2;
+        writeln('The answer is: ', answer);
+    end;
 
+    // ask the user for the numbers
     Function ask_2numbers(): integer;
     begin
        write('Type number 1 (a): '); TextColor(2); readln(number1);

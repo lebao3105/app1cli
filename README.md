@@ -22,25 +22,26 @@ $ brew install fpc # you also can use it in macOS (and BSD, Linux) with brew ins
 $ sudo pkg install fpc # usually used in BSD
 $ sudo pacman -Syu fpc # for pacman-based distros
 ```
-Next, "cd" to project folder (make sure you're cloned it first) and type the following command to compile app1:
+Next, "cd" to Pascal from the project folder (make sure you're cloned it first) and type the following command to compile app1:
 ```
 $ fpc app1.pas
 ```
+In version 1.0.27, we have a new unit called maths. Compile it **before** you compile app1.
 Ignore all warnings and errors unaffected to the compile progress. <br>
 Then, make our output excutable, and run it:
 ``` 
 $ chmod +x app1 
 $ ./app1 # run it 
 ```
-You don't need to do this because the .exe, .bat,... files are automaticaly excutable before. <br>
-However, Windows does not have chmod or chown anymore:)  <br>
+In Windows this is useless because the .exe, .bat,... files are automaticaly excutable before. <br>
+However, Windows does not have chmod or chown:)  <br>
 You can use Free Pascal IDE to open the .pas file and compile it (of cource). <br>
 Congratulations, now you have compiled app1!
 
 ## What to use C# version? Try now!
 C# makes app1 smaller with ~300 lines of code and app1 still can run from Windows, macOS and Linux.<br>
 First, install .NET SDK with this [address](https://dotnet.microsoft.com/download)<br>
-Then, clone the repository and "open" it in Terminal (Command Prompt). Next type:
+Then, clone the repository, cd to C# directory and "open" it in Terminal (Command Prompt). Next type:
 ```
 dotnet run
 ```

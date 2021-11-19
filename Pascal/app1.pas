@@ -14,8 +14,7 @@ label
 var
     choice : 1 .. 4;
     sub_choice_cal : 1 .. 11;
-    sub_choice : 1 .. 3;
-    yes_no : string ;
+    yes_no : string ; // replaces sub_choice
     //number1, number2, number3, answer : integer;    // These line are useless now
     //real1, real2, real_answer : real;               // with new unit
 
@@ -76,8 +75,8 @@ begin
       writeln('number1 = number 2. Seems like you are typed the same number.');
       goto sub_menu_cpr;
     end;
-   end;
-  end;
+   end; // end of "cpr"
+  end; // enf of choice = 1
   //calculator
    if choice = 2 then
    begin
@@ -96,24 +95,28 @@ cal:
      write('Enter your answer: '); TextColor(2); readln(sub_choice_cal);
      TextColor(White);
    end;
+
   if sub_choice_cal = 1 then
    begin
      ask_2numbers();
      Add(number1, number2);
      goto sub_menu_cal;
    end;
+
   if sub_choice_cal = 2 then
    begin
      ask_2numbers();
      Minus(number1, number2);
      goto sub_menu_cal;
    end;
+
   if sub_choice_cal = 3 then
    begin
      ask_2numbers();
      Multiple(number1, number2);
      goto sub_menu_cal;
    end;
+
   if sub_choice_cal = 4 then
    begin
      ask_2numbers();
@@ -299,7 +302,7 @@ cal:
     TextColor(2);
     WriteLn('  All done. Press Enter to exit...');
     TextColor(White);
-    readln();
+    readkey();
     delay(1350);
     goto sub_menu;
   end;
@@ -317,10 +320,10 @@ cal:
       TextColor(Red);
       writeln('2.Exit');
       TextColor(White);
-      Write('Your choice: '); readln(sub_choice);
-       if sub_choice = 1 then goto menu;
-       if sub_choice = 2 then goto exit_program;
-       if sub_choice = 3 then
+      Write('Your choice [menu/exit]: '); readln(yes_no);
+       if yes_no = 'menu' then goto menu;
+       if yes_no = 'exit' then goto exit_program;
+       if yes_no = 'credit' then
           begin
            writeln('You are unlocked the (very very easy) credit screen!');
            writeln('Thanks to...:');
@@ -342,32 +345,34 @@ cal:
      TextColor(Red);
      WriteLn('3.Exit the program');
      TextColor(White);
-     write('Enter your choice here: '); readln(sub_choice);
-       if sub_choice = 1 then goto cal;
-       if sub_choice = 2 then goto menu;
-       if sub_choice = 3 then goto exit_program;
+     write('Enter your choice here [new/back/exit]: '); readln(yes_no);
+       if yes_no = 'new' then goto cal;
+       if yes_no = 'back' then goto menu;
+       if yes_no = 'exit' then goto exit_program;
   end;
 
  //ask the user after compare
  sub_menu_cpr:
    begin
      writeln(); // Add one more line
-     write('Compare more? [yes/no]'); readln(yes_no);
-     if yes_no = 'yes' then goto cpr;
-     if yes_no = 'no' then goto menu;
+     write('Compare more? [yes/no/exit]'); readln(yes_no);
+       if yes_no = 'yes' then goto cpr;
+       if yes_no = 'no' then goto menu;
+       if yes_no = 'exit' then goto exit_program;
    end;
 
 //exit
 exit_program:
-   writeln('Are you sure want to exit the program? 1.Yes 2.No');
-   write('Your choice: '); readln(sub_choice);
-    if sub_choice = 1 then
+   writeln('Are you sure want to exit the program?');
+   writeln('If you want choose "no", you will be come back to the main menu.');
+   write('Your choice: '); readln(yes_no);
+    if yes_no = 'yes' then
      begin
       writeln('Thank you for using my application. Exiting now.');
       delay(1350);
       exit;
      end;
-    if sub_choice = 2 then
+    if yes_no = 'no' then
      begin
       writeln('Switching to menu...');
       delay(1000);

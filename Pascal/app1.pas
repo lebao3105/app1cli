@@ -5,7 +5,7 @@ Program App1;
 uses
     crt,
     sysutils, // use this to show the time (and program's path?)
-    maths; // my new unit, you should re-compile if FPC says unit not found
+    maths; // my new unit, you should re-compile this unit first if FPC says unit not found
 
 // Define some "labels"
 label
@@ -36,10 +36,10 @@ begin
    // I think I shouldn't let these in startup, so I leave it here:
     writeln ('The current time is : ',DateTimeToStr(Now));
     //Show the current program's path
-    writeln({$ifDef Darwin} // If the current os is macOS (or Darwin)
+    writeln({$ifDef Darwin} // If the current os is macOS (Darwin)
             'Program location: ',
             {$else}
-            'Program location: ', // Other oses (?)
+            'Program location: ', // Other oses
             {$endif}
             paramStr(0));
     writeln('Welcome to app1! Choose a function to use this app now:');
@@ -146,6 +146,7 @@ cal:
    begin
      ask_3numbers();
      one_for_total(number1, number2, number3);
+     writeln('Now you have: ', number3,'(',number1,'+',number2,')');
      goto sub_menu;
    end;
 
@@ -154,6 +155,7 @@ cal:
    begin
      ask_3numbers();
      one_for_minus(number1, number2, number3);
+     writeln('Now you have: ', number3,'(',number1,'-',number2,')');
      goto sub_menu;
    end;
 
@@ -192,6 +194,7 @@ cal:
    begin
     ask_2numbers();
     a3_add_b3(number1, number2, answer);
+     writeln('Now you have: ', number1,'^3 + ',number2,'^3');
     goto sub_menu;
    end;
 
@@ -220,6 +223,7 @@ cal:
    begin
     ask_2numbers();
     a3_sub_b3(number1, number2, answer);
+     writeln('Now you have: ', number1,'^3 - ',number2,'^3');
     goto sub_menu;
    end;
   //Cancel:

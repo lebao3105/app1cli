@@ -3,6 +3,7 @@
 * [Compile](#compile)
 * [What's new](#whats-new)
 * [Warnings](#warnings)
+* [Inside the code](#inside-the-code)
 
 ## General info
 OK, so welcome to the first development release of app1.<br> 
@@ -84,10 +85,19 @@ However, this does not make any changes or affect to the output.<br>
       ![bug_example](https://user-images.githubusercontent.com/77564176/142801380-1e273b0c-54ea-4219-90a7-3077d3839f13.png)<br>
       In if..else, before else you must not leave any ; including it is used to separate command lines (in this case you should place these code to begin...end block.). 
 ## What's new:
-*For the latest stabel release, see from [here](https://github.com/lebao3105/app1cli/releases/)*
-***In this release, we have: (only Pascal version)***
+*For the latest stable release, see from [here](https://github.com/lebao3105/app1cli/releases/)* <br>
+***In this release, we have: (only for Pascal version)***
 - Replaced sub_choice to yes_no to ask the user for something. yes_no is a string value.
 - Merged sub_choice_cal and sub_choice_cpr 
 - Merged sub_choice and Infomation section
 - Added colors to version number in Infomation
 - Fully replaced readkey() to readln() in Infomation
+- Almost all the calculations are using its own function<br>
+ 
+***In the next version 1.0.28:***
+- Apply array for yes_no
+- Create unit for C# version do the same things as the Pascal one (may need Visual Studio)
+- Apply color and 1.0.27's enhancements to C# version
+- Access app1 easily with command-line [arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal)<br>
+*The GUI version of app1 is currently in development state.*<br>
+## Inside the code

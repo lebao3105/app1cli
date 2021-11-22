@@ -3,7 +3,6 @@
 * [Compile](#compile)
 * [What's new](#whats-new)
 * [Warnings](#warnings)
-* [Inside the code](#inside-the-code)
 
 ## General info
 OK, so welcome to the first development release of app1.<br> 
@@ -55,7 +54,6 @@ Linking app1.exe
 ## Warnings 
 * As you can see, while building maths.pas, FPC says that:
 ```
-
 maths.pas(25,14) Warning: Function result does not seem to be set
 maths.pas(31,14) Warning: Function result does not seem to be set
 maths.pas(37,14) Warning: Function result does not seem to be set
@@ -100,4 +98,3 @@ However, this does not make any changes or affect to the output.<br>
 - Apply color and 1.0.27's enhancements to C# version
 - Access app1 easily with command-line [arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal)<br>
 *The GUI version of app1 is currently in development state.*<br>
-## Inside the code

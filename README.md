@@ -38,7 +38,8 @@ However, Windows does not have chmod or chown:)  <br>
 You can use Free Pascal IDE to open the .pas file and compile it (of cource). <br>
 Congratulations, now you have compiled app1!
 
-## What to use C# version? Try now!
+**Have a problem? Check out now [here](https://github.com/lebao3105/app1cli/blob/1.0.27/Pascal/README.md#warnings)**
+## Try the C# version
 C# makes app1 smaller with ~300 lines of code and app1 still can run from Windows, macOS and Linux.<br>
 First, install .NET SDK with this [address](https://dotnet.microsoft.com/download)<br>
 Then, clone the repository, cd to C# directory and "open" it in Terminal (Command Prompt). Next type:
@@ -48,7 +49,8 @@ dotnet run
 Wait and ejnoy!
 
 ## What's new:
-*See in the latest release from [here](https://github.com/lebao3105/app1cli/releases/)*
+*For the latest stable release, read it [here.](https://github.com/lebao3105/app1cli/releases/)*
+*For the latest development release, see in [this page](https://github.com/lebao3105/app1cli/blob/1.0.27/Pascal/README.md#whats-new)*
 
 ## Some images:
 ![image](https://user-images.githubusercontent.com/77564176/139211727-06351e51-9b6b-4363-be7d-109b0597bca6.png)

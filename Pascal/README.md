@@ -73,6 +73,8 @@ However, this does not make any changes or affect to the output.<br>
 ![image](https://user-images.githubusercontent.com/77564176/142796646-7c24fe1d-80a7-44f2-a84f-8cf326f4a6e3.png)
 ![image](https://user-images.githubusercontent.com/77564176/142796847-b20fbba9-3ff4-4278-8fc9-5d9a165741f0.png)
 * In app1.pas, you may see a warning like "Unreachable code", skip it.
+* Some other warning(s): 
+  - /usr/bin/ld.bfd: warning: link.res contains output sections; did you forget -T? (found in Linux)
 * Errors:
   - Unit ... not found: 
     - Make sure that FPC is installed correctly, if needed, download and build FPC from source code.
@@ -94,7 +96,7 @@ However, this does not make any changes or affect to the output.<br>
  
 ***In the next version 1.0.28:***
 - Apply array for yes_no
-- Create unit for C# version do the same things as the Pascal one (may need Visual Studio)
+- Create unit for C# version do the same things as the Pascal one (may need to make the project to a Visual Studio project)
 - Apply color and 1.0.27's enhancements to C# version
 - Access app1 easily with command-line [arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal)<br>
 *The GUI version of app1 is currently in development state.*<br>

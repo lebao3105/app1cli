@@ -26,7 +26,7 @@ Next, "cd" to Pascal from the project folder (make sure you're cloned it first) 
 ```
 $ fpc app1.pas
 ```
-In version 1.0.27, we have a new unit called maths. Compile it **before** you compile app1.
+From version 1.0.27, we have a new unit called maths. Compile it **before** you compile app1.
 Ignore all warnings and errors unaffected to the compile progress. <br>
 Then, make our output excutable, and run it:
 ``` 

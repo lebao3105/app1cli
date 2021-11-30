@@ -99,4 +99,3 @@ However, this does not make any changes or affect to the output.<br>
 - Create unit for C# version do the same things as the Pascal one (may need to make the project to a Visual Studio project)
 - Apply color and 1.0.27's enhancements to C# version
 - Access app1 easily with command-line [arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal)<br>
-**This 1.0.28 version has been started in development state under a new branch 1.0.28. See the status.txt file.**

@@ -24,15 +24,18 @@ $ sudo pacman -Syu fpc # for pacman-based distros
 ```
 Next, "cd" to project folder (make sure you're cloned it first) and type the following command to compile app1:
 ```
+# Compile maths.pas first (do not type or copy $)
+$ fpc maths.pas
+# THen app1.pas
 $ fpc app1.pas
 ```
 Ignore all warnings and errors unaffected to the compile progress. <br>
 Then, make our output excutable, and run it:
 ``` 
 $ chmod +x app1 
-$ ./app1 # run it 
+$ app1 # run it 
 ```
-You don't need to do this because the .exe, .bat,... files are automaticaly excutable before. <br>
+You don't need to do this in Windows because the .exe, .bat,... files are automaticaly excutable. <br>
 However, Windows does not have chmod or chown anymore:)  <br>
 You can use Free Pascal IDE to open the .pas file and compile it (of cource). <br>
 Congratulations, now you have compiled app1!

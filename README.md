@@ -29,20 +29,15 @@ $ fpc maths.pas
 # THen app1.pas
 $ fpc app1.pas
 ```
-From version 1.0.27, we have a new unit called maths. Compile it **before** you compile app1.
-Ignore all warnings and errors unaffected to the compile progress. <br>
+From version 1.0.27, we have a new unit called maths. While compile app1 FPC might compile the unit too. 
+Ignore all warnings and errors that unaffected to the compile progress. <br>
 Then, make our output excutable, and run it:
 ``` 
 $ chmod +x app1 
 $ app1 # run it 
 ```
-<<<<<<< HEAD
-You don't need to do this in Windows because the .exe, .bat,... files are automaticaly excutable. <br>
-However, Windows does not have chmod or chown anymore:)  <br>
-=======
 In Windows this is useless because the .exe, .bat,... files are automaticaly excutable before. <br>
 However, Windows does not have chmod or chown:)  <br>
->>>>>>> f6b4fd674df05dd1c07564f9c03b0a6365653690
 You can use Free Pascal IDE to open the .pas file and compile it (of cource). <br>
 Congratulations, now you have compiled app1!
 

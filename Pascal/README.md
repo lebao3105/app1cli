@@ -95,7 +95,7 @@ However, this does not make any changes or affect to the output.<br>
 - Almost all the calculations are using its own function<br>
  
 ***In the next version 1.0.28:***
-- Apply array for yes_no
-- Create unit for C# version do the same things as the Pascal one (may need to make the project to a Visual Studio project)
+- Apply array for yes_no (now cancelled)
+- Create "unit" for C# version do the same things as the Pascal one (may need to make the project to a Visual Studio project)
 - Apply color and 1.0.27's enhancements to C# version
 - Access app1 easily with command-line [arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal)<br>

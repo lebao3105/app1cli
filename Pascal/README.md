@@ -20,6 +20,7 @@ The output will like this (not 100%):
 Explain the outputs:<br>
   * maths.pas: maths.ppu (our needed unit), maths.o (object file), maths.bak ("backup" file)<br>
   * app1.pas: app1.exe (the final output that can run). Others like .o and .bak are do the same as in maths.pas.<br>
+  * New in 1.0.28 : app1_utils.ppu: A unit like maths, but it do many things like write colored line(s) or give us the usage of app1. 
 Compile output in Terminal:  
 ```
 C:\Users\Le Bao Roofs\Documents\source\repos\Pascal\app1>fpc maths.pas
@@ -82,8 +83,10 @@ However, this does not make any changes or affect to the output.<br>
     - If the missing unit is maths, make sure you have compiled it before and get the .ppu file.
   - ; expected but else found:
     - see the example:
-      ![bug_example](https://user-images.githubusercontent.com/77564176/142801380-1e273b0c-54ea-4219-90a7-3077d3839f13.png)<br>
+      ![bug_example](https://user-images.githubusercontent.com/77564176/142801380-1e273b0c-54ea-4219-90a7-3077d3839f13.png)<br><br>
       In if..else, before else you must not leave any ; including it is used to separate command lines (in this case you should place these code to begin...end block.). 
+  - Local variable "param" not used (while debugging app1_utils):
+    - Don't care about that. The "param" variable is used for the functions that write colored text.       
 ## What's new:
 *For the latest stable release, see from [here](https://github.com/lebao3105/app1cli/releases/)* <br>
 ***In this release, we have: (only for Pascal version)***

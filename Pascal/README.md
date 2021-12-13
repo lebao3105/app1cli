@@ -10,7 +10,7 @@ This document will talk about changes in this release, and how you can contribut
 	
 ## Compile
 First, make sure that you are in Pascal directory - where we at now. Then FPC is installed correctly, and included in PATH if needded.<br>
-Let's compile it now (maths unit first):
+Let's compile it now (you should compile maths.pas first):
 ```
 fpc maths.pas
 fpc app1.pas
@@ -67,7 +67,7 @@ maths.pas(88,14) Warning: Function result does not seem to be set
 maths.pas(96,14) Warning: Function result does not seem to be set
 maths.pas(106,14) Warning: Function result does not seem to be set
 ```
-This is "a misunderstanding the source" from FPC because I have defined the result early like this (see the red-underlined text):<br>
+This is a warning from FPC because I have defined the result early like this (see the red-underlined text):<br>
 However, this does not make any changes or affect to the output.<br>
 ![image](https://user-images.githubusercontent.com/77564176/142796571-8bb402df-9f64-4874-add6-669c15dd664a.png)
 ![image](https://user-images.githubusercontent.com/77564176/142796646-7c24fe1d-80a7-44f2-a84f-8cf326f4a6e3.png)

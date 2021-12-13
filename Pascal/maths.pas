@@ -54,18 +54,9 @@ uses crt, sysutils;
 
     Function compare(number1, number2:integer):integer;
     begin
-       if number1 < number2 then
-     begin
-      writeln('Number 1 < Number 2');
-     end;
-    if number1 > number2 then
-     begin
-      writeln('Number 1 > Number 2');
-     end;
-   if number1 = number2 then
-    begin
-      writeln('These numbers are the same.');
-    end;
+       if number1 < number2 then writeln('Number 1 < Number 2');
+       if number1 > number2 then writeln('Number 1 > Number 2');
+       if number1 = number2 then writeln('These numbers are the same.');
     end;
 
     Function one_for_minus(number1, number2, number3: integer): integer;

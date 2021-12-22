@@ -4,12 +4,12 @@ Program App1;
 {$mode objFPC}
 uses
     crt,
-    sysutils, // use this to show the time
-    maths; // my new unit, you should re-compile if FPC says unit not found
+    sysutils, // use this to show the time (and program's path?)
+    maths; // my new unit, you should re-compile this unit first if FPC says unit not found
 
 // Define some "labels"
 label
-    menu, sub_menu, exit_program, cpr, sub_menu_cal, cal, about, sub_menu_cpr;
+    start, sub_menu, exit_program, cpr, cal, about;
 
 var
     choice : 1 .. 4;
@@ -31,16 +31,17 @@ begin
     TextColor(White);
     delay(1000);
     clrscr;
-//Main Menu
-  menu:
+
+// now let's begin
+  start:
    begin
    // I think I shouldn't let these in startup, so I leave it here:
     writeln ('The current time is : ',DateTimeToStr(Now));
     //Show the current program's path
-    writeln({$ifDef Darwin} // If the current os is macOS (or Darwin)
+    writeln({$ifDef Darwin} // If the current os is macOS (Darwin)
             'Program location: ',
             {$else}
-            'Program location: ', // Other oses (?)
+            'Program location: ', // Other oses
             {$endif}
             paramStr(0));
     writeln('Welcome to app1! Choose a function to use this app now:');
@@ -60,20 +61,8 @@ begin
   cpr:
     begin
     ask_2numbers();
-    if number1 < number2 then
-     begin
-      writeln('Number 1 < Number 2');
-      goto sub_menu_cpr;
-     end;
-    if number1 > number2 then
-     begin
-      writeln('Number 1 > Number 2');
-      goto sub_menu_cpr;
-     end;
-   if number1 = number2 then
-    begin
-      writeln('number1 = number 2. Seems like you are typed the same number.');
-      goto sub_menu_cpr;
+    compare(number1,number2);
+    goto sub_menu;
     end;
    end; // end of "cpr"
   end; // enf of choice = 1
@@ -100,28 +89,28 @@ cal:
    begin
      ask_2numbers();
      Add(number1, number2);
-     goto sub_menu_cal;
+     goto sub_menu;
    end;
 
   if sub_choice_cal = 2 then
    begin
      ask_2numbers();
      Minus(number1, number2);
-     goto sub_menu_cal;
+     goto sub_menu;
    end;
 
   if sub_choice_cal = 3 then
    begin
      ask_2numbers();
      Multiple(number1, number2);
-     goto sub_menu_cal;
+     goto sub_menu;
    end;
 
   if sub_choice_cal = 4 then
    begin
-     ask_2numbers();
+     ask_2real();
      Divide(real1, real2);
-     goto sub_menu_cal;
+     goto sub_menu;
    end;
 
   //Will go to Main Menu if answer = 5:
@@ -129,7 +118,7 @@ cal:
    begin
     clrscr;
     delay(500);
-    goto menu;
+    goto start;
    end;
 
   //Advanced
@@ -160,7 +149,8 @@ cal:
    begin
      ask_3numbers();
      one_for_total(number1, number2, number3);
-     goto sub_menu_cal;
+     writeln('Now you have: ', number3,'(',number1,'+',number2,')');
+     goto sub_menu;
    end;
 
   //x(a-b)
@@ -168,7 +158,8 @@ cal:
    begin
      ask_3numbers();
      one_for_minus(number1, number2, number3);
-     goto sub_menu_cal;
+     writeln('Now you have: ', number3,'(',number1,'-',number2,')');
+     goto sub_menu;
    end;
 
   //x^2 - a^2
@@ -178,7 +169,7 @@ cal:
      answer := sqr(number1) - sqr(number2);
      writeln('Now you have: ', number1 ,'^2 - ',number2, '^2' );
      writeln('Answer is: ', answer);
-     goto sub_menu_cal;
+     goto sub_menu;
    end;
 
   //(a+b)^2
@@ -188,7 +179,7 @@ cal:
      answer := sqr(number1 + number2);
      writeln('You have: (', number1, ' + ',number2,')^2');
      writeln('Answer is: ', answer);
-     goto sub_menu_cal;
+     goto sub_menu;
    end;
 
   //(a-b)^2
@@ -198,7 +189,7 @@ cal:
     answer := Sqr(number1 - number2);
     writeln('Now we have:', '(', number1, '-', number2,')', '^2');
     writeln('The answer is: ', answer);
-    goto sub_menu_cal;
+    goto sub_menu;
   end;
 
   //a^3 + b^3 (ver 1.0.26)
@@ -206,7 +197,8 @@ cal:
    begin
     ask_2numbers();
     a3_add_b3(number1, number2, answer);
-    goto sub_menu_cal;
+     writeln('Now you have: ', number1,'^3 + ',number2,'^3');
+    goto sub_menu;
    end;
 
   //(a+b)^3 (ver 1.0.26)
@@ -216,7 +208,7 @@ cal:
     answer := (number1 + number2) * (number1 + number2) * (number1 + number2);
     writeln('Here is what you got: (', number1, '+', number2, ')^3');
     writeln('Answer: ', answer);
-    goto sub_menu_cal;
+    goto sub_menu;
    end;
 
   //(a-b)^3 (ver 1.0.26)
@@ -226,7 +218,7 @@ cal:
     answer := (number1 - number2) * (number1 - number2) * (number1 - number2);
     writeln('Heres what you have: (',number1, '-',number2,')^3');
     writeln('The answer is: ', answer);
-    goto sub_menu_cal;
+    goto sub_menu;
    end;
 
   //a^3 - b^3 (ver 1.0.26)
@@ -234,6 +226,8 @@ cal:
    begin
     ask_2numbers();
     a3_sub_b3(number1, number2, answer);
+     writeln('Now you have: ', number1,'^3 - ',number2,'^3');
+    goto sub_menu;
    end;
   //Cancel:
   if sub_choice_cal = 10 then
@@ -253,6 +247,7 @@ cal:
   if choice = 3 then
    begin
     clrscr;
+
   //About
   about:
    begin
@@ -272,48 +267,42 @@ cal:
   //News
    //Curent
     writeln('Whats new on this version:');
-    writeln('  Current Version: 1.0.26:');
-    writeln('  This version is a update that come with new features, and major bug fix.');
+    writeln(' Current Version: '); TextColor(2); writeln('1.0.26:'); TextColor(White);
+    writeln(' This version is a update that come with more new features, and major bug fix.');
     writeln('   1.Added new maths: (a-b)^3, (a+b)^3, a^3 + b^3');
     writeln('   2.Removed warning the choice cant be under 1 in sub_menu (see in source code);');
     writeln('   3.Show the current time and date while starting the program (Thanks to tutorialspoint)');
     writeln('   4.Show the programs path in About section and home');
     writeln('   5.Fixed the exit bug by...add the exit command (oh I forgot it, sorry)!');
-    writeln('  Press Enter to continue...');
-    readkey();
+    writeln(' Press Enter to continue...');
+    readln();
    //1.0.25
-    writeln('  Available old version (not too old yet): 1.0.25');
-    writeln('   1.TextColor now available! When you use the program, TextColor will change the text color to the green,red, or white (default). Id like to make this app use GUI, but I dont have enough time to do this.');
-    writeln('   2.Change label exit -> exit_program to avoid unexpected error(!?, now solved)');
-    writeln('   3.Now you can install this application (oh, this is not important because you can share the binary file to other without any installer) via .exe setup file (yes, of course). I will create another installer for *NIX (Linux, BSD and macOS:)'
-);
+    write(' Available old version (ready to old now):'); TextColor(Yellow); writeln('1.0.25'); TextColor(White);
+    writeln('   1.TextColor now available! When you use the program, TextColor will change the text ');
+    writeln('   color to the green,red, or white (default).');
+    writeln('   2.Change label exit -> exit_program');
+    writeln('   3.Now you can install this application (if you want)');
     writeln('   4.Fix some layout bug.');
-    writeln('   5.Added Know issuses');
-    writeln('   6.Added some documents for you (now closed)');
-    writeln('  Press Enter to continue...');
-    readkey();
+    writeln('   5.Added Know issuses (now removed in 1.0.26)');
+    writeln('   6.Added some documents for you (now cancelled)');
+    writeln(' Press Enter to continue...');
+    readln();
    //1.0.2
-    WriteLn('  Old Version: 1.0.2:');
+    Write(' Old Version: '); TextColor(Red); writeln('1.0.2:'); TextColor(White);
     WriteLn('   1.Added new features: some advanced math(s), add more choices for exit');
     WriteLn('   2.Fix goto exit -> goto Exit bug on line 228 and bugs while building');
-    WriteLn('   3.Add descriptions for codes (start by //, read the .pas - the main source code file to see it)');
+    WriteLn('   3.Add descriptions for codes (start by //, read the .pas - the source code file to see it)');
     WriteLn('   4.Now you can compare decimal numbers (just 2, of course)');
     WriteLn('   5.Adjust the "return" direction of the calculator');
     TextColor(2);
-    WriteLn('  All done. Press Enter to exit...');
+    WriteLn(' All done. Press Enter to exit...');
     TextColor(White);
     readkey();
     delay(1350);
-    goto sub_menu;
-  end;
- end;
-
-//exit the program
-  if choice = 4 then goto exit_program;
-
-//ask to exit the program, or come back to main menu
- sub_menu:
-   begin
+    writeln('Clearing the screen...');
+    delay(500);
+    clrscr;
+    // ask now (take from sub_menu)
       writeln('Are you want to go to Main Menu to do other actions, or exit?');
       TextColor(2);
       writeln('1.Go to Main Menu');
@@ -321,7 +310,7 @@ cal:
       writeln('2.Exit');
       TextColor(White);
       Write('Your choice [menu/exit]: '); readln(yes_no);
-       if yes_no = 'menu' then goto menu;
+       if yes_no = 'menu' then goto start;
        if yes_no = 'exit' then goto exit_program;
        if yes_no = 'credit' then
           begin
@@ -332,26 +321,36 @@ cal:
            writeln('And the final is my friends - for testing this application!');
            writeln('Ridecting you to the menu...');
            delay(1000);
-           goto menu;
+           goto start;
           end;
-   end;
-
-//try a new calculation, or return to the menu. If users want, exit the program
- sub_menu_cal:
-  begin
-     writeln('Are you want to try a new calculation, or return to the menu or exit the program?');
-     writeln('1.Try new calculation');
-     writeln('2.Return to Main Menu');
-     TextColor(Red);
-     WriteLn('3.Exit the program');
-     TextColor(White);
-     write('Enter your choice here [new/back/exit]: '); readln(yes_no);
-       if yes_no = 'new' then goto cal;
-       if yes_no = 'back' then goto menu;
-       if yes_no = 'exit' then goto exit_program;
   end;
+ end;
 
- //ask the user after compare
+//exit the program
+  if choice = 4 then goto exit_program;
+
+(* try a new calculation, compare more, or return to the menu. If users want, exit the program.
+i merged sub_menu_cal and sub_menu_cpr and now we have this: *)
+ sub_menu:
+  begin
+     writeln(); // add one more line
+     writeln('Are you want to try a new calculation, compare new numbers,');
+     writeln('return to the menu or exit the program?');
+     writeln('1.Try new calculation');
+     writeln('2.Compare again');
+     writeln('3.Return to Main Menu');
+     TextColor(Red);
+     WriteLn('4.Exit the program');
+     TextColor(White);
+     write('Enter your choice here [new/cpr/back/exit]: '); readln(yes_no);
+       if yes_no = 'new' then goto cal
+       else if yes_no = 'cpr' then goto cpr
+       else if yes_no = 'back' then goto start
+       else if yes_no = 'exit' then goto exit_program
+       else write('Invaild asnwer. Please try again'); readln(yes_no);
+  end;
+  
+ //ask the user after compared
  sub_menu_cpr:
    begin
      writeln(); // Add one more line
@@ -369,13 +368,14 @@ exit_program:
     if yes_no = 'yes' then
      begin
       writeln('Thank you for using my application. Exiting now.');
-      delay(1350);
+      delay(1300);
       exit;
-     end;
-    if yes_no = 'no' then
+     end
+    else if yes_no = 'no' then
      begin
       writeln('Switching to menu...');
       delay(1000);
-      goto menu;
+      goto start;
      end;
+   else write('Invaild answer. Please try again.'); readln(yes_no);
   end.

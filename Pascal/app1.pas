@@ -317,14 +317,6 @@ cal:
     writeln('   6.Added some documents for you (now cancelled)');
     writeln(' Press Enter to continue...');
     readln();
-   //1.0.2
-    Write(' Old Version: '); TextColor(Red); writeln('1.0.2:'); TextColor(White);
-    WriteLn('   1.Added new features: some advanced math(s), add more choices for exit');
-    WriteLn('   2.Fix goto exit -> goto Exit bug on line 228 and bugs while building');
-    WriteLn('   3.Add descriptions for codes (start by //, read the .pas - the source code file to see it)');
-    WriteLn('   4.Now you can compare decimal numbers (just 2, of course)');
-    WriteLn('   5.Adjust the "return" direction of the calculator');
->>>>>>> a909c5d83fcd764f651ada68bb3c58d6ec70e98c
     TextColor(2);
     WriteLn(' All done. Press Enter to exit...');
     TextColor(White);

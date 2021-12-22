@@ -1,6 +1,6 @@
 (* Noitce: maths unit sometimes cannot be recognized by FPC,
    so please compile maths.pas first, then try again. *)
-Program App1;
+Program app1;
 {$mode objFPC}
 uses
     crt,
@@ -272,37 +272,38 @@ cal:
   //News
    //Curent
     writeln('Whats new on this version:');
-    writeln('  Current Version: 1.0.26:');
+    writeln('  Current Version: 1.0.27');
+    writeln('   | 1.Replaced sub_choice to yes_no to ask the user for something. yes_no is a string value');
+    writeln('   | 2.Merged sub_choice_cal and sub_choice_cpr');
+    writeln('   | 3.Merged sub_choice and Infomation section');
+    writeln('   | 4.Added colors to version number in Infomation');
+    writeln('   | 5.Fully replaced readkey() to readln() in Infomation');
+    writeln('   | 6.Almost all the calculations are using its own function');
+    writeln('   | 7.Removed bugs (issues) section in application');
+    writeln('  Press Enter to continue...');
+    readln();
+    //1.0.26
+    writeln('  Available version: 1.0.26:');
     writeln('  This version is a update that come with new features, and major bug fix.');
-    writeln('   1.Added new maths: (a-b)^3, (a+b)^3, a^3 + b^3');
-    writeln('   2.Removed warning the choice cant be under 1 in sub_menu (see in source code);');
-    writeln('   3.Show the current time and date while starting the program (Thanks to tutorialspoint)');
-    writeln('   4.Show the programs path in About section and home');
-    writeln('   5.Fixed the exit bug by...add the exit command (oh I forgot it, sorry)!');
+    writeln('   | 1.Added new maths: (a-b)^3, (a+b)^3, a^3 + b^3');
+    writeln('   | 2.Removed warning the choice cant be under 1 in sub_menu (see in source code);');
+    writeln('   | 3.Show the current time and date while starting the program (Thanks to tutorialspoint)');
+    writeln('   | 4.Show the programs path in About section and home');
+    writeln('   | 5.Fixed the exit bug by...add the exit command (oh I forgot it, sorry)!');
     writeln('  Press Enter to continue...');
-    readkey();
+    readln();
    //1.0.25
-    writeln('  Available old version (not too old yet): 1.0.25');
-    writeln('   1.TextColor now available! When you use the program, TextColor will change the text color to the green,red, or white (default). Id like to make this app use GUI, but I dont have enough time to do this.');
-    writeln('   2.Change label exit -> exit_program to avoid unexpected error(!?, now solved)');
-    writeln('   3.Now you can install this application (oh, this is not important because you can share the binary file to other without any installer) via .exe setup file (yes, of course). I will create another installer for *NIX (Linux, BSD and macOS:)'
-);
-    writeln('   4.Fix some layout bug.');
-    writeln('   5.Added Know issuses');
-    writeln('   6.Added some documents for you (now closed)');
-    writeln('  Press Enter to continue...');
-    readkey();
-   //1.0.2
-    WriteLn('  Old Version: 1.0.2:');
-    WriteLn('   1.Added new features: some advanced math(s), add more choices for exit');
-    WriteLn('   2.Fix goto exit -> goto Exit bug on line 228 and bugs while building');
-    WriteLn('   3.Add descriptions for codes (start by //, read the .pas - the main source code file to see it)');
-    WriteLn('   4.Now you can compare decimal numbers (just 2, of course)');
-    WriteLn('   5.Adjust the "return" direction of the calculator');
+    writeln('  Available old version (being old now): 1.0.25');
+    writeln('   | 1.TextColor now available! When you use the program, TextColor will change the text color to the green,red, or white (default). Id like to make this app use GUI, but I dont have enough time to do this.');
+    writeln('   | 2.Change label exit -> exit_program to avoid unexpected error(!?, now solved)');
+    writeln('   | 3.Now you can install this application (oh, this is not important because you can share the binary file to other without any installer) via .exe setup file (yes, of course). I will create another installer for *NIX (Linux, BSD and macOS:)');
+    writeln('   | 4.Fix some layout bug.');
+    writeln('   | 5.Added Know issuses');
+    writeln('   | 6.Added some documents for you (now closed)');
     TextColor(2);
     WriteLn('  All done. Press Enter to exit...');
     TextColor(White);
-    readkey();
+    readln();
     delay(1350);
     goto sub_menu;
   end;

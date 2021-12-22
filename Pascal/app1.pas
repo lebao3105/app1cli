@@ -294,6 +294,30 @@ cal:
     writeln('   | 4.Fix some layout bug.');
     writeln('   | 5.Added Know issuses');
     writeln('   | 6.Added some documents for you (now closed)');
+<<<<<<< HEAD
+=======
+=======
+    writeln(' Current Version: '); TextColor(2); writeln('1.0.26:'); TextColor(White);
+    writeln(' This version is a update that come with more new features, and major bug fix.');
+    writeln('   1.Added new maths: (a-b)^3, (a+b)^3, a^3 + b^3');
+    writeln('   2.Removed warning the choice cant be under 1 in sub_menu (see in source code);');
+    writeln('   3.Show the current time and date while starting the program (Thanks to tutorialspoint)');
+    writeln('   4.Show the programs path in About section and home');
+    writeln('   5.Fixed the exit bug by...add the exit command (oh I forgot it, sorry)!');
+    writeln(' Press Enter to continue...');
+    readln();
+   //1.0.25
+    write(' Available old version (ready to old now):'); TextColor(Yellow); writeln('1.0.25'); TextColor(White);
+    writeln('   1.TextColor now available! When you use the program, TextColor will change the text ');
+    writeln('   color to the green,red, or white (default).');
+    writeln('   2.Change label exit -> exit_program');
+    writeln('   3.Now you can install this application (if you want)');
+    writeln('   4.Fix some layout bug.');
+    writeln('   5.Added Know issuses (now removed in 1.0.26)');
+    writeln('   6.Added some documents for you (now cancelled)');
+    writeln(' Press Enter to continue...');
+    readln();
+>>>>>>> 19eb61f3bbe1be352efcf3ac9bdff14e21beab49
     TextColor(2);
     WriteLn(' All done. Press Enter to exit...');
     TextColor(White);

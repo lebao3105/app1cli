@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xaah1/hkS9FGj/HtcUCiIcGxFO1Ce7dvS4CkyMZ7nBY/sVu7wn4Oezq3dHH+Z+0WISl3BWKcpIt8w+T76wRDhA==",
+  "dgSpecHash": "FpuzeNySSaB5ZL9Cjcru/wA4SE+OE9ZZNlLEPc4hvv6PqlJiLaThiqgPxZ5qogjikhqltDuOWfTex2u/VcS0zg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Le Bao Roofs\\Documents\\source\\repos\\c#\\app1\\app1.csproj",
+  "projectFilePath": "/home/leabao/app1cli/C#/C#.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

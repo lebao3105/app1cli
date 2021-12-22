@@ -11,13 +11,13 @@
     "/home/leabao/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.27",
     "restore": {
-      "projectUniqueName": "/home/leabao/app1cli/C#/C#.csproj",
-      "projectName": "C#",
-      "projectPath": "/home/leabao/app1cli/C#/C#.csproj",
+      "projectUniqueName": "/home/leabao/app1cli/C#/maths/maths.csproj",
+      "projectName": "maths",
+      "projectPath": "/home/leabao/app1cli/C#/maths/maths.csproj",
       "packagesPath": "/home/leabao/.nuget/packages/",
-      "outputPath": "/home/leabao/app1cli/C#/obj/",
+      "outputPath": "/home/leabao/app1cli/C#/maths/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/leabao/.nuget/NuGet/NuGet.Config"

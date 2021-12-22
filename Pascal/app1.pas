@@ -15,6 +15,8 @@ var
     choice : 1 .. 4;
     sub_choice_cal : 1 .. 11;
     yes_no : string ; // replaces sub_choice
+    //number1, number2, number3, answer : integer;    // These line are useless now
+    //real1, real2, real_answer : real;               // with new unit
 
 begin
     TextColor(Red);
@@ -61,6 +63,7 @@ begin
     ask_2numbers();
     compare(number1,number2);
     goto sub_menu;
+    end;
    end; // end of "cpr"
   end; // enf of choice = 1
   //calculator
@@ -294,7 +297,7 @@ cal:
     TextColor(2);
     WriteLn(' All done. Press Enter to exit...');
     TextColor(White);
-    readln();
+    readkey();
     delay(1350);
     writeln('Clearing the screen...');
     delay(500);
@@ -346,13 +349,22 @@ i merged sub_menu_cal and sub_menu_cpr and now we have this: *)
        else if yes_no = 'exit' then goto exit_program
        else write('Invaild asnwer. Please try again'); readln(yes_no);
   end;
+  
+ //ask the user after compared
+ sub_menu_cpr:
+   begin
+     writeln(); // Add one more line
+     write('Compare more? [yes/no/exit]'); readln(yes_no);
+       if yes_no = 'yes' then goto cpr;
+       if yes_no = 'no' then goto menu;
+       if yes_no = 'exit' then goto exit_program;
+   end;
 
 //exit
 exit_program:
-   writeln();
    writeln('Are you sure want to exit the program?');
    writeln('If you want choose "no", you will be come back to the main menu.');
-   write('Your choice [yes/no]: '); readln(yes_no);
+   write('Your choice: '); readln(yes_no);
     if yes_no = 'yes' then
      begin
       writeln('Thank you for using my application. Exiting now.');
@@ -364,6 +376,6 @@ exit_program:
       writeln('Switching to menu...');
       delay(1000);
       goto start;
-     end
+     end;
    else write('Invaild answer. Please try again.'); readln(yes_no);
   end.

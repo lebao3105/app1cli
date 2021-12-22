@@ -9,7 +9,7 @@ uses
 
 // Define some "labels"
 label
-    start, sub_menu, exit_program, cpr, cal, about;
+    start, sub_menu, exit_program, cpr, cal, about, sub_menu_cpr;
 
 var
     choice : 1 .. 4;
@@ -63,7 +63,6 @@ begin
     ask_2numbers();
     compare(number1,number2);
     goto sub_menu;
-    end;
    end; // end of "cpr"
   end; // enf of choice = 1
   //calculator
@@ -252,7 +251,7 @@ cal:
   about:
    begin
     writeln('About this app:');
-    writeln('   App1 Version 1.0.27 RC');
+    writeln('   App1 Version 1.0.27');
     writeln('   This application is written by Le Bao Nguyen in Pascal and released under the GNU GPL V3.');
     writeln('   You can edit it, or redistribution it to everyone.');
    //Show the current program's path
@@ -267,7 +266,6 @@ cal:
   //News
    //Curent
     writeln('Whats new on this version:');
-<<<<<<< HEAD
     writeln('  Current Version: 1.0.27');
     writeln('   | 1.Replaced sub_choice to yes_no to ask the user for something. yes_no is a string value');
     writeln('   | 2.Merged sub_choice_cal and sub_choice_cpr');
@@ -296,35 +294,6 @@ cal:
     writeln('   | 4.Fix some layout bug.');
     writeln('   | 5.Added Know issuses');
     writeln('   | 6.Added some documents for you (now closed)');
-=======
-    writeln(' Current Version: '); TextColor(2); writeln('1.0.26:'); TextColor(White);
-    writeln(' This version is a update that come with more new features, and major bug fix.');
-    writeln('   1.Added new maths: (a-b)^3, (a+b)^3, a^3 + b^3');
-    writeln('   2.Removed warning the choice cant be under 1 in sub_menu (see in source code);');
-    writeln('   3.Show the current time and date while starting the program (Thanks to tutorialspoint)');
-    writeln('   4.Show the programs path in About section and home');
-    writeln('   5.Fixed the exit bug by...add the exit command (oh I forgot it, sorry)!');
-    writeln(' Press Enter to continue...');
-    readln();
-   //1.0.25
-    write(' Available old version (ready to old now):'); TextColor(Yellow); writeln('1.0.25'); TextColor(White);
-    writeln('   1.TextColor now available! When you use the program, TextColor will change the text ');
-    writeln('   color to the green,red, or white (default).');
-    writeln('   2.Change label exit -> exit_program');
-    writeln('   3.Now you can install this application (if you want)');
-    writeln('   4.Fix some layout bug.');
-    writeln('   5.Added Know issuses (now removed in 1.0.26)');
-    writeln('   6.Added some documents for you (now cancelled)');
-    writeln(' Press Enter to continue...');
-    readln();
-   //1.0.2
-    Write(' Old Version: '); TextColor(Red); writeln('1.0.2:'); TextColor(White);
-    WriteLn('   1.Added new features: some advanced math(s), add more choices for exit');
-    WriteLn('   2.Fix goto exit -> goto Exit bug on line 228 and bugs while building');
-    WriteLn('   3.Add descriptions for codes (start by //, read the .pas - the source code file to see it)');
-    WriteLn('   4.Now you can compare decimal numbers (just 2, of course)');
-    WriteLn('   5.Adjust the "return" direction of the calculator');
->>>>>>> a909c5d83fcd764f651ada68bb3c58d6ec70e98c
     TextColor(2);
     WriteLn(' All done. Press Enter to exit...');
     TextColor(White);
@@ -387,7 +356,7 @@ i merged sub_menu_cal and sub_menu_cpr and now we have this: *)
      writeln(); // Add one more line
      write('Compare more? [yes/no/exit]'); readln(yes_no);
        if yes_no = 'yes' then goto cpr;
-       if yes_no = 'no' then goto menu;
+       if yes_no = 'no' then goto start;
        if yes_no = 'exit' then goto exit_program;
    end;
 
@@ -407,6 +376,6 @@ exit_program:
       writeln('Switching to menu...');
       delay(1000);
       goto start;
-     end;
+     end
    else write('Invaild answer. Please try again.'); readln(yes_no);
   end.

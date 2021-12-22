@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;  
-
+using maths;
+using utils;
 namespace app1
 {
     class Program
@@ -62,23 +63,15 @@ namespace app1
                 if (answer == 1)
                 {
                         Console.WriteLine("You are typed 1 - plus.");
-                        Console.Write("Set variable for the first number: ");
-                        int number1 = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("And for the second number too: ");
-                        int number2 = Convert.ToInt32(Console.ReadLine());
-                        int result = number1 + number2;
-                        Console.WriteLine("The answer is: "+result);
+                        ask_2numbers();
+                        Add(number1, number2);
                         goto ask;
                 }        
                 else if (answer == 2)
                 {
                         Console.WriteLine("You are typed 2 - minus.");
-                        Console.Write("Set variable for the first number: ");
-                        int number1 = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("And for the second number too: ");
-                        int number2 = Convert.ToInt32(Console.ReadLine());
-                        int result = number1 - number2;
-                        Console.WriteLine("The answer is: "+result);
+                        ask_2numbers();
+                        Sub(number1, number2); 
                         goto ask;       
                 }
                 else if (answer == 3)

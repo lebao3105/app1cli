@@ -1,0 +1,11 @@
+/home/leabao/app1cli/C#/utils/bin/Debug/net6.0/utils.deps.json
+/home/leabao/app1cli/C#/utils/bin/Debug/net6.0/utils.dll
+/home/leabao/app1cli/C#/utils/bin/Debug/net6.0/ref/utils.dll
+/home/leabao/app1cli/C#/utils/bin/Debug/net6.0/utils.pdb
+/home/leabao/app1cli/C#/utils/obj/Debug/net6.0/utils.GeneratedMSBuildEditorConfig.editorconfig
+/home/leabao/app1cli/C#/utils/obj/Debug/net6.0/utils.AssemblyInfoInputs.cache
+/home/leabao/app1cli/C#/utils/obj/Debug/net6.0/utils.AssemblyInfo.cs
+/home/leabao/app1cli/C#/utils/obj/Debug/net6.0/utils.csproj.CoreCompileInputs.cache
+/home/leabao/app1cli/C#/utils/obj/Debug/net6.0/utils.dll
+/home/leabao/app1cli/C#/utils/obj/Debug/net6.0/ref/utils.dll
+/home/leabao/app1cli/C#/utils/obj/Debug/net6.0/utils.pdb

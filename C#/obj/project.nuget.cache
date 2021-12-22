@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7cxduH9Z8f3TQoEm1Ko1eCO2cXaKoyeyNgTt9U0Vw8A+CdUc6YgF+LdPxVVhxnYUVWa+OcuE10i64ve5rfZMiw==",
+  "dgSpecHash": "FpuzeNySSaB5ZL9Cjcru/wA4SE+OE9ZZNlLEPc4hvv6PqlJiLaThiqgPxZ5qogjikhqltDuOWfTex2u/VcS0zg==",
   "success": true,
-  "projectFilePath": "/home/leabao/app1cli/C#/app1.csproj",
+  "projectFilePath": "/home/leabao/app1cli/C#/C#.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

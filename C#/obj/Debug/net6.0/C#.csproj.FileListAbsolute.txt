@@ -1,0 +1,5 @@
+/home/leabao/app1cli/C#/obj/Debug/net6.0/C#.csproj.AssemblyReference.cache
+/home/leabao/app1cli/C#/obj/Debug/net6.0/C#.GeneratedMSBuildEditorConfig.editorconfig
+/home/leabao/app1cli/C#/obj/Debug/net6.0/C#.AssemblyInfoInputs.cache
+/home/leabao/app1cli/C#/obj/Debug/net6.0/C#.AssemblyInfo.cs
+/home/leabao/app1cli/C#/obj/Debug/net6.0/C#.csproj.CoreCompileInputs.cache

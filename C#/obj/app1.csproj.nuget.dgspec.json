@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Le Bao Roofs\\Documents\\source\\repos\\c#\\app1\\app1.csproj": {}
+    "/home/leabao/app1cli/C#/app1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Le Bao Roofs\\Documents\\source\\repos\\c#\\app1\\app1.csproj": {
+    "/home/leabao/app1cli/C#/app1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Le Bao Roofs\\Documents\\source\\repos\\c#\\app1\\app1.csproj",
+        "projectUniqueName": "/home/leabao/app1cli/C#/app1.csproj",
         "projectName": "app1",
-        "projectPath": "C:\\Users\\Le Bao Roofs\\Documents\\source\\repos\\c#\\app1\\app1.csproj",
-        "packagesPath": "C:\\Users\\Le Bao Roofs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Le Bao Roofs\\Documents\\source\\repos\\c#\\app1\\obj\\",
+        "projectPath": "/home/leabao/app1cli/C#/app1.csproj",
+        "packagesPath": "/home/leabao/.nuget/packages/",
+        "outputPath": "/home/leabao/app1cli/C#/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Le Bao Roofs\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/leabao/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/leabao/.dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }

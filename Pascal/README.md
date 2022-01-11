@@ -88,17 +88,11 @@ However, this does not make any changes or affect to the output.<br>
   - Local variable "param" not used (while debugging app1_utils):
     - Don't care about that. The "param" variable is used for the functions that write colored text.       
 ## What's new:
-*For the latest stable release, see from [here](https://github.com/lebao3105/app1cli/releases/)* <br>
-***In this release, we have: (only for Pascal version)***
-- Replaced sub_choice to yes_no to ask the user for something. yes_no is a string value.
-- Merged sub_choice_cal and sub_choice_cpr 
-- Merged sub_choice and Infomation section
-- Added colors to version number in Infomation
-- Fully replaced readkey() to readln() in Infomation
-- Almost all the calculations are using its own function<br>
- 
-***In the next version 1.0.28:***
+*For the latest stable release, find it [here](https://github.com/lebao3105/app1cli/releases/)* <br>
+
+***In version 1.0.28:***
 - Apply array for yes_no (now cancelled)
-- Create "unit" for C# version do the same things as the Pascal one (may need to make the project to a Visual Studio project)
+- Create "unit" for C# version do the same things as the Pascal one (one of the hardest things i need to do)
 - Apply color and 1.0.27's enhancements to C# version
-- Access app1 easily with command-line [arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal)<br>
+- Access app1 easily with command-line [arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal, use to run some calculations...)<br>
+- If you want to add to this program a language, you're welcome. I will add this support to app1 by a script before compile. There's no way to change the language directly while running app1.

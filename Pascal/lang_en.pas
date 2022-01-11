@@ -1,0 +1,30 @@
+(* English translation resource file for app1 
+   You may need to run the config_lang to set 
+   the language before compile and run app1.
+   The default language is English. *)
+unit lang_en;
+Interface
+const
+	(* Some lines in startup *)
+	Startup_opening = 'Starting...';
+	Startup_appname = 'app1 from Le Bao Nguyen.';
+	Startup_appver = 'Version ';
+	(* Program location and time-date *)
+	Startup_applocation = 'The current program location is: ';
+	Startup_timedate = 'The current time: ';
+	(* Now we are in the main menu *)
+	Menu_welcome = 'Welcome to app1! Choose a function below to start: ';
+    Menu_item1 = 'Compare';
+    Menu_item2 = 'Calculator';
+    Menu_item3 = 'Infomation';
+    Menu_item4 = 'Exit';
+    Menu_ask = 'Enter your answer here: ';
+    (* Calculator *)
+    Cal_select = 'Select a formula now: ';
+    Cal_item5 = '5.Cancel';
+    Cal_item6 = '6.Advenced maths';
+    Cal_item7 = '11.Force exut';
+IMPLEMENTATION
+// nothing here
+end. // EOF
+

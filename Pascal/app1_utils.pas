@@ -17,19 +17,30 @@ IMPLEMENTATION
 procedure warm_num();
   begin
 	   writeln('app1cli version 1.0.2x+ps by Le Bao Nguyen.');
-	   TextColor(Red); writeln('Fatal: '); 
+	   textredln('Fatal: '); 
 	   TextColor(White); writeln('We need one more number to do this action.');
 	   writeln('Action aborted.');
   end;
+procedure warm_cal();
+  begin
+     writeln('app1cli version 1.0.2x+ps by Le Bao Nguyen.');
+     writeln('You are running app1 as a calculator.');
+  end;
 
+(* Compare (use for app1's command-line arguments) *)  
+procedure cpr(var param1,param2);
+  begin 
+    if ParamStr(1) = '' then begin warm_num(); exit end
+    else if ParamStr()
+  end;  
 (* Show the help box *)  
 procedure help();
   begin
     writeln('app1cli version 1.0.2x+ps by Le Bao Nguyen.');
-    writeln('Syntax: app1 [cmd] [options/numbers] [more options if have/needed]');
-    writeln('cpr [only 2 numbers]: compare numbers');
-    writeln('cal : do some calculations');
-    writeln('  | [plus/sub/multi/div] [number1] [number2] : do basic maths (add,subtract,multiple,divide) with 2 numbers.');
+    write('Syntax: app1 '); textredln('[cmd] [options/numbers] [more options if have/needed]');
+    textgreen('cpr '); TextColor(White); writeln('[only 2 numbers]: compare numbers');
+    textgreen('cal : '); TextColor(White); writeln('do some calculations');
+    writeln('  | [add/sub/multi/div] [number1] [number2] : do basic maths (add,subtract,multiple,divide) with 2 numbers.');
     writeln('  | adv ["formula" numbers from 1 to 9] [2 or 3 numbers]: do advanced maths');
     writeln('    \  formula(s):');        
     write('       | 1.x(a+b)');               writeln('             3 numbers required');
@@ -43,12 +54,11 @@ procedure help();
     writeln('       | 9.a^3 - b^3');
     writeln();
     writeln('------ END OF BOTH ADV and CAL ------');
-    writeln('about : Show infomations about this application');
-    writeln('help : Show this box and exit');
-    write('Press '); TextColor(2); write('Enter'); TextColor(White); writeln(' to continue');
+    textgreen('about : '); TextColor(white); writeln('Show infomations about this application');
+    textgreen('help : '); TextColor(White); writeln('Show this box and exit');
+    write('Press '); textgreen('Enter'); TextColor(White); writeln(' to continue');
     readln();
-    writeln('help: show this help box and exit');
-    TextColor(Red); writeln('Flags '); TextColor(White); writeln('(not available yet.)');
+    textred('------- Flags '); TextColor(White); writeln('(not available yet.)');
     writeln('-v/verbose : Explain what are you doing; ');
     writeln('--more [cmd...] : Do some thing more after done the action.')
   end;

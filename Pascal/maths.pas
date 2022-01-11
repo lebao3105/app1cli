@@ -1,17 +1,15 @@
-(* This unit is used for app1 (Pascal version).
-   Created by Le Bao Nguyen. *)
+(* This unit used to do many calculations which are featured in app1cli. 
+    This unit is a part of the application, so you have to use this file
+    but follow the GNU GPL V3 License. *)
 Unit maths;
 
 Interface
-var
-    number1, number2, number3, answer: integer;
-    real1, real2, real_answer: real;
-
-//something...
-Function Add(number1, number2: Integer): integer;
-Function Minus(number1, number2: Integer): integer;
-Function Multiple(number1, number2: Integer): integer;
-Function Divide(real1, real2:real): real;
+var number1, number2, number3, answer:integer;
+    real1, real2, real_answer:real;
+Function add(number1, number2: Integer): integer;
+Function minus(number1, number2: Integer): integer;
+Function multiple(number1, number2: Integer): integer;
+Function divide(real1, real2:real): real;
 Function compare(number1, number2:integer):integer;
 Function one_for_total(number1, number2, number3: integer): integer;
 Function one_for_minus(number1, number2, number3: integer): integer;
@@ -20,27 +18,29 @@ Function ask_2numbers():integer;
 Function ask_3numbers():integer;
 Function a3_sub_b3(number1, number2, answer:integer):integer;
 Function a3_add_b3(number1, number2, answer: integer):integer;
+Function total2_3exp(number1,number2,asnwer:integer):integer;
+Function minus2_3exp(number1,number2,answer:integer):integer;
 IMPLEMENTATION
 uses crt, sysutils;
-    Function Add(number1, number2: Integer): integer;
+    Function add(number1, number2: Integer): integer;
     Begin
         answer := number1 + number2;
         writeln('The answer is: ', answer);
     End;
 
-    Function Minus(number1, number2: Integer): integer;
+    Function minus(number1, number2: Integer): integer;
     Begin
         answer := number1 - number2;
         writeln('The answer is: ', answer);
     End;
 
-    Function Multiple(number1, number2: Integer): integer;
+    Function multiple(number1, number2: Integer): integer;
     Begin
         answer := number1 * number2;
         writeln('The answer is: ', answer);
     End;
 
-    Function Divide(real1, real2: real): real;
+    Function divide(real1, real2: real): real;
     Begin
         real_answer := real1 / real2;
         writeln('The answer is: ', real_answer);
@@ -54,18 +54,12 @@ uses crt, sysutils;
 
     Function compare(number1, number2:integer):integer;
     begin
-       if number1 < number2 then
-     begin
-      writeln('Number 1 < Number 2');
-     end;
-    if number1 > number2 then
-     begin
-      writeln('Number 1 > Number 2');
-     end;
-   if number1 = number2 then
-    begin
-      writeln('These numbers are the same.');
-    end;
+        if number1 < number2 then
+            writeln('Number 1 < Number 2');
+        if number1 > number2 then
+            writeln('Number 1 > Number 2');
+        if number1 = number2 then
+            writeln('These numbers are the same.');
     end;
 
     Function one_for_minus(number1, number2, number3: integer): integer;
@@ -73,11 +67,13 @@ uses crt, sysutils;
         answer := (number1 - number2) * number3;
         writeln('The answer is: ', answer);
     end;
+
     Function a3_sub_b3(number1, number2, answer: integer): integer;
     begin
         answer := number1*number1*number1 - number2*number2*number2;
         writeln('The answer is: ', answer);
     end;
+
     Function a3_add_b3(number1, number2, answer: integer): integer;
     begin
         answer := number1*number1*number1 + number2*number2*number2;
@@ -110,4 +106,16 @@ uses crt, sysutils;
         write('The second one (b): '); TextColor(2); readln(real2);
         TextColor(White);
     end;
+
+    // new calculator functions
+    Function total2_3exp(number1,number2,asnwer:integer):integer;
+    begin
+        answer := (number1 + number2) * (number1 + number2) * (number1 + number2);
+        writeln('The answer is: ', answer);
+    end;
+    Function minus2_3exp(number1,number2,answer:integer):integer;
+    begin
+        answer := (number1 - number2) * (number1 - number2) * (number1 - number2);
+        writeln('The answer is: ', answer);
+    end; 
 END.

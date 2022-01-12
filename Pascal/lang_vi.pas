@@ -2,7 +2,7 @@
    For Vietnamese Users: Hien tai thi de tranh 
    loi khi bien dich va chay tren nen CLI nen ban dich 
    Tieng Viet nay se khong co dau *)
-unit lang-vi;
+unit lang_vi;
 Interface
     const 
 	(* Some lines in startup / mot so 'dong' khi khoi dong *)

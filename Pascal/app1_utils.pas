@@ -9,9 +9,12 @@ Interface
   procedure textgreenln(param:string);
   procedure textgreen(param:string);
   procedure textred(param:string);
+  //function textcolor(color:integer, text:string):integer;
 IMPLEMENTATION
   uses crt;
+  type clr = array [1..15] of integer;
   var param:string;
+      color:clr;
 
 (* Warm the user if they don't have enough numbers to do action*)
 procedure warm_num();
@@ -28,11 +31,12 @@ procedure warm_cal();
   end;
 
 (* Compare (use for app1's command-line arguments) *)  
-procedure cpr(var param1,param2);
+(* procedure cpr(var param1,param2);
   begin 
     if ParamStr(1) = '' then begin warm_num(); exit end
     else if ParamStr()
-  end;  
+  end;  *)
+
 (* Show the help box *)  
 procedure help();
   begin
@@ -86,4 +90,10 @@ procedure help();
       TextColor(2);
       write(param); 
   end;
+
+  (*function textcolor(color:integer, text:string):integer;
+  begin
+      TextColor(color);
+      write(text);
+  end;*)
 end.    

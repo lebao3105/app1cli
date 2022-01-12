@@ -4,8 +4,9 @@
 Unit maths;
 
 Interface
-var number1, number2, number3, answer:integer;
-    real1, real2, real_answer:real;
+var number1, number2, number3, answer: integer;
+    real1, real2, real_answer: real;
+
 Function add(number1, number2: Integer): integer;
 Function minus(number1, number2: Integer): integer;
 Function multiple(number1, number2: Integer): integer;
@@ -16,10 +17,10 @@ Function one_for_minus(number1, number2, number3: integer): integer;
 Function ask_2real():real;
 Function ask_2numbers():integer;
 Function ask_3numbers():integer;
-Function a3_sub_b3(number1, number2, answer:integer):integer;
-Function a3_add_b3(number1, number2, answer: integer):integer;
-Function total2_3exp(number1,number2,asnwer:integer):integer;
-Function minus2_3exp(number1,number2,answer:integer):integer;
+Function a3_sub_b3(number1, number2:integer):integer;
+Function a3_add_b3(number1, number2: integer):integer;
+Function total2_3exp(number1,number2:integer):integer;
+Function minus2_3exp(number1,number2:integer):integer;
 IMPLEMENTATION
 uses crt, sysutils;
     Function add(number1, number2: Integer): integer;
@@ -68,13 +69,13 @@ uses crt, sysutils;
         writeln('The answer is: ', answer);
     end;
 
-    Function a3_sub_b3(number1, number2, answer: integer): integer;
+    Function a3_sub_b3(number1, number2: integer): integer;
     begin
         answer := number1*number1*number1 - number2*number2*number2;
         writeln('The answer is: ', answer);
     end;
 
-    Function a3_add_b3(number1, number2, answer: integer): integer;
+    Function a3_add_b3(number1, number2: integer): integer;
     begin
         answer := number1*number1*number1 + number2*number2*number2;
         writeln('The answer is: ', answer);
@@ -108,12 +109,13 @@ uses crt, sysutils;
     end;
 
     // new calculator functions
-    Function total2_3exp(number1,number2,asnwer:integer):integer;
+    Function total2_3exp(number1,number2:integer):integer;
     begin
         answer := (number1 + number2) * (number1 + number2) * (number1 + number2);
         writeln('The answer is: ', answer);
     end;
-    Function minus2_3exp(number1,number2,answer:integer):integer;
+
+    Function minus2_3exp(number1,number2:integer):integer;
     begin
         answer := (number1 - number2) * (number1 - number2) * (number1 - number2);
         writeln('The answer is: ', answer);

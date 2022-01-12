@@ -10,8 +10,8 @@ const
 	Startup_appname = 'app1 from Le Bao Nguyen.';
 	Startup_appver = 'Version ';
 	(* Program location and time-date *)
-	Startup_applocation = 'The current program location is: ';
-	Startup_timedate = 'The current time: ';
+	Applocation = 'The current program location is: ';
+	Timedate = 'The current time: ';
 	(* Now we are in the main menu *)
 	Menu_welcome = 'Welcome to app1! Choose a function below to start: ';
     Menu_item1 = 'Compare';
@@ -20,10 +20,10 @@ const
     Menu_item4 = 'Exit';
     Menu_ask = 'Enter your answer here: ';
     (* Calculator *)
-    Cal_select = 'Select a formula now: ';
-    Cal_item5 = '5.Cancel';
-    Cal_item6 = '6.Advenced maths';
-    Cal_item7 = '11.Force exut';
+    Select = 'Select a formula now: ';
+    Cancel = 'Cancel';
+    Cal_Adv = 'Advenced maths';
+    Cal_Exit = 'Force exut';
 IMPLEMENTATION
 // nothing here
 end. // EOF

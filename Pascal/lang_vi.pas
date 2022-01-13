@@ -10,8 +10,8 @@ Interface
 	Startup_appname = 'app1 tu Le Bao Nguyen';
 	Startup_appver = 'Phien ban ';
 	(* Program location and time-date / vi tri cua chuong trinh va thoi gian *)
-	Startup_applocation = 'Vi tri chuong trinh hien tai: ';
-	Startup_timedate = 'Thoi gian hien tai la: ';
+	Applocation = 'Vi tri chuong trinh hien tai: ';
+	Timedate = 'Thoi gian hien tai la: ';
 	(* Now we are in the main menu - Bay gio chung ta dang o menu chinh *)
 	Menu_welcome = 'Chao mung den voi app1! Vui long chon mot tinh nang duoi day de bat dau: ';
     Menu_item1 = 'So sanh';
@@ -20,9 +20,18 @@ Interface
     Menu_item4 = 'Thoat';
     Menu_ask = 'Go lua chon cua ban tai day: ';
     (* Calculator - May tinh *)
-    Cal_select = 'Su dung mot trong cac lua chon sau:';
-    Cal_item5 = 'Huy';
-    Cal_item6 = 'Phep toan nang cao';
-    Cal_item7 = 'Buoc thoat';
+    Select = 'Su dung mot trong cac lua chon sau:';
+    Cancel = 'Huy';
+    Cal_Adv = 'Phep toan nang cao';
+    Cal_Exit = 'Buoc thoat';
+    Cal_Ans = 'Ket qua la: ';
+    (* Compare - So sanh *)
+    Cpr_Bigger = 'So thu nhat lon hon so thu hai';
+    Cpr_Both = 'Ca hai so duoc cho dau nhu nhau';
+    Cpr_Smaller = 'So thu nhat nho hon so thu hai';
+    (* Ask - Hoi *)
+    Ask_num1 = 'Vui long nhap gia tri cho so thu nhat: ';
+    Ask_num2 = 'Cho so thu hai o day: ';
+    Ask_num3 = 'So thu ba nua: ';
 IMPLEMENTATION
 end.	

@@ -23,7 +23,16 @@ const
     Select = 'Select a formula now: ';
     Cancel = 'Cancel';
     Cal_Adv = 'Advenced maths';
-    Cal_Exit = 'Force exut';
+    Cal_Exit = 'Force exit';
+    Cal_Ans = 'The answer is: ';
+    (* Compare *)
+    Cpr_Smaller = 'The first number < the second one';
+    Cpr_Bigger = 'The first number > the second one';
+    Cpr_Both = 'These given numbers are the same';
+    (* Ask *)
+    Ask_num1 = 'Give the first number a value: ';
+    Ask_num2 = 'The second number here: ';
+    Ask_num3 = 'The third number too: ';
 IMPLEMENTATION
 // nothing here
 end. // EOF

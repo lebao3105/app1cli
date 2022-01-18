@@ -50,7 +50,7 @@ dotnet run
 Wait and ejnoy!
 
 ## What's new:
-*See in the latest release from [here](https://github.com/lebao3105/app1cli/releases/)*
+*See in the latest release [here](https://github.com/lebao3105/app1cli/releases/)*
 
 ## Some images:
 ![image](https://user-images.githubusercontent.com/77564176/139211727-06351e51-9b6b-4363-be7d-109b0597bca6.png)

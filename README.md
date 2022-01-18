@@ -41,7 +41,7 @@ You can use Free Pascal IDE to open the .pas file and compile it (of cource). <b
 Congratulations, now you have compiled app1!
 
 ## What to use C# version? Try now!
-C# makes app1 smaller with ~300 lines of code and app1 still can run from Windows, macOS and Linux.<br>
+C# makes app1 small with ~300 lines of code and runnable from Windows, macOS and Linux.<br>
 First, install .NET SDK with this [address](https://dotnet.microsoft.com/download)<br>
 Then, clone the repository and "open" it in Terminal (Command Prompt). Next type:
 ```

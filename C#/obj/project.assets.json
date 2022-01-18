@@ -1,36 +1,43 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net6.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Le Bao Roofs\\.nuget\\packages\\": {}
+    "C:\\Users\\Le Bao Nguyen\\.nuget\\packages\\": {},
+    "D:\\vscode\\2022-others\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Le Bao Roofs\\Documents\\source\\repos\\c#\\app1\\app1.csproj",
+      "projectUniqueName": "D:\\source\\repos\\c#\\app1\\app1.csproj",
       "projectName": "app1",
-      "projectPath": "C:\\Users\\Le Bao Roofs\\Documents\\source\\repos\\c#\\app1\\app1.csproj",
-      "packagesPath": "C:\\Users\\Le Bao Roofs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Le Bao Roofs\\Documents\\source\\repos\\c#\\app1\\obj\\",
+      "projectPath": "D:\\source\\repos\\c#\\app1\\app1.csproj",
+      "packagesPath": "C:\\Users\\Le Bao Nguyen\\.nuget\\packages\\",
+      "outputPath": "D:\\source\\repos\\c#\\app1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\vscode\\2022-others\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Le Bao Roofs\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Le Bao Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -41,8 +48,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "imports": [
           "net461",
           "net462",
@@ -58,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

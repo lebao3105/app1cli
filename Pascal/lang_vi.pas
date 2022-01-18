@@ -33,5 +33,8 @@ Interface
     Ask_num1 = 'Vui long nhap gia tri cho so thu nhat: ';
     Ask_num2 = 'Cho so thu hai o day: ';
     Ask_num3 = 'So thu ba nua: ';
+    Ask_cal = 'Thu thuc hien phep toan';
+    Ask_back = 'Quay ve Menu chinh';
+    Ask_exit = 'Thoat chuong trinh';
 IMPLEMENTATION
 end.	

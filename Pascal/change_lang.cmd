@@ -16,7 +16,7 @@ echo VS Code (Visual Studio Code) can only installed mannually from its website.
 echo --------------------------------------------
 
 set /p ask="Enter your answer here:"
-if %ask% == "1" (
+if "%ask%" == "1" (
     echo Finding vi... If the program exists in the PATH and the script found it, this will open the file for you.
     echo Continue? You need to change vi or en from lang_{language} to the others (en - English is the default.). 
     pause
@@ -25,7 +25,7 @@ if %ask% == "1" (
     vi app1_utils.pas
     exit
 )
-if %ask% == "2" (
+if "%ask%" == "2" (
     echo Finding nano... If you installed nano in MSYS or MinGW, run the program (MSYS..) and cd to this directory, 
     echo then use nano to edit the file app1.pas, maths.pas and app1_utils.pas. You can also use vi instead.
     echo Continue? You need to change vi or en from lang_{language} to the others (en - English is the default.).
@@ -35,9 +35,9 @@ if %ask% == "2" (
     nano app1_utils.pas 
     exit
 )
-if %ask% == "3" (
+if "%ask%" == "3" (
     set /p test="Is notepad installed here? It can be install/uninstall_ed via Settings, or MS Store.[y/n]"
-    if %test% == "y" (
+    if "%test%" == "y" (
         echo Continue? You need to change vi or en from lang_{language} to the others (en - English is the default.).
         pause
         notepad app1.pas
@@ -45,14 +45,14 @@ if %ask% == "3" (
         notepad app1_utils.pas 
         exit
     )
-    if %test% == "n" (
+    if "%test%" == "n" (
         echo Exitting... You can reopen the script to try again.
         exit
     )
 )
-if %ask% == "4" (
+if "%ask%" == "4" (
     set /p test="Is wordpad installed here? It can be install/uninstall_ed via Settings, or MS Store.[y/n]"
-    if %test% == "y" (
+    if "%test%" == "y" (
         echo Continue? You need to change vi or en from lang_{language} to the others (en - English is the default.).
         pause
         wordpad app1.pas
@@ -60,20 +60,20 @@ if %ask% == "4" (
         wordpad app1_utils.pas 
         exit
     )
-    if %test% == "n" (
+    if "%test%" == "n" (
         echo Exitting... You can reopen the script to try again.
         exit
     )
 )
-if %ask% == "5" (
+if "%ask%" == "5" (
     set /p test="Is VSCODE installed here? [y/n]"
-    if %test% = ="y" (
+    if "%test%" = ="y" (
         echo Continue? You need to change vi or en from lang_{language} to the others (en - English is the default.).
         echo Code will run here and you have to open app1.pas, app1_utils.pas and maths.pas from the left pane.
         pause
         code .
     )
-    if %test% == "n" (
+    if "%test%" == "n" (
         echo Exitting... You can reopen the script to try again.
         exit
     )
@@ -81,4 +81,3 @@ if %ask% == "5" (
 echo Anything should be done if there are not any error here.
 echo You can check for the file permission, make sure that you are not open the wrong file...
 pause
-exit

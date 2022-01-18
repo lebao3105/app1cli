@@ -12,9 +12,6 @@ Interface
   //function textcolor(color:integer, text:string):integer;
 IMPLEMENTATION
   uses crt;
-  type clr = array [1..15] of integer;
-  var param:string;
-      color:clr;
 
 (* Warm the user if they don't have enough numbers to do action*)
 procedure warm_num();
@@ -23,19 +20,14 @@ procedure warm_num();
 	   textredln('Fatal: '); 
 	   TextColor(White); writeln('We need one more number to do this action.');
 	   writeln('Action aborted.');
+     exit;
   end;
 procedure warm_cal();
   begin
      writeln('app1cli version 1.0.2x+ps by Le Bao Nguyen.');
      writeln('You are running app1 as a calculator.');
+     writeln('To exit any time, use Ctrl+Z (*NIX?) and Ctrl+C (Windows)');
   end;
-
-(* Compare (use for app1's command-line arguments) *)  
-(* procedure cpr(var param1,param2);
-  begin 
-    if ParamStr(1) = '' then begin warm_num(); exit end
-    else if ParamStr()
-  end;  *)
 
 (* Show the help box *)  
 procedure help();
@@ -64,7 +56,6 @@ procedure help();
     readln();
     textred('------- Flags '); TextColor(White); writeln('(not available yet.)');
     writeln('-v/verbose : Explain what are you doing; ');
-    writeln('--more [cmd...] : Do some thing more after done the action.')
   end;
   (* Write colored line. 
      If you want to write multi lines , don't change the TextColor 
@@ -91,9 +82,14 @@ procedure help();
       write(param); 
   end;
 
-  (*function textcolor(color:integer, text:string):integer;
+  (* function textcolor(color:integer, text:string):integer;
   begin
       TextColor(color);
       write(text);
-  end;*)
+  end; 
+    function textcolor(color:string, text:string)
+  begin
+      TextColor(color);
+      write(text);
+  end; *)
 end.    

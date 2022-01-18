@@ -33,6 +33,9 @@ const
     Ask_num1 = 'Give the first number a value: ';
     Ask_num2 = 'The second number here: ';
     Ask_num3 = 'The third number too: ';
+    Ask_cal = 'Try to calculation';
+    Ask_back = 'Return to Main Menu';
+    Ask_exit = 'Exit the program';
 IMPLEMENTATION
 // nothing here
 end. // EOF

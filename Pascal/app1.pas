@@ -13,9 +13,11 @@ label
 var
     choice : 1 .. 4;
     sub_choice_cal : 1 .. 11;
-    yes_no : string ; 
+    yes_no : string;
+    n : integer; 
 
 begin
+  if ParamCount = 0 then begin 
     TextColor(Red);
     writeln(Startup_opening);
     TextColor(White);
@@ -199,7 +201,7 @@ cal:
       TextColor(2);
       writeln('1.Go to Main Menu');
       TextColor(Red);
-      writeln('2.Exit');
+      writeln('2.', Menu_item4);
       TextColor(White);
       Write('Your choice [menu/exit]: '); readln(yes_no);
        if yes_no = 'menu' then goto start;
@@ -217,11 +219,11 @@ i merged sub_menu_cal and sub_menu_cpr and now we have this: *)
      writeln(); // add one more line
      writeln('Are you want to try a new calculation, compare new numbers,');
      writeln('return to the menu or exit the program?');
-     writeln('1.Try new calculation');
-     writeln('2.Compare');
-     writeln('3.Return to Main Menu');
+     writeln('1.', Ask_cal);
+     writeln('2.', Menu_item1);
+     writeln('3.', Ask_back);
      TextColor(Red);
-     WriteLn('4.Exit the program');
+     WriteLn('4.', Ask_exit);
      TextColor(White);
      write('Enter your choice here [new/cpr/back/exit]: '); readln(yes_no);
        if yes_no = 'new' then goto cal
@@ -246,4 +248,48 @@ exit_program:
       writeln('Switching to menu...');
       delay(1000);
       goto start;
+  end
+  else for n := 1 to ParamCount do
+        if ParamStr(n) = 'cpr' then begin
+            if ParamStr(n+1) = '' then 
+                warm_num()
+            else if ParamStr(n+2) = '' then
+                warm_num()
+            else 
+                writeln('app1 Argument Runner');
+                writeln('You are about to Compare ', ParamStr(n+1), ' ', ParamStr(n+2));
+                compare(StrToInt(ParamStr(n+1)), StrToInt(ParamStr(n+2)));
+        end;
+        if ParamStr(n) = 'about' then goto about;
+        if ParamStr(n) = 'help' then help();
+        if ParamStr(n) = 'cal' then begin
+          if ParamStr(n+1) = 'add' then begin
+            if ParamStr(n+2) = '' then 
+                  warm_num()
+            else if ParamStr(n+3) = '' then
+                  warm_num()
+            else Add(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+            end;
+          if ParamStr(n+1) = 'sub' then begin
+            if ParamStr(n+2) = '' then 
+                  warm_num()
+            else if ParamStr(n+3) = '' then
+                  warm_num()
+            else Minus(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+          end;
+          if ParamStr(n+1) = 'multiple' then begin
+            if ParamStr(n+2) = '' then 
+                  warm_num()
+            else if ParamStr(n+3) = '' then
+                  warm_num()
+            else Multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+          end;
+      (* if ParamStr(n+1) = 'div' then begin
+            if ParamStr(n+2) = '' then 
+                  warm_num()
+            else if ParamStr(n+3) = '' then
+                  warm_num()
+            else writeln(StrToInt(ParamStr(n+2)) / StrToInt(ParamStr(n+3)));
+          end; *)
+        end;
   end.

@@ -307,7 +307,10 @@ namespace app1
                 while (!Console.KeyAvailable) {
                     keyinfo = Console.ReadKey(true);
                     switch (keyinfo.Key) {
-                        case ConsoleKey.Y: System.Environment.Exit(0);
+                        case ConsoleKey.Y: 
+                            Console.WriteLine("Thank you for using this application! Exiting...");
+                            System.Environment.Exit(0);
+                            break;
                         case ConsoleKey.N: goto home;
                     }
                 }

@@ -58,6 +58,14 @@ $ sudo add-apt-repository ppa:lebao3105/app1
 $ sudo apt update
 $ sudo apt install app1
 ``` 
+
+You can make your own .deb package directly with this command:
+```
+$ cd .. # if you are in the project folder
+$ dpkg-deb --build app1cli
+$ sudo dpkg -i app1cli*.deb
+```
+
 The Pascal edition will be used to install to your computer.
 * If your computer says "add-apt-repository" not found (most time happends in Elementary), install ```software-properties-common``` first. <br>
 * To install app1 mannually, just compile the package, then copy it to any usable folder in $PATH (/usr/bin or /bin for system-wide).

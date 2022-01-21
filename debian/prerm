@@ -1,4 +1,0 @@
-#!/bin/sh
-set -e
-echo Removing app1...
-echo Thank you for using my application!

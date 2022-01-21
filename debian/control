@@ -1,7 +1,7 @@
 Package: app1cli
 Version: 1.0.28
 Architecture: All
-Maintainer: lebao3105
+Maintainer: Le Bao Nguyen <bao12345yocoo@gmail.com>
 Essential: no
 Section: Utilities
 Priority: optional

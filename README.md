@@ -54,7 +54,7 @@ Wait and ejnoy!
 ## Install
 Now app1 is available on ppa as a Debian package (.deb). To get it, issue these commands:
 ```
-$ sudo add-apt-repository ppa:lebao3105/app1
+$ sudo add-apt-repository ppa:nlb3105/app1
 $ sudo apt update
 $ sudo apt install app1
 ``` 

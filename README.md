@@ -52,6 +52,7 @@ dotnet run
 Wait and ejnoy!
 
 ## Install
+**Currently install app1 from LaunchPad isn't available yet.**
 Now app1 is available on ppa as a Debian package (.deb). To get it, issue these commands:
 ```
 $ sudo add-apt-repository ppa:nlb3105/app1

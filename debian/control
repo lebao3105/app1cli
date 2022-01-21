@@ -4,5 +4,6 @@ Architecture: All
 Maintainer: lebao3105
 Section: Utilities
 Priority: optional
+Installed-size: 148
 Homepage: https://github.com/lebao3105/app1cli
 Description: Do many calculations and compare with app1.

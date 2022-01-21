@@ -1,6 +1,8 @@
 ## Table of contents
 * [General info](#general-info)
 * [Setup](#setup)
+* [C# version](#try-the-C#-version)
+* [Install](#install)
 * [What's new](#whats-new)
 * [Images](#some-images)
 
@@ -40,7 +42,7 @@ However, Windows does not have chmod or chown anymore:)  <br>
 You can use Free Pascal IDE to open the .pas file and compile it (of cource). <br>
 Congratulations, now you have compiled app1!
 
-## What to use C# version? Try now!
+## Try the C# version
 C# makes app1 small with ~300 lines of code and runnable from Windows, macOS and Linux.<br>
 First, install .NET SDK with this [address](https://dotnet.microsoft.com/download)<br>
 Then, clone the repository and "open" it in Terminal (Command Prompt). Next type:
@@ -48,6 +50,18 @@ Then, clone the repository and "open" it in Terminal (Command Prompt). Next type
 dotnet run
 ```
 Wait and ejnoy!
+
+## Install
+Now app1 is available on ppa as a Debian package (.deb). To get it, issue these commands:
+```
+$ sudo add-apt-repository ppa:lebao3105/app1
+$ sudo apt update
+$ sudo apt install app1
+``` 
+The Pascal edition will be used to install to your computer.
+* If your computer says "add-apt-repository" not found (most time happends in Elementary), install ```software-properties-common``` first. <br>
+* To install app1 mannually, just compile the package, then copy it to any usable folder in $PATH (/usr/bin or /bin for system-wide).
+* If you are in Windows, get the installer from [Releases.](https://github.com/lebao3105/app1cli/releases)
 
 ## What's new:
 *See in the latest release [here](https://github.com/lebao3105/app1cli/releases/)*

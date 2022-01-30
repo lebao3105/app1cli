@@ -2,8 +2,8 @@
 * [General info](#general-info)
 * [Recent changes](#recent-changes)
 * [Compile](#compile)
-* [What's new](#whats-new)
 * [Warnings](#warnings)
+* [What's new](#whats-new)
 * [Contribute](#contribute)
 
 ## General info
@@ -85,10 +85,10 @@ Just ignore it.<br>
     - Make sure that FPC is installed correctly, if needed, download and build FPC from source code.
     - Make sure that the unit is not corrupted. If the missing unit is maths, try to clone the source code again.
     - If the missing unit is maths, you should compile this unit before compile the application.
-  - ; expected but else found:
+  - ; expected but else found: <br>
     see the example:
       ![error_example](https://user-images.githubusercontent.com/77564176/142801380-1e273b0c-54ea-4219-90a7-3077d3839f13.png)<br><br>
-      In if..else, before else you must not leave any ; including it is used to separate command lines (in this case you should place these code to begin...end block.).      
+    In if..else, before else you must not leave any ; including it is used to separate command lines (in this case you should place these code to begin...end block.).      
       
 ## What's new:
 *For the latest stable release, find it [here.](https://github.com/lebao3105/app1cli/releases/) There also some app1-1.0.28 builds for you.* <br>

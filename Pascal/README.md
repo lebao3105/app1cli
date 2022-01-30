@@ -21,15 +21,16 @@ This document will talk about changes in this release, and how you can contribut
 First, make sure that you are in Pascal directory - where we at now. Then FPC is installed correctly, and included in PATH if needded.<br>
 Let's compile it now :
 ```
-fpc app1.pas
-# fpc <other files>.pas #if you want to compile a specific file
+fpc <file name>.pas #if you want to compile a specific file
 ```
-The output will like this (not 100%):
+The output should be like this (not 100%):
 ![image](https://user-images.githubusercontent.com/77564176/142795151-55a35239-1232-4794-adde-f0f86c5780b4.png)
+
 Explain the outputs:<br>
   * maths.pas: maths.ppu (our needed unit), maths.o (object file), maths.bak ("backup" file)<br>
   * app1.pas: app1.exe (the final output that can run). Others like .o and .bak are do the same as in maths.pas.<br>
-  * New in 1.0.28 : app1_utils.ppu: A unit like maths, but it do many things like write colored line(s) or give us the usage of app1.<br>
+  * New in 1.0.28 : app1_utils.ppu: A unit like maths, but do other things like write colored line(s) or give us the usage of app1.<br>
+  
 Here is the compile output in Windows Terminal:  
 ```
 C:\Users\Le Bao Roofs\Documents\source\repos\Pascal\app1>fpc maths.pas
@@ -86,19 +87,18 @@ Just ignore it.<br>
     - Make sure that the unit is not corrupted. If the missing unit is maths, try to clone the source code again.
     - If the missing unit is maths, you should compile this unit before compile the application.
   - ; expected but else found: <br>
-    see the example:
-      ![error_example](https://user-images.githubusercontent.com/77564176/142801380-1e273b0c-54ea-4219-90a7-3077d3839f13.png)<br><br>
-    In if..else, before else you must not leave any ; including it is used to separate command lines (in this case you should place these code to begin...end block.).      
+    - see the [example.](https://user-images.githubusercontent.com/77564176/142801380-1e273b0c-54ea-4219-90a7-3077d3839f13.png)
+    - In if..else, before else you must not leave any ; including it is used to separate command lines (in this case you should place these code to begin...end block.).      
       
 ## What's new:
 *For the latest stable release, find it [here.](https://github.com/lebao3105/app1cli/releases/) There also some app1-1.0.28 builds for you.* <br>
 
 ***In version 1.0.28:***
-[] Apply array for yes_no (now cancelled)
-[] Create a library for C# version do the same things as the Pascal one (this will improve my C# skill!)
-[x] Apply color and 1.0.27's enhancements to C# version (almost done!)
-[x] Access app1 easily with [command-line arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal, do some basic things...) (almost done)<br>
-[x] Add Multi-language support (and a guide to do that too) (almost done with English and Vietnamese)
+- [ ] Apply array for yes_no (now cancelled) 
+- [ ] Create a library for C# version do the same things as the Pascal one (this will improve my C# skill!)
+- [x] Apply color and 1.0.27's enhancements to C# version (almost done!)
+- [x] Access app1 easily with [command-line arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal, do some basic things...) (almost done)<br>
+- [x] Add Multi-language support (and a guide to do that too) (almost done with English and Vietnamese)
 
 ## Contribute
 If you want to contribute to this application, here's what you can do:

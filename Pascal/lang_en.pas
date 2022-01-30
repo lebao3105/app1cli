@@ -5,7 +5,8 @@
 unit lang_en;
 Interface
 const // don't use resourcestring!
-	(* Some lines in startup *)
+	(* Some lines in startup. 
+        Application name and version also used in 3.Infomation. *)
 	Startup_opening = 'Starting...';
 	Startup_appname = 'app1 from Le Bao Nguyen.';
 	Startup_appver = 'Version ';
@@ -36,10 +37,15 @@ const // don't use resourcestring!
     Ask_cal = 'Try to calculation';
     Ask_back = 'Return to Main Menu';
     Ask_exit = 'Exit the program';
-    (* Argv *)
+    (* Argv - Parsing argument 
+        These strings are used in app1_utils in non-text* functions;
+        I use sLineBreak to break the current line and write next in the next one. 
+        You can also use #13#10 in Windows. sLineBreak is platform-independent. *)
     Argv_Fatal = 'Fatal Error:';
-    Argv_Cal_Missing = 'Missing argument(s) for this action.'#13#10'Exiting.';
-
+    Argv_Missing = 'Missing argument(s) for this action.'+ sLineBreak +'Exiting.';
+    Argv_Cal = 'app1 is ready to run in Calculator mode.'+ sLineBreak +'To exit this application everytime, use Ctrl+Z (UNIX?) and Ctrl+C (Windows).';
+    (* Help - also used for parsing the arg *)
+    
 IMPLEMENTATION
 // nothing here
 end. // EOF

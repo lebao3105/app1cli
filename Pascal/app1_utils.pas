@@ -23,40 +23,17 @@ procedure warm_argv();
   end;
 procedure warm_cal();
   begin
-     writeln('You are running app1 as a calculator.');
-     writeln('To exit any time, use Ctrl+Z (*NIX?) and Ctrl+C (Windows)');
+     writeln(Argv_Cal);
   end;
 
 (* Show the help box *)  
 procedure help();
   begin
-    writeln('app1cli version 1.0.2x+ps by Le Bao Nguyen.');
-    write('Syntax: app1 '); textredln('[cmd] [options/numbers] [more options if have/needed]');
-    textgreen('cpr '); TextColor(White); writeln('[only 2 numbers]: compare numbers');
-    textgreen('cal : '); TextColor(White); writeln('do some calculations');
-    writeln('  | [add/sub/multi/div] [number1] [number2] : do basic maths (add,subtract,multiple,divide) with 2 numbers.');
-    writeln('  | adv ["formula" numbers from 1 to 9] [2 or 3 numbers]: do advanced maths');
-    writeln('    \  formula(s):');        
-    write('       | 1.x(a+b)');               writeln('             3 numbers required');
-    writeln('       | 2.x(a-b)');
-    write('       | 3.x^2 - a^2');            writeln('          2 numbers required');
-    writeln('       | 4.(a+b)^2'); 
-    writeln('       | 5.(a-b)^2');
-    writeln('       | 6.a^3 + b^3');
-    writeln('       | 7.(a+b)^3');
-    writeln('       | 8.(a-b)^3');
-    writeln('       | 9.a^3 - b^3');
-    writeln();
-    writeln('------ END OF BOTH ADV and CAL ------');
-    textgreen('about : '); TextColor(white); writeln('Show infomations about this application');
-    textgreen('help : '); TextColor(White); writeln('Show this box and exit');
-    write('Press '); textgreen('Enter'); TextColor(White); writeln(' to continue');
-    readln();
-    textred('------- Flags '); TextColor(White); writeln('(not available yet.)');
-    writeln('-v/verbose : Explain what are you doing; ');
+     writeln('app1 ', Startup_appver, '1.0.28+ps');
+     writeln();
   end;
   (* Write colored line. 
-     If you want to write multi lines , don't change the TextColor 
+     If you want to write multi lines with one color, don't change the TextColor 
      to other color after run this function. *)
   procedure textredln(param:string);
   begin
@@ -80,6 +57,7 @@ procedure help();
       write(param); 
   end;
 
+// function to use any color you want, at this time I don't need it yet.
   (* function textcolor(color:integer; text:string):integer;
   begin
       TextColor(color);

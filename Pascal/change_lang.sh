@@ -4,7 +4,7 @@
 echo ----------------------------------------------------
 echo ----------------------------------------------------
 echo Change language for app1cli - Pascal
-echo Only use this file in *NIX. For Windows or ReactOS, 
+echo Only use this file in *NIX. For Windows or ReactOS,
 echo you can look for change_lang.cmd.
 echo ----------------------------------------------------
 echo ----------------------------------------------------
@@ -25,6 +25,7 @@ else
     nano maths.pas
     confirm_exit
 fi
+
 function check_vim() {
     if ! command -v vi &> /dev/null
     then
@@ -62,6 +63,3 @@ function confirm_exit() {
         exit 1
     fi
 }
-
-
-        

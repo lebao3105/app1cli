@@ -1,10 +1,10 @@
 (* English translation resource file for app1 
-   You may need to run the config_lang to set 
+   You may want to run the change_lang script to set 
    the language before compile and run app1.
    The default language is English. *)
 unit lang_en;
 Interface
-const
+const // don't use resourcestring!
 	(* Some lines in startup *)
 	Startup_opening = 'Starting...';
 	Startup_appname = 'app1 from Le Bao Nguyen.';
@@ -36,6 +36,10 @@ const
     Ask_cal = 'Try to calculation';
     Ask_back = 'Return to Main Menu';
     Ask_exit = 'Exit the program';
+    (* Argv *)
+    Argv_Fatal = 'Fatal Error:';
+    Argv_Cal_Missing = 'Missing argument(s) for this action.'#13#10'Exiting.';
+
 IMPLEMENTATION
 // nothing here
 end. // EOF

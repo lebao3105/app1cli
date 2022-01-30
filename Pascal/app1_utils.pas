@@ -2,29 +2,27 @@
    you can get and customize it for your application. *)
 unit app1_utils;
 Interface
-  procedure warm_num();
+  procedure warm_argv();
   procedure warm_cal();
   procedure help();
   procedure textredln(param:string);  
   procedure textgreenln(param:string);
   procedure textgreen(param:string);
   procedure textred(param:string);
-  //function textcolor(color:integer, text:string):integer;
+  //function textcolor(color:integer; text:string):integer;
 IMPLEMENTATION
-  uses crt;
+  uses 
+      crt, lang_en;
 
 (* Warm the user if they don't have enough numbers to do action*)
-procedure warm_num();
+procedure warm_argv();
   begin
-	   writeln('app1cli version 1.0.2x+ps by Le Bao Nguyen.');
-	   textredln('Fatal: '); 
-	   TextColor(White); writeln('We need one more number to do this action.');
-	   writeln('Action aborted.');
+	   textredln(Argv_Fatal); 
+	   TextColor(White); writeln(Argv_Missing);
      exit;
   end;
 procedure warm_cal();
   begin
-     writeln('app1cli version 1.0.2x+ps by Le Bao Nguyen.');
      writeln('You are running app1 as a calculator.');
      writeln('To exit any time, use Ctrl+Z (*NIX?) and Ctrl+C (Windows)');
   end;
@@ -82,7 +80,7 @@ procedure help();
       write(param); 
   end;
 
-  (* function textcolor(color:integer, text:string):integer;
+  (* function textcolor(color:integer; text:string):integer;
   begin
       TextColor(color);
       write(text);

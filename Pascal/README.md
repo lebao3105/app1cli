@@ -29,8 +29,8 @@ The output will like this (not 100%):
 Explain the outputs:<br>
   * maths.pas: maths.ppu (our needed unit), maths.o (object file), maths.bak ("backup" file)<br>
   * app1.pas: app1.exe (the final output that can run). Others like .o and .bak are do the same as in maths.pas.<br>
-  * New in 1.0.28 : app1_utils.ppu: A unit like maths, but it do many things like write colored line(s) or give us the usage of app1. 
-Compile output in Terminal:  
+  * New in 1.0.28 : app1_utils.ppu: A unit like maths, but it do many things like write colored line(s) or give us the usage of app1.<br>
+Here is the compile output in Windows Terminal:  
 ```
 C:\Users\Le Bao Roofs\Documents\source\repos\Pascal\app1>fpc maths.pas
 Free Pascal Compiler version 3.2.2 [2021/05/15] for i386
@@ -62,16 +62,16 @@ Linking app1.exe
 ```
 
 ## Warnings 
-* As you can see, while building maths.pas, FPC says that:
+* As you can see, while compiling maths.pas, FPC says that:
 ```
 maths.pas(line,location) Warning: Function result does not seem to be set
 ```
-I think FPC may warm us that we need a "return value" like C++:
+I think FPC may warm us that we should use a "return value" like C++:
 ```
 # C++ example code:
-function hello() {
+void hello() {
 	cout << "Hello world!";
-	return 1; <- this is what you think
+	return 1; <- this is what I think
 }
 ```
 Just ignore it.<br>
@@ -84,24 +84,25 @@ Just ignore it.<br>
   - Unit ... not found: 
     - Make sure that FPC is installed correctly, if needed, download and build FPC from source code.
     - Make sure that the unit is not corrupted. If the missing unit is maths, try to clone the source code again.
-    - If the missing unit is maths, make sure you have compiled it before and get the .ppu file.
+    - If the missing unit is maths, you should compile this unit before compile the application.
   - ; expected but else found:
-    - see the example:
-      ![bug_example](https://user-images.githubusercontent.com/77564176/142801380-1e273b0c-54ea-4219-90a7-3077d3839f13.png)<br><br>
+    see the example:
+      ![error_example](https://user-images.githubusercontent.com/77564176/142801380-1e273b0c-54ea-4219-90a7-3077d3839f13.png)<br><br>
       In if..else, before else you must not leave any ; including it is used to separate command lines (in this case you should place these code to begin...end block.).      
       
 ## What's new:
-*For the latest stable release, find it [here](https://github.com/lebao3105/app1cli/releases/)* <br>
+*For the latest stable release, find it [here.](https://github.com/lebao3105/app1cli/releases/) There also some app1-1.0.28 builds for you.* <br>
 
 ***In version 1.0.28:***
-- Apply array for yes_no (now cancelled)
-- Create "unit" for C# version do the same things as the Pascal one (one of the hardest things i need to do)
-- Apply color and 1.0.27's enhancements to C# version
-- Access app1 easily with [command-line arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal, use to run some calculations...)<br>
-- If you want to add to this program a language, you're welcome. I will add this support to app1 by a script before compile. There's no way to change the language directly while running app1.
+[] Apply array for yes_no (now cancelled)
+[] Create a library for C# version do the same things as the Pascal one (this will improve my C# skill!)
+[x] Apply color and 1.0.27's enhancements to C# version (almost done!)
+[x] Access app1 easily with [command-line arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal, do some basic things...) (almost done)<br>
+[x] Add Multi-language support (and a guide to do that too) (almost done with English and Vietnamese)
 
 ## Contribute
 If you want to contribute to this application, here's what you can do:
 * Fork the repo and clone the forked one, then code and make a Pull request 
 * Clone the repo, try to debug and report any bugs you found;
-* Or make new language for app1 (require fork and make pull request)
+* Or make new language for app1 (require fork and make pull request)<br>
+You may need to create a GitHub account.

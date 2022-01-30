@@ -8,3 +8,6 @@ Pascal/maths.ppu
 Pascal/lang_en.ppu
 Pascal/lang_vi.ppu
 ./app1cli*.deb
+Pascal/test.pas
+Pascal/test
+Pascal/test.o

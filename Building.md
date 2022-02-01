@@ -4,6 +4,7 @@
 * [Compile](#compile)
 * [Warnings](#warnings)
 * [What's new](#whats-new)
+* [Know issues](#know-issues)
 * [Contribute](#contribute)
 
 ## General info
@@ -11,15 +12,35 @@ OK, so welcome to the development release(s) of app1.<br>
 This document will talk about changes in this release, and how you can contribute app1.
 	
 ## Recent changes:
-* Make the application easier to read (I mean read the code:)) with if and case statement. See in the calculator mode.
+* Make the application easier to read (I mean read the code:)) with if and case statement. See in the calculator mode;
 * Ready to "push" the arguments function to app1, but only launch the modes;
-* Added new units to set the color
+* Added new units to set the color;
 * And the most interesting thing is added new Language and a script to change the language before compile!
 * (and planted some new featues in 1.0.29 too)
+* Also apply new features to the C# edition
 
 ## Compile
-First, make sure that you are in Pascal directory - where we at now. Then FPC is installed correctly, and included in PATH if needded.<br>
-Let's compile it now :
+
+### Requirements:
+* Free Pascal Compiler (or IDE if needed) for Pascal edition;
+* .NET (dotnet) SDK 6.0 for C# edition;
+* git to clone this repository.
+
+### Building:
+First clone the repository:
+```
+git clone https://github.com/lebao3105/app1cli 
+```
+You can use ```-b``` flag to clone other branch, for example, this will clone 1.0.27 branch:
+```
+git clone https://github.com/lebao3105/app1cli -b 1.0.27
+```
+Go to the cloned repo by:
+```
+cd app1cli
+```
+Now you can go to Pascal folder for Pascal edition, or C# for C# edition. Let's compile it now:
+* With FPC (Free Pascal Compiler):
 ```
 fpc <file name>.pas #if you want to compile a specific file
 ```
@@ -30,7 +51,13 @@ Explain the outputs:<br>
   * maths.pas: maths.ppu (our needed unit), maths.o (object file), maths.bak ("backup" file)<br>
   * app1.pas: app1.exe (the final output that can run). Others like .o and .bak are do the same as in maths.pas.<br>
   * New in 1.0.28 : app1_utils.ppu: A unit like maths, but do other things like write colored line(s) or give us the usage of app1.<br>
-  
+
+* With dotnet:
+```
+dotnet run // build and run the application
+dotnet clean // clean the project
+dotnet build // build the project
+```  
 Here is the compile output in Windows Terminal:  
 ```
 C:\Users\Le Bao Roofs\Documents\source\repos\Pascal\app1>fpc maths.pas
@@ -95,10 +122,14 @@ Just ignore it.<br>
 
 ***In version 1.0.28:***
 - [ ] Apply array for yes_no (now cancelled) 
-- [ ] Create a library for C# version do the same things as the Pascal one (this will improve my C# skill!)
+- [x] Create a library for C# version do the same things as the Pascal one (this will improve my C# skill!) (almost done)
 - [x] Apply color and 1.0.27's enhancements to C# version (almost done!)
 - [x] Access app1 easily with [command-line arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal, do some basic things...) (almost done)<br>
 - [x] Add Multi-language support (and a guide to do that too) (almost done with English and Vietnamese)
+
+## Know issues
+* ask_2nums function not found (C# edition)
+* Some parts of the parsing arguments function is not working (see the commented codes - Pascal edition)
 
 ## Contribute
 If you want to contribute to this application, here's what you can do:

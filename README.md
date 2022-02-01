@@ -26,9 +26,7 @@ $ sudo pacman -Syu fpc # for pacman-based distros
 ```
 Next, "cd" to project folder (make sure you're cloned it first) and type the following command to compile app1:
 ```
-# Compile maths.pas first (do not type or copy $)
-$ fpc maths.pas
-# THen app1.pas
+# don't type or copy $!
 $ fpc app1.pas
 ```
 Ignore all warnings and errors unaffected to the compile progress. <br>
@@ -49,26 +47,17 @@ Then, clone the repository and "open" it in Terminal (Command Prompt). Next type
 ```
 dotnet run
 ```
+To build the project:
 Wait and ejnoy!
 
 ## Install
-**Currently install app1 from LaunchPad isn't available yet.**
-Now app1 is available on ppa as a Debian package (.deb). To get it, issue these commands:
-```
-$ sudo add-apt-repository ppa:nlb3105/app1
-$ sudo apt update
-$ sudo apt install app1
-``` 
-
 You can make your own .deb package directly with this command:
 ```
 $ cd .. # if you are in the project folder
 $ dpkg-deb --build app1cli
 $ sudo dpkg -i app1cli*.deb
 ```
-
 The Pascal edition will be used to install to your computer.
-* If your computer says "add-apt-repository" not found (most time happends in Elementary), install ```software-properties-common``` first. <br>
 * To install app1 mannually, just compile the package, then copy it to any usable folder in $PATH (/usr/bin or /bin for system-wide).
 * If you are in Windows, get the installer from [Releases.](https://github.com/lebao3105/app1cli/releases)
 

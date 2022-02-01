@@ -1,7 +1,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Setup](#setup)
-* [C# version](#try-the-C#-version)
+* [C# edition](#try-the-C#-version)
 * [Install](#install)
 * [What's new](#whats-new)
 * [Images](#some-images)
@@ -10,12 +10,12 @@
 app1 (also called app1cli) is a (very) simple project written in C# and Pascal. It can:
 * Be a calculator
 * Compare 2 numbers
+* Be a portable application
 * And run it from Terminal:)
 	
 ## Setup
 If you are in Windows/OSes that doesn't have a package manager, install [Free Pascal IDE](https://www.freepascal.org/download.html). <br>
 In BSD and Linux, try one of these commands:
-
 ```
 $ sudo apt update && sudo apt install fpc # for apt-based distros
 $ sudo dnf update && sudo dnf install fpc # for dnf-based distros
@@ -48,6 +48,13 @@ Then, clone the repository and "open" it in Terminal (Command Prompt). Next type
 dotnet run
 ```
 To build the project:
+```
+dotnet build
+```
+Or clean:
+```
+dotnet clean
+```
 Wait and ejnoy!
 
 ## Install
@@ -70,4 +77,5 @@ The Pascal edition will be used to install to your computer.
 ![image](https://user-images.githubusercontent.com/77564176/139212160-2cfd1b74-0f59-444d-af8f-517d3e5475df.png)
 ![image](https://user-images.githubusercontent.com/77564176/139212433-a15929d2-7e75-45b8-b764-f702242a56bc.png)
 ![image](https://user-images.githubusercontent.com/77564176/139212736-f8670679-9d78-4b28-be0b-cbc20dbb9c77.png)
+![image](https://user-images.githubusercontent.com/77564176/151974343-bc86e661-9627-4852-92e3-62f2cd104e07.png)
 

@@ -34,3 +34,7 @@ C#/utilsLib/obj/Debug/net6.0/utilsLib.csproj.CoreCompileInputs.cache
 C#/utilsLib/obj/Debug/net6.0/utilsLib.dll
 C#/utilsLib/obj/Debug/net6.0/ref/utilsLib.dll
 C#/utilsLib/obj/Debug/net6.0/utilsLib.pdb
+./app1cli*.deb
+Pascal/test.pas
+Pascal/test
+Pascal/test.o

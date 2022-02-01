@@ -1,10 +1,11 @@
 (* This unit used to do many calculations which are featured in app1cli. 
-    This unit is a part of the application, so you have to use this file
-    but follow the GNU GPL V3 License. *)
+    This unit is a part of the application, so you can use this file
+    and follow the GNU GPL V3 License. *)
 Unit maths;
 
 Interface
-var number1, number2, number3, answer: integer;
+var 
+    number1, number2, number3, answer: integer;
     real1, real2, real_answer: real;
 
 Function add(number1, number2: Integer): integer;
@@ -21,8 +22,11 @@ Function a3_sub_b3(number1, number2:integer):integer;
 Function a3_add_b3(number1, number2: integer):integer;
 Function total2_3exp(number1,number2:integer):integer;
 Function minus2_3exp(number1,number2:integer):integer;
+
 IMPLEMENTATION
-uses crt, sysutils, lang_en;
+uses 
+    crt, sysutils, lang_en;
+    
     Function add(number1, number2: Integer): integer;
     Begin
         answer := number1 + number2;

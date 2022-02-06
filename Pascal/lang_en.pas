@@ -1,12 +1,11 @@
 (* English translation resource file for app1 
-   You may want to run the change_lang script to set 
+   You may want to run change_lang script to set 
    the language before compile and run app1.
    The default language is English. *)
 unit lang_en;
 Interface
-const // don't use resourcestring!
-	(* Some lines in startup. 
-        Application name and version also used in 3.Infomation. *)
+const // you should use const instead of var
+	(* Some lines in startup *)
 	Startup_opening = 'Starting...';
 	Startup_appname = 'app1 from Le Bao Nguyen.';
 	Startup_appver = 'Version ';
@@ -37,15 +36,23 @@ const // don't use resourcestring!
     Ask_cal = 'Try to calculation';
     Ask_back = 'Return to Main Menu';
     Ask_exit = 'Exit the program';
-    (* Argv - Parsing argument 
-        These strings are used in app1_utils in non-text* functions;
-        I use sLineBreak to break the current line and write next in the next one. 
-        You can also use #13#10 in Windows. sLineBreak is platform-independent. *)
-    Argv_Fatal = 'Fatal Error:';
-    Argv_Missing = 'Missing argument(s) for this action.'+ sLineBreak +'Exiting.';
-    Argv_Cal = 'app1 is ready to run in Calculator mode.'+ sLineBreak +'To exit this application everytime, use Ctrl+Z (UNIX?) and Ctrl+C (Windows).';
-    (* Help - also used for parsing the arg *)
-    
+    Ask_home = 'Go to Main Menu';
+    Ask_choice = 'Enter your choice here ';
+    Ask_other = 'Are you want to go to Main Menu to do other actions, or exit?';
+    (* Exit *)
+    Exit_ask = 'Are you sure want to exit the program?'; // we have Ask_exit before, now we have Exit_ask:) 
+    Exit_ask_2 = 'You will be redirected back to the main menu if you choose no'; // new 
+    Exit_bye = 'Thank you for using my application. Have a good day!'; // new too
+    Exit_out = 'Exitting...';
+    (* Misc *)
+    Argv_cpr = 'You are about to compare ';
+    Argv_fatal = 'Fatal:';
+    Argv_warm_num = 'We need one more number to do this action.';
+    Argv_abort = 'Action aborted.';
+    Clr = 'Clearing the screen...'; 
+    Press_Enter = 'Press Enter to continue...';
+    Enter_Exit = 'All done. Press Enter to exit...';
+    Switch = 'Switching to main menu...';
 IMPLEMENTATION
 // nothing here
 end. // EOF

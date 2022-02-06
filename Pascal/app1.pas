@@ -25,7 +25,7 @@ begin
     writeln(Startup_appname);
     delay(500);
     TextColor(2);
-    writeln(Startup_appver, '1.0.28+ps');
+    writeln(Startup_appver, '1.0.28 Beta');
     TextColor(White);
     delay(1000);
     clrscr;
@@ -35,12 +35,7 @@ begin
    begin
     writeln (Timedate,DateTimeToStr(Now));
     //Show the current program's path
-    writeln({$ifDef Darwin} // If the current os is macOS (Darwin)
-            Applocation,
-            {$else}
-            Applocation, // Other oses
-            {$endif}
-            paramStr(0));
+    writeln(Applocation, paramStr(0));
     writeln(Menu_welcome);
     TextColor(2);
     writeln('1.', Menu_item1);
@@ -49,81 +44,86 @@ begin
     TextColor(Red);
     writeln('4.', Menu_item4);
     TextColor(White);
-    write(Menu_ask); TextColor(2); readln(choice);
+    write(Menu_ask);  
+    readln(choice); // why this is not working???
     TextColor(White);
   end;
  //compare
 if choice = 1 then
   cpr:
     begin
-    ask_2numbers();
-    compare(number1,number2);
-    goto sub_menu;
-   end; // end of "cpr"
+      ask_2numbers();
+      compare(number1,number2);
+      goto sub_menu;
+    end; // end of "cpr"
 
   //calculator
 if choice = 2 then begin  
-cal:
-   begin
-     writeln(Select, 'Or you can get more with ', Cal_Adv);
-     TextColor(2);
-     writeln('1. +');
-     writeln('2. -');
-     writeln('3. *');
-     writeln('4. /');
-     TextColor(Red);
-     writeln('5. ', Cancel);
-     TextColor(White);
-     writeln('6. ', Cal_Adv);
-     write(Menu_ask); TextColor(2); readln(sub_choice_cal);
-     TextColor(White);
-   end;
-   if (sub_choice_cal >=1) and (sub_choice_cal <=3) then begin
-    ask_2numbers();
-    case (sub_choice_cal) of
-      1: Add(number1, number2);
-      2: Minus(number1, number2); 
-      3: Multiple(number1, number2);
+  cal:
+    begin
+      writeln(Select, 'Or you can get more with ', Cal_Adv);
+      TextColor(2);
+      writeln('1. +');
+      writeln('2. -');
+      writeln('3. *');
+      writeln('4. /');
+      TextColor(Red);
+      writeln('5. ', Cancel);
+      TextColor(White);
+      writeln('6. ', Cal_Adv);
+      write(Menu_ask); 
+      TextColor(2); 
+      readln(sub_choice_cal);
+      TextColor(White);
     end;
-      goto sub_menu;
-    end;
+    if (sub_choice_cal >=1) and (sub_choice_cal <=3) then begin
+      ask_2numbers();
+      case (sub_choice_cal) of
+        1: Add(number1, number2);
+        2: Minus(number1, number2); 
+        3: Multiple(number1, number2);
+      end;
+        goto sub_menu;
+      end;
 
-  if sub_choice_cal = 4 then
-   begin
-     ask_2real();
-     Divide(real1, real2);
-     goto sub_menu;
-   end;
+    if sub_choice_cal = 4 then
+      begin
+        ask_2real();
+        Divide(real1, real2);
+        goto sub_menu;
+      end;
 
-  //Will go to Main Menu if answer = 5:
-  if sub_choice_cal = 5 then
-   begin
-    clrscr;
-    delay(500);
-    goto start;
-   end;
+    //Will go to Main Menu if answer = 5:
+    if sub_choice_cal = 5 then
+      begin
+        clrscr;
+        delay(500);
+        goto start;
+      end;
 
-  //Advanced
-  if sub_choice_cal = 6 then
-   begin
-    writeln(Select);
-    TextColor(2);
-    writeln('1.x(a+b)');
-    writeln('2.x(a-b)');
-    writeln('3.x^2 - a^2');
-    writeln('4.x^2 + a^2'); // add new formula
-    writeln('5.(a+b)^2');
-    writeln('6.(a-b)^2');
-    writeln('7.a^3 + b^3');
-    writeln('8.a^3 - b^3');
-    writeln('9.(a-b)^3');
-    writeln('10.(a+b)^3 ');
-    TextColor(Red);
-    writeln('11.', Cancel);
-    writeln('12.', Cal_Exit);
-    TextColor(White);
-    write(Menu_ask); TextColor(2); readln(sub_choice_cal);
-    TextColor(White);
+    //Advanced
+    if sub_choice_cal = 6 then
+      begin
+        writeln(Select);
+        TextColor(2);
+        writeln('1.x(a+b)');
+        writeln('2.x(a-b)');
+        writeln('3.x^2 - a^2');
+        writeln('4.x^2 + a^2'); // add new formula
+        writeln('5.(a+b)^2');
+        writeln('6.(a-b)^2');
+        writeln('7.a^3 + b^3');
+        writeln('8.a^3 - b^3');
+        writeln('9.(a-b)^3');
+        writeln('10.(a+b)^3 ');
+        TextColor(Red);
+        writeln('11.', Cancel);
+        writeln('12.', Cal_Exit);
+        TextColor(White);
+        write(Menu_ask); 
+        TextColor(2); 
+        readln(sub_choice_cal);
+        TextColor(White);
     if (sub_choice_cal >=1) and (sub_choice_cal <=10) then begin
     // ask the user
       case (sub_choice_cal) of
@@ -134,10 +134,10 @@ cal:
       case (sub_choice_cal) of
         1: one_for_total(number1,number2,number3);
         2: one_for_minus(number1,number2,number3);
-        3: writeln('The answer is ', sqr(number1) - sqr(number2));
-        4: writeln('The answer is ', sqr(number1) + sqr(number2));
-        5: writeln('The answer is ', sqr(number1 + number2));
-        6: writeln('The answer is ', sqr(number1 - number2));
+        3: writeln(Cal_Ans, sqr(number1) - sqr(number2));
+        4: writeln(Cal_Ans, sqr(number1) + sqr(number2));
+        5: writeln(Cal_Ans, sqr(number1 + number2));
+        6: writeln(Cal_Ans, sqr(number1 - number2));
         7: a3_add_b3(number1, number2);
         8: a3_sub_b3(number1, number2);
         9: minus2_3exp(number1, number2);
@@ -171,35 +171,21 @@ cal:
     writeln('   App1 Version 1.0.28.'); 
     writeln('   This application is released under the GNU GPL V3.');
     writeln('   You can edit it, or redistribution it to everyone.');
-   //Show the current program's path
-    writeln({$ifDef Darwin} // If the current os is macOS (or Darwin)
-            Applocation,
-            {$else}
-            Applocation, // Other oses
-            {$endif}
-            paramStr(0));
-    writeln('"Press Enter to continue"');
+    writeln(Applocation, paramStr(0));
+    writeln('What can this application do:');
+    writeln('   Do many calculations and compare;');
+    writeln('   Portable and no installation needed; (you can do it if you want)');
+    writeln('   Run from Terminal (Command Prompt)');
+    writeln(Press_Enter);
     Readln();
-  //News
-   //Curent
-    writeln('Whats new on this version:');
-    write(' Current Dev Version: '); textgreenln('1.0.28:'); TextColor(White);
-    // not available now
-    writeln(' Press Enter to continue...');
-    readln();
-    write('Current stable version: '); textgreenln('1.0.27'); TextColor(White);
-    TextColor(2);
-    WriteLn(' All done. Press Enter to exit...');
-    TextColor(White);
-    readln();
     delay(1350);
-    writeln('Clearing the screen...');
+    writeln(Clr);
     delay(500);
     clrscr;
     // ask now (take from sub_menu)
-      writeln('Are you want to go to Main Menu to do other actions, or exit?');
+      writeln(Ask_other);
       TextColor(2);
-      writeln('1.Go to Main Menu');
+      writeln('1.', Ask_home);
       TextColor(Red);
       writeln('2.', Menu_item4);
       TextColor(White);
@@ -225,7 +211,7 @@ i merged sub_menu_cal and sub_menu_cpr and now we have this: *)
      TextColor(Red);
      WriteLn('4.', Ask_exit);
      TextColor(White);
-     write('Enter your choice here [new/cpr/back/exit]: '); readln(yes_no);
+     write(Ask_choice, ' [new/cpr/back/exit]: '); readln(yes_no);
        if yes_no = 'new' then goto cal
        else if yes_no = 'cpr' then goto cpr
        else if yes_no = 'back' then goto start
@@ -235,61 +221,81 @@ i merged sub_menu_cal and sub_menu_cpr and now we have this: *)
 //exit
 exit_program:
    writeln();
-   writeln('Are you sure want to exit the program?');
-   writeln('If you want choose "no", you will be come back to the main menu.');
-   write('Your choice [yes/no]: '); readln(yes_no);
+   writeln(Exit_ask);
+   writeln(Exit_ask_2);
+   write(Ask_choice ,'[yes/no]: '); readln(yes_no);
     if yes_no = 'yes' then
      begin
-      writeln('Thank you for using my application. Exiting now.');
+      writeln(Exit_bye);
+      writeln(Exit_out);
       delay(1300);
       exit;
      end
     else if yes_no = 'no' then
-      writeln('Switching to menu...');
+      writeln(Switch);
       delay(1000);
       goto start;
   end
-  else for n := 1 to ParamCount do
+  else 
+   (* Parse the arguments! But now its working only with some basic maths *)
+     for n := 1 to ParamCount do begin
+      
+      // compare
         if ParamStr(n) = 'cpr' then begin
             if ParamStr(n+1) = '' then 
                 warm_num()
             else if ParamStr(n+2) = '' then
                 warm_num()
-            else 
-                writeln('app1 Argument Runner');
-                writeln('You are about to Compare ', ParamStr(n+1), ' ', ParamStr(n+2));
+            else begin
+                writeln(Argv_cpr, ParamStr(n+1), ' ', ParamStr(n+2));
                 compare(StrToInt(ParamStr(n+1)), StrToInt(ParamStr(n+2)));
+            end;
         end;
-        if ParamStr(n) = 'about' then goto about;
-        if ParamStr(n) = 'help' then help();
+
+      // calculator
         if ParamStr(n) = 'cal' then begin
           if ParamStr(n+1) = 'add' then begin
-            if ParamStr(n+2) = '' then 
-                  warm_num()
-            else if ParamStr(n+3) = '' then
-                  warm_num()
-            else Add(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
-            end;
-          if ParamStr(n+1) = 'sub' then begin
-            if ParamStr(n+2) = '' then 
-                  warm_num()
-            else if ParamStr(n+3) = '' then
-                  warm_num()
-            else Minus(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
-          end;
-          if ParamStr(n+1) = 'multiple' then begin
-            if ParamStr(n+2) = '' then 
-                  warm_num()
-            else if ParamStr(n+3) = '' then
-                  warm_num()
-            else Multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
-          end;
-      (* if ParamStr(n+1) = 'div' then begin
-            if ParamStr(n+2) = '' then 
-                  warm_num()
-            else if ParamStr(n+3) = '' then
-                  warm_num()
-            else writeln(StrToInt(ParamStr(n+2)) / StrToInt(ParamStr(n+3)));
-          end; *)
+              if ParamStr(n+2) = '' then 
+                    warm_num()
+              else if ParamStr(n+3) = '' then
+                    warm_num()
+              else Add(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
+          end
+          else if ParamStr(n+1) = 'sub' then begin
+              if ParamStr(n+2) = '' then 
+                    warm_num()
+              else if ParamStr(n+3) = '' then
+                    warm_num()
+              else Minus(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
+          end
+          else if ParamStr(n+1) = 'multiple' then begin
+              if ParamStr(n+2) = '' then 
+                    warm_num()
+              else if ParamStr(n+3) = '' then
+                    warm_num()
+              else Multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+          end
+      	  else if ParamStr(n+1) = 'div' then begin
+              if ParamStr(n+2) = '' then 
+                    warm_num()
+              else if ParamStr(n+3) = '' then
+                    warm_num()
+              else begin
+                    real1 := StrToInt(ParamStr(n+2)) + 0.0;
+                    real2 := StrToInt(ParamStr(n+3)) + 0.0;
+                    writeln(Divide(real1, real2));
+              end;
+          end  
+          else if ParamStr(n+1) = '' then 
+          begin
+              warm_cal();
+              goto cal;
+          end
         end;
+      // others
+      if ParamStr(n) = 'about' then 
+              goto about
+      else if ParamStr(n) = 'help' then 
+              help();
+      end; // end of for .. do block
   end.

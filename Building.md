@@ -4,7 +4,6 @@
 * [Compile](#compile)
 * [Warnings](#warnings)
 * [What's new](#whats-new)
-* [Know issues](#know-issues)
 * [Contribute](#contribute)
 
 ## General info
@@ -119,17 +118,15 @@ Just ignore it.<br>
       
 ## What's new:
 *For the latest stable release, find it [here.](https://github.com/lebao3105/app1cli/releases/) There also some app1-1.0.28 builds for you.* <br>
-
-***In version 1.0.28:***
-- [ ] Apply array for yes_no (now cancelled) 
+* In this time (2022/02/05 +0700), I have some fixes here:
+	* Fixed arguments not working with ParamStr(n) = 'cal'	
+	* Update languages
+	* Removed Whats new from About 
+* In version 1.0.28
 - [x] Create a library for C# version do the same things as the Pascal one (this will improve my C# skill!) (almost done)
 - [x] Apply color and 1.0.27's enhancements to C# version (almost done!)
 - [x] Access app1 easily with [command-line arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal, do some basic things...) (almost done)<br>
-- [x] Add Multi-language support (and a guide to do that too) (almost done with English and Vietnamese)
-
-## Know issues
-* ask_2nums function not found (C# edition)
-* Some parts of the parsing arguments function is not working (see the commented codes - Pascal edition)
+- [x] Add Multi-language support (almost done with English and Vietnamese)
 
 ## Contribute
 If you want to contribute to this application, here's what you can do:

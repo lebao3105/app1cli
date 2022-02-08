@@ -5,9 +5,13 @@ namespace utilsLib;
 
 public class utilsLibrary
 {
+    // make 3 target numbers
     public int target1;
     public int target2;
     public int target3;
+    // a boolean variable
+    public boolean check_inf;
+    // functions
     public void ask_2nums(int target1, int target2, string? check) {
         dev.Write("Enter a value for the first target: ");
         target1 = Convert.ToInt32(dev.ReadLine());

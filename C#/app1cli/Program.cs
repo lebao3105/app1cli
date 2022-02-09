@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO; 
 using utilsLib;
 
@@ -9,7 +9,7 @@ namespace app1cli
         static void Main()
         {
             var test = new utilsLibrary();
-            Console.WriteLine("app1 version 1.0.28+cs.net", ConsoleColor.Green);
+            Console.WriteLine("app1 version 1.0.28 Beta", ConsoleColor.Green);
             Console.WriteLine("The current time is: " + DateTime.Now);
             Console.WriteLine("Program's path: {0}");  
             Console.Clear();
@@ -31,7 +31,7 @@ namespace app1cli
             { goto cal; }
             else if (choice == 3)
             {
-                Console.WriteLine("app1 version 1.0.28 by Le Bao Nguyen.");
+                Console.WriteLine("app1 version 1.0.28 Beta by Le Bao Nguyen.");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("Program's path: {0}");
                 Console.WriteLine("-------------------------------------------------");

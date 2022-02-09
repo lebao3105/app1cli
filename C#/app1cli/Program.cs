@@ -119,81 +119,60 @@ namespace app1cli
                         if (answer_2 == 1)
                         {
                             Console.WriteLine("You are typed 1 - x(a+b).");
-                            Console.Write("Set variable for the first number (x): ");
-                            test.ask_3nums(test.target1, test.target2, test.target3);
-                            int result = test.target1 * (test.target3 + test.target2);
-                            Console.WriteLine("The answer is: "+result);
+                            test.ask_3nums(test.target1, test.target2, test.target3, "1");
                             goto ask;    
                         }
                         else if (answer_2 == 2)
                         {
                             Console.WriteLine("You are typed 2 - x(a-b).");
-                            test.ask_3nums(test.target1, test.target2, test.target3);
-                            int result = test.target1 * (test.target2 - test.target3);
-                            Console.WriteLine("The answer is: "+result);
+                            test.ask_3nums(test.target1, test.target2, test.target3, "2");
                             goto ask;    
                         }
                         else if (answer_2 == 3)
                         {
                             Console.WriteLine("You are typed 3 - x^2-a^2).");
-                            test.ask_2nums(test.target1, test.target2);
-                            int result = test.target1 * test.target1 - test.target2 * test.target2;
-                            Console.WriteLine("The answer is: "+result);
+                            test.ask_2nums(test.target1, test.target2, "a");
                             goto ask;    
                         }
                         else if (answer_2 == 4) {
                             Console.WriteLine("You are typed 4 - x^2+a^2).");
-                            test.ask_2nums(test.target1, test.target2);
-                            int result = test.target1 * test.target1 + test.target2 * test.target2;
-                            Console.WriteLine("The answer is: "+result);
+                            test.ask_2nums(test.target1, test.target2, "b");
                             goto ask;
                         }
                         else if (answer_2 == 5)
                         {
                             Console.WriteLine("You are typed 5 - (a+b)^2.");
-                            test.ask_2nums(test.target1, test.target2);
-                            int result = (test.target1 + test.target2) * (test.target1 + test.target2);
-                            Console.WriteLine("The answer is: "+result);
+                            test.ask_2nums(test.target1, test.target2, "c");
                             goto ask;    
                         }
                         else if (answer_2 == 6)
                         {
                             Console.WriteLine("You are typed 6 - (a-b)^2.");
-                            test.ask_2nums(test.target1, test.target2);
-                            int result = (test.target1 - test.target2) * (test.target1 - test.target2);
-                            Console.WriteLine("The answer is: "+result);
+                            test.ask_2nums(test.target1, test.target2, "d");
                             goto ask;    
                         }
                         else if (answer_2 == 7)
                         {
                             Console.WriteLine("You are typed 7 - a^3+b^3.");
-                            test.ask_2nums(test.target1, test.target2);
-                            int result = (test.target1 * test.target1 * test.target1 + test.target2 * test.target2 * test.target2);
-                            Console.WriteLine("The answer is: "+result);
+                            test.ask_2nums(test.target1, test.target2, "e");
                             goto ask;    
                         }
                         else if (answer_2 == 8)
                         {
                             Console.WriteLine("You are typed 8 - a^3-b^3.");
-                            test.ask_2nums(test.target1, test.target2);
-                            int result = test.target1 * test.target1 * test.target1 - test.target2 * test.target2 * test.target2;
-                            Console.WriteLine("The answer is: "+result);
+                            test.ask_2nums(test.target1, test.target2, "f");
                             goto ask;    
                         }
                         else if (answer_2 == 9)
                         {
                             Console.WriteLine("You are typed 9 - (a+b)^3.");
-                            test.ask_2nums(test.target1, test.target2);
-                            int result = (test.target1 + test.target2) * (test.target1 + test.target2) * (test.target1 + test.target2);
-                            Console.WriteLine("The answer is: "+result);
+                            test.ask_2nums(test.target1, test.target2, "g");
                             goto ask;    
                         }
                         else if (answer_2 == 10)
                         {
                             Console.WriteLine("You are typed 10 - (a-b)^3.");
-                            test.ask_2nums(test.target1, test.target2);
-                            int result = (test.target1 - test.target2) * (test.target1 - test.target2) * (test.target1 - test.target2);
-                            Console.WriteLine("The answer is: "+result);
+                            test.ask_2nums(test.target1, test.target2, "h");
                             goto ask;    
                         }
                         else if (answer_2 == 11)

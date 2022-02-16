@@ -37,7 +37,7 @@ const // you should use const instead of var
     Ask_back = 'Return to Main Menu';
     Ask_exit = 'Exit the program';
     Ask_home = 'Go to Main Menu';
-    Ask_choice = 'Enter your choice here ';
+    Ask_choice = 'Enter your choice here: ';
     Ask_other = 'Are you want to go to Main Menu to do other actions, or exit?';
     (* Exit *)
     Exit_ask = 'Are you sure want to exit the program?'; // we have Ask_exit before, now we have Exit_ask:) 

@@ -36,5 +36,22 @@ Interface
     Ask_cal = 'Thu thuc hien phep toan';
     Ask_back = 'Quay ve Menu chinh';
     Ask_exit = 'Thoat chuong trinh';
+    Ask_home = 'Ve man hinh chinh';
+    Ask_choice = 'Go lua chon cua ban tai day: ';
+    Ask_other = 'Ban co muon ve man hinh chinh de lam viec khac khong, hoac la thoat?';
+    (* Exit - Thoat *)
+    Exit_ask = 'Ban co muon thoat chuong trinh nay khong?'; // we have Ask_exit before, now we have Exit_ask:) 
+    Exit_ask_2 = 'Ban se duoc dua den man hinh chinh neu ban chon Khong'; // new 
+    Exit_bye = 'Cam on ban da su dung ung dung nay. Chuc mot ngay tot lanh!'; // new too
+    Exit_out = 'Dang thoat...';
+    (* Misc *)
+    Argv_cpr = 'Chuan bi so sanh ';
+    Argv_fatal = 'Loi:';
+    Argv_warm_num = 'Chung toi can them mot so nua de lam viec nay.';
+    Argv_abort = 'Da huy cong viec dinh lam.';
+    Clr = 'Dang lam trang man hinh...'; 
+    Press_Enter = 'Bam Enter de tiep tuc...';
+    Enter_Exit = 'Da xong. Bam Enter de thoat...';
+    Switch = 'Dang chuyen sang Menu chinh...';
 IMPLEMENTATION
 end.	

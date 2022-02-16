@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dow9C7g2Hlq4vvoHV+qRoPrbq4FVxrU5gs0V+uuTpXgm8JFb53312yOhCsgV0IFBpbe6+FuKdmXWfK8xRnsMzQ==",
+  "dgSpecHash": "pnK6YKwy55jKdYph7P+fzPFdrntDR00q7gERHNip1hu52YdmjicAF4ZEpmvFWaqsFrM+JpBMO21uIS1uj+SYyw==",
   "success": true,
-  "projectFilePath": "D:\\source\\repos\\c#\\app1\\app1cli\\app1cli.csproj",
+  "projectFilePath": "/home/lebao/Projects/app1cli/C#/app1cli/app1cli.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

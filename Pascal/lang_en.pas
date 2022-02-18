@@ -53,6 +53,19 @@ const // you should use const instead of var
     Press_Enter = 'Press Enter to continue...';
     Enter_Exit = 'All done. Press Enter to exit...';
     Switch = 'Switching to main menu...';
+    Argv_cal = 'You are running app1 in Calculator mode.';
+    Argv_exit = 'To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows).';
+    Help = 'Syntax:' + sLineBreak; // go to the next line
+            + 'app1 [cpr/cal] [sub-function] [2 numbers]' + sLineBreak
+            + 'With: ' + sLineBreak
+            + 'cpr : Compare 2 numbers' + sLineBreak
+            + 'cal : Calculator, with basic maths:' + sLineBreak
+            + '         add      : Calculate the "sum" of numbers' + sLineBreak
+            + '         sub      : Calculate the  "difference" of numbers'+ sLineBreak
+            + '         multiple : The first number * the second one' + sLineBreak
+            + '         div      : The first number / the second one' + sLineBreak
+            + '-----------------------------------------------------------------------' + sLineBreak
+            + 'app1 version 1.0.28 - Do many calculations and compare with app1.'
 IMPLEMENTATION
 // nothing here
 end. // EOF

@@ -25,7 +25,7 @@ begin
     writeln(Startup_appname);
     delay(500);
     TextColor(2);
-    writeln(Startup_appver, '1.0.28 Beta');
+    writeln(Startup_appver, '1.0.28');
     TextColor(White);
     delay(1000);
     clrscr;
@@ -203,8 +203,7 @@ i merged sub_menu_cal and sub_menu_cpr and now we have this: *)
  sub_menu:
   begin
      writeln(); // add one more line
-     writeln('Are you want to try a new calculation, compare new numbers,');
-     writeln('return to the menu or exit the program?');
+     writeln(Ask_other);
      writeln('1.', Ask_cal);
      writeln('2.', Menu_item1);
      writeln('3.', Ask_back);

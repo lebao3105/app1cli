@@ -9,7 +9,6 @@ Interface
   procedure textgreenln(param:string);
   procedure textgreen(param:string);
   procedure textred(param:string);
-  //function textcolor(color:integer, text:string):integer;
 IMPLEMENTATION
   uses crt, lang_en;
 
@@ -29,8 +28,8 @@ procedure warm_cal();
 	   write(Startup_appname, Startup_appver);
      textgreenln(' 1.0.28');
      TextColor(White);
-     writeln('You are running app1 as a calculator.');
-     writeln('To exit any time, use Ctrl+Z (*NIX) and Ctrl+C (Windows)');
+     writeln(Argv_cal);
+     writeln(Argv_exit);
   end;
 
 (* Show the help box *)  
@@ -39,13 +38,7 @@ procedure help();
 	   write(Startup_appname, Startup_appver);
      textgreenln(' 1.0.28');
      TextColor(White);
-     writeln('Syntax:');
-     writeln('app1 [cpr/cal] [options/sub-function] [2 numbers]');
-     writeln('With: ');
-     textred('      cpr'); TextColor(White); 
-          writeln(' : Compare (no options)'); // I made these tabs
-      textred('     cal'); TextColor(White);
-          writeln(' : Calculator (with options add[+], sub[-], multiple[*], div[/]');
+     writeln(Help);
   end;
 
   (* Write colored line. 
@@ -75,15 +68,4 @@ procedure help();
       TextColor(2);
       write(param); 
   end;
-
-  (* function textcolor(color:integer, text:string):integer;
-  begin
-      TextColor(color);
-      write(text);
-  end; 
-    function textcolor(color:string, text:string)
-  begin
-      TextColor(color);
-      write(text);
-  end; *)
 end.    

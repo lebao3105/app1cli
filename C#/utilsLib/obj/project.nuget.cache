@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KZiFp4svnOY+bSs1R2OBfNxs8mP/TN4Zk5D7fHy6TvjZOJXPx9TYYR7ddrawpA2MZdmWixchZlhKShRhwxV0dQ==",
+  "dgSpecHash": "0yV2bVBBci+XcT7rfr0aQJFM2NtaNV7kpqlRLMggGD63t8pT68wpYejR1lmpUdQ0xg/sxtj/6R5/Z7jSU0us3g==",
   "success": true,
-  "projectFilePath": "D:\\source\\repos\\c#\\app1\\utilsLib\\utilsLib.csproj",
+  "projectFilePath": "/home/lebao/Projects/app1cli/C#/utilsLib/utilsLib.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,0 +1,4 @@
+#!/usr/bin/fpc
+build:
+	app1.pas
+

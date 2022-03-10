@@ -31,7 +31,7 @@ namespace app1cli
             { goto cal; }
             else if (choice == 3)
             {
-                Console.WriteLine("app1 version 1.0.28 Beta by Le Bao Nguyen.");
+                Console.WriteLine("app1 version 1.0.28.");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("Program's path: {0}");
                 Console.WriteLine("-------------------------------------------------");

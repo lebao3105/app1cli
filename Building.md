@@ -139,13 +139,16 @@ Just ignore it.<br>
     - In if..else, before else you must not leave any ; including it is used to separate command lines (in this case you should place these code to begin...end block.).  
   - Numbers is not defined or something else similar (C#):
     - This should be fixed now - if you still see this error, report it to me. You also can archive the current code - this may be easier to fix.    
-      
+
+## Build your own package
+Please read [Install section](https://github.com/lebao3105/app1cli#install) in ../README.md.
+
 ## What's new:
 *For the latest stable release, find it [here.](https://github.com/lebao3105/app1cli/releases/) There also some app1-1.0.28 builds for you.* <br>
 * In this time (2022/02/05 +0700), I have some fixes here:
-	* Fixed arguments not working with ParamStr(n) = 'cal'	
-	* Update languages
-	* Removed Whats new from About 
+  * Fixed arguments not working with ParamStr(n) = 'cal'	
+  * Update languages	
+  * Removed Whats new from About 
 
 * Also for C# edition. Why not?
   * Removed Whats new from About

@@ -15,7 +15,7 @@ app1 (or app1cli) is a simple and basic calculator and comparator.
 **app1** 
 : Run this will let you to a menu where you can do anything you want
 
-**app1 cal [+ | - | * | /] [number1] [number2]**
+**app1 cal [ + | - | * | / ] [number1] [number2]**
 : Do something with number1 and number2
 
 **app1 cpr [number1[ [number2]**
@@ -31,7 +31,7 @@ app1 (or app1cli) is a simple and basic calculator and comparator.
 **0**
 : Success
 
-**1**
+**-1**
 : Invalid option
 
 # COPYRIGHT

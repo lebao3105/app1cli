@@ -23,7 +23,7 @@ $ sudo dpkg -i app1cli*.deb
 ```
 * To install app1 mannually, just compile the package, then copy it to any usable folder in $PATH (/usr/bin or /bin for system-wide).
 * If you are in Windows, get the installer (only for 1.0.27 below) from [Releases.](https://github.com/lebao3105/app1cli/releases)
-* <b>Optional for Linux and BSD</b> : If you want to install [```man page``](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjyocScrPD2AhUFp1YBHczqAgQQFnoECAoQAQ&url=https%3A%2F%2Fwww.kernel.org%2Fdoc%2Fman-pages%2F&usg=AOvVaw3OoGlokpkBmAA2VpBY_9J1) for this application, do these following commands:
+* <b>Optional for Linux and BSD</b> : If you want to install [```man page```](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjyocScrPD2AhUFp1YBHczqAgQQFnoECAoQAQ&url=https%3A%2F%2Fwww.kernel.org%2Fdoc%2Fman-pages%2F&usg=AOvVaw3OoGlokpkBmAA2VpBY_9J1) for this application, do these following commands:
 ```
 # Go to the project root folder first, if not, then...
 $ sudo apt install pandoc # install pandoc first

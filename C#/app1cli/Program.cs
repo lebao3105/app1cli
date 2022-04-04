@@ -31,11 +31,12 @@ namespace app1cli
             { goto cal; }
             else if (choice == 3)
             {
-                Console.WriteLine("app1 version 1.0.28 Beta by Le Bao Nguyen.");
+                Console.WriteLine("app1 version 1.0.28 by Le Bao Nguyen.");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("Program's path: {0}");
                 Console.WriteLine("-------------------------------------------------");
-                Console.WriteLine("This is NOT the Final version of app1 C# edition.");
+                Console.WriteLine("This is NOT the Final version of app1 C# edition yet.");
+                Console.WriteLine("This program is a free software released under the terms of the GNU Generel Public License");
                 Console.WriteLine("You can edit, redistribution this application to others WITHOUT any WARRANTY.");
                 Console.WriteLine("This C# version do the same things as the Pascal version.\n");
                 Console.WriteLine("-------------------------------------------------");

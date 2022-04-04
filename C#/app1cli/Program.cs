@@ -56,10 +56,12 @@ namespace app1cli
                 Console.WriteLine("This C# version do same things as the Pascal version.\n");
                 Console.WriteLine("Program's path: {0}");
                 Console.WriteLine("-------------------------------------------------");
+                // Never translate these line!
                 Console.WriteLine("Copyright (C) 2021-2022 Le Bao Nguyen");
                 Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.");
-                Console.WriteLine("is free software, and you are welcome to redistribute it");
+                Console.WriteLine("This is free software, and you are welcome to redistribute it");
                 Console.WriteLine("under certain conditions; type `show c' for details.");
+                // End of the translate warning
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("What this application can do:");
                 Console.WriteLine("1. Do many calculations");

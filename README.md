@@ -24,6 +24,11 @@ $ sudo dpkg -i app1cli*.deb
 * Or simply, just copy the program to any usable folder in $PATH (/usr/bin or /bin or ~/.local/bin).
 * If you are in Windows, get the installer (actually old) from [Releases.](https://github.com/lebao3105/app1cli/releases)
 
+## Replacing languages
+app1 now supports Vietnamese and English. To use it (Pascal only for now), use:
+* UNIX : sed -i 's/lang_en/lang_vi/g' */*.pas
+* Windows: Manually change lang_en to lang_vi in all .pas files and so on.
+
 ## What's new:
 *See in the latest release [here](https://github.com/lebao3105/app1cli/releases/)*
 

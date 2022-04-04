@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 app1cli (1.0.28) stable; ugency=medium
 
 * Enable "parse arguments" feature (only for Pascal edition, with basic maths)
@@ -5,6 +6,8 @@ app1cli (1.0.28) stable; ugency=medium
 * New menu layout (for C# only)
 * Resolved maths problem for C# edition
 
+=======
+>>>>>>> 1.0.28
 app1cli (1.0.28-dev) unstable; ugency=medium
 
 * A Developer release of app1cli

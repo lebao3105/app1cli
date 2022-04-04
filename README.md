@@ -15,13 +15,18 @@ app1 (also called app1cli) is a (very) simple project written in C# and Pascal. 
 Read the [Building.md](Building.md) file for all steps and requirements.
 
 ## Install
+<<<<<<< HEAD
 You can make your own .deb package directly. First copile the project, copy the application to ```<project root>/debian/bin/``` then make the .deb package:
+=======
+You can make your own .deb package directly. First copile the project, copy the application to ```<project root>/debian/bin/```folder then make the .deb package:
+>>>>>>> 1.0.28
 ```
 $ cd .. # if you are in the project folder
 $ dpkg-deb --build app1cli
 $ sudo dpkg -i app1cli*.deb
 ```
 * To install app1 mannually, just compile the package, then copy it to any usable folder in $PATH (/usr/bin or /bin for system-wide).
+<<<<<<< HEAD
 * If you are in Windows, get the installer (only for 1.0.27 below) from [Releases.](https://github.com/lebao3105/app1cli/releases)
 * <b>Optional for Linux and BSD</b> : If you want to install [```man page```](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjyocScrPD2AhUFp1YBHczqAgQQFnoECAoQAQ&url=https%3A%2F%2Fwww.kernel.org%2Fdoc%2Fman-pages%2F&usg=AOvVaw3OoGlokpkBmAA2VpBY_9J1) for this application, do these following commands:
 ```
@@ -37,6 +42,12 @@ $ man app1 # Try to open the page!
 
 ## What's new:
 *See in the latest release [here.](https://github.com/lebao3105/app1cli/releases/)*
+=======
+* If you are in Windows, get the installer from [Releases.](https://github.com/lebao3105/app1cli/releases)
+
+## What's new:
+*See in the latest release [here](https://github.com/lebao3105/app1cli/releases/)*
+>>>>>>> 1.0.28
 
 ## Some images:
 ![image](https://user-images.githubusercontent.com/77564176/139211727-06351e51-9b6b-4363-be7d-109b0597bca6.png)

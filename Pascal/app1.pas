@@ -1,3 +1,23 @@
+{ 
+  app1.pas - Main Program file which links everything together 
+  Copyright (C) 2021-2022 Le Bao Nguyen
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ----------------------------------------------------------------------
+  Possible future improvements are in TODO file, read it if you want.
+}
+
 Program App1;
 {$mode objFPC}
 uses
@@ -168,13 +188,15 @@ if choice = 2 then begin
   about:
    begin
     writeln('About this app:');
-    writeln('   App1 Version 1.0.28.'); 
-    writeln('   This application is released under the GNU GPL V3.');
-    writeln('   You can edit it, or redistribution it to everyone.');
+    writeln('   App1 Version 1.0.29-Alpha.'); 
+    writeln('Copyright (C) 2022 Le Bao Nguyen');
+    writeln('This program comes with ABSOLUTELY NO WARRANTY; for details type show w,');
+    writeln('This is free software, and you are welcome to redistribute it');
+    writeln('under certain conditions; type show c for details.');
     writeln(Applocation, paramStr(0));
     writeln('What can this application do:');
     writeln('   Do many calculations and compare;');
-    writeln('   Portable and no installation needed; (you can do it if you want)');
+    writeln('   Portable and no installation needed;');
     writeln('   Run from Terminal (Command Prompt)');
     writeln(Press_Enter);
     Readln();

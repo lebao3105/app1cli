@@ -1,3 +1,23 @@
+/* 
+  app1.pas - Main Program file which links everything together 
+  Copyright (C) 2021-2022 Le Bao Nguyen
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ----------------------------------------------------------------------
+  Possible future improvements are in TODO file, read it if you want.
+*/
+
 using System;
 using System.IO; 
 using utilsLib;
@@ -33,12 +53,13 @@ namespace app1cli
             {
                 Console.WriteLine("app1 version 1.0.28 by Le Bao Nguyen.");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
+                Console.WriteLine("This C# version do same things as the Pascal version.\n");
                 Console.WriteLine("Program's path: {0}");
                 Console.WriteLine("-------------------------------------------------");
-                Console.WriteLine("This is NOT the Final version of app1 C# edition yet.");
-                Console.WriteLine("This program is a free software released under the terms of the GNU Generel Public License");
-                Console.WriteLine("You can edit, redistribution this application to others WITHOUT any WARRANTY.");
-                Console.WriteLine("This C# version do the same things as the Pascal version.\n");
+                Console.WriteLine("Copyright (C) 2021-2022 Le Bao Nguyen");
+                Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.");
+                Console.WriteLine("is free software, and you are welcome to redistribute it");
+                Console.WriteLine("under certain conditions; type `show c' for details.");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("What this application can do:");
                 Console.WriteLine("1. Do many calculations");
@@ -225,7 +246,7 @@ namespace app1cli
                 }
               }      
           } // end of "home" label         
-        } // end of "static"
+        } // end of the main function
     } // end of the class
 } // and the program
 

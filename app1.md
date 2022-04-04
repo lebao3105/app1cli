@@ -15,10 +15,10 @@ app1 (or app1cli) is a simple and basic calculator and comparator.
 **app1** 
 : Run this will let you to a menu where you can do anything you want
 
-**app1 cal [ + | - | * | / ] [number1] [number2]**
+**app1 cal [ add | sub | multiple | div ] [number1] [number2]**
 : Do something with number1 and number2
 
-**app1 cpr [number1[ [number2]**
+**app1 cpr [number1] [number2]**
 : Compare 2 numbers
 
 **app1 about**
@@ -32,8 +32,10 @@ app1 (or app1cli) is a simple and basic calculator and comparator.
 : Success
 
 **-1**
-: Invalid option
+: Invalid option, or something wrong happened
 
 # COPYRIGHT
-Copyright (C) 2021-2022 Le Bao Nguyen. This application uses GNU GPL License version 3 or later <https://gnu.org/licenses/gpl.html>.
-This is free software, you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.
+Copyright (C) 2021-2022 Le Bao Nguyen").
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+This is free software, and you are welcome to redistribute it
+under certain conditions; type `show c' for details.

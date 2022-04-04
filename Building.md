@@ -58,11 +58,13 @@ dotnet run // build and run the application
 dotnet clean // clean the project
 dotnet build // build the project
 ```  
+
 If you are in C# folder, just use:
 ```
 dotnet build // this will build the .sln file
 ./app1cli/bin/Debug/net6.0/app1cli // run the application
 ```
+
 Here is the compile output in Windows Terminal:  
 ```
 C:\Users\Le Bao Roofs\Documents\source\repos\Pascal\app1>fpc maths.pas
@@ -93,6 +95,7 @@ Compiling app1.pas
 Linking app1.exe
 365 lines compiled, 0.3 sec, 94448 bytes code, 5364 bytes data  
 ```
+
 also for C# edition:
 ```
 [lebao@Jujitsumfy-3847 C#]$ dotnet build
@@ -110,6 +113,19 @@ Build succeeded.
 
 Time Elapsed 00:00:01.80
 ```
+
+### Install man page
+Install pandoc, and use:
+```
+# Make files
+pandoc app1.md -s -t man -o app1.1
+gzip app1.1
+# And copy it to somewhere
+manpath | grep /usr/share/man/man1
+if [[ $1 == 0 ]] then sudo cp app1.1.gz /usr/share/man/man1
+sudo mandb # Update the database
+```
+
 ## Warnings 
 * As you can see, while compiling maths.pas, FPC says that:
 ```
@@ -118,11 +134,12 @@ maths.pas(line,location) Warning: Function result does not seem to be set
 I think FPC may warm us that we should use a "return value" like C++:
 ```
 # C++ example code:
-void hello() {
+int hello() {
 	cout << "Hello world!";
 	return 1; <- this is what I think
 }
 ```
+
 Just ignore it.<br>
 * There also a warning like "Unreachable code", skip it too.
 * Some other warnings: 
@@ -141,8 +158,8 @@ Just ignore it.<br>
     - This should be fixed now - if you still see this error, report it to me. You also can archive the current code - this may be easier to fix.    
       
 ## What's new:
-*For the latest stable release, find it [here.](https://github.com/lebao3105/app1cli/releases/) There also some app1-1.0.28 builds for you.* <br>
-* In this time (2022/02/05 +0700), I have some fixes here:
+*For the latest stable release, find it [here.](https://github.com/lebao3105/app1cli/releases/)<br>
+* In 2022/02/05 +0700, I have some fixes here:
 	* Fixed arguments not working with ParamStr(n) = 'cal'	
 	* Update languages
 	* Removed Whats new from About 

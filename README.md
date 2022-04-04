@@ -14,7 +14,7 @@ app1 (also called app1cli) is a (very) simple project written in C# and Pascal. 
 ## Building
 Read the [Building.md](Building.md) file for all steps and requirements.
 
-## Install
+## Installation
 You can make your own .deb package directly. First copile the project, copy the application to ```<project root>/debian/bin/```folder then make the .deb package:
 ```
 $ cd .. # if you are in the project folder

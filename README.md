@@ -21,8 +21,8 @@ $ cd .. # if you are in the project folder
 $ dpkg-deb --build app1cli
 $ sudo dpkg -i app1cli*.deb
 ```
-* To install app1 mannually, just compile the package, then copy it to any usable folder in $PATH (/usr/bin or /bin for system-wide).
-* If you are in Windows, get the installer from [Releases.](https://github.com/lebao3105/app1cli/releases)
+* Or simply, just copy the program to any usable folder in $PATH (/usr/bin or /bin or ~/.local/bin).
+* If you are in Windows, get the installer (actually old) from [Releases.](https://github.com/lebao3105/app1cli/releases)
 
 ## What's new:
 *See in the latest release [here](https://github.com/lebao3105/app1cli/releases/)*

@@ -1,6 +1,6 @@
 ## Table of contents
 * [General info](#general-info)
-* [Buiding](#building)
+* [Building](#building)
 * [Install](#install)
 * [What's new](#whats-new)
 * [Images](#some-images)

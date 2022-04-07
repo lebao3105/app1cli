@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0yV2bVBBci+XcT7rfr0aQJFM2NtaNV7kpqlRLMggGD63t8pT68wpYejR1lmpUdQ0xg/sxtj/6R5/Z7jSU0us3g==",
+  "dgSpecHash": "6OCOgg/GINTjbrGDL35x00tZl7ClSKXj3dmjxlqXu+8hj8xiMhy4MqiuVyyscKsLxBr5VJSPUc3IsXGcxFSu1A==",
   "success": true,
-  "projectFilePath": "/home/lebao/Projects/app1cli/C#/utilsLib/utilsLib.csproj",
+  "projectFilePath": "d:\\source\\repos\\Pascal\\app1cli\\C#\\utilsLib\\utilsLib.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

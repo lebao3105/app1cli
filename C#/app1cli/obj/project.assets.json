@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "/home/lebao/.nuget/packages/": {}
+    "C:\\Users\\bao12\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lebao/Projects/app1cli/C#/app1cli/app1cli.csproj",
+      "projectUniqueName": "d:\\source\\repos\\Pascal\\app1cli\\C#\\app1cli\\app1cli.csproj",
       "projectName": "app1cli",
-      "projectPath": "/home/lebao/Projects/app1cli/C#/app1cli/app1cli.csproj",
-      "packagesPath": "/home/lebao/.nuget/packages/",
-      "outputPath": "/home/lebao/Projects/app1cli/C#/app1cli/obj/",
+      "projectPath": "d:\\source\\repos\\Pascal\\app1cli\\C#\\app1cli\\app1cli.csproj",
+      "packagesPath": "C:\\Users\\bao12\\.nuget\\packages\\",
+      "outputPath": "d:\\source\\repos\\Pascal\\app1cli\\C#\\app1cli\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/lebao/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\bao12\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -51,8 +51,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/lebao/Projects/app1cli/C#/utilsLib/utilsLib.csproj": {
-              "projectPath": "/home/lebao/Projects/app1cli/C#/utilsLib/utilsLib.csproj"
+            "d:\\source\\repos\\Pascal\\app1cli\\C#\\utilsLib\\utilsLib.csproj": {
+              "projectPath": "d:\\source\\repos\\Pascal\\app1cli\\C#\\utilsLib\\utilsLib.csproj"
             }
           }
         }
@@ -81,7 +81,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/lebao/.dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

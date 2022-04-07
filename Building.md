@@ -1,20 +1,20 @@
 ## Table of contents
 * [General info](#general-info)
-* [Recent changes](#recent-changes)
+* [Recent changes](#recent-changes-in-1028)
 * [Compile](#compile)
 * [Warnings](#warnings)
 * [What's new](#whats-new)
 * [Contribute](#contribute)
 
 ## General info
-OK, so welcome to the development release(s) of app1.<br> 
-This document will talk about changes in this release, and how you can contribute app1.
+OK, so welcome you to my building tutorial for app1.<br> 
+This document will talk about building progress, whats new and how do you can contribute app1.
 	
-## Recent changes:
-* Make the application easier to read (I mean read the code:)) with if and case statement. See in the calculator mode;
+## Recent changes in 1.0.28:
+* Make the application easier to read (I mean read the code:)) with if / case statement. See in the calculator mode;
 * Ready to "push" the arguments function to app1, but only launch the modes;
 * Added new units to set the color;
-* And the most interesting thing is added new Language and a script to change the language before compile!
+* And the most interesting thing is added new Language and ~~a script to change the language before compile!~~
 * (and planted some new featues in 1.0.29 too)
 * Also apply new features to the C# edition
 
@@ -30,10 +30,12 @@ First clone the repository:
 ```
 git clone https://github.com/lebao3105/app1cli 
 ```
+
 You can use ```-b``` flag to clone other branch, for example, this will clone 1.0.27 branch:
 ```
 git clone https://github.com/lebao3105/app1cli -b 1.0.27
 ```
+
 Go to the cloned repo by:
 ```
 cd app1cli
@@ -118,7 +120,7 @@ maths.pas(line,location) Warning: Function result does not seem to be set
 I think FPC may warm us that we should use a "return value" like C++:
 ```
 # C++ example code:
-void hello() {
+int hello() {
 	cout << "Hello world!";
 	return 1; <- this is what I think
 }
@@ -128,7 +130,7 @@ Just ignore it.<br>
 * Some other warnings: 
   - /usr/bin/ld.bfd: warning: link.res contains output sections; did you forget -T? (found in Linux)
   - Comparison might be always false due to range of constant and expression : This is about the functions
-  - Local variables not used : some variables I may not cleared yet, or I use it for a new funciton.
+  - Local variables not used : some variables I'm not cleared yet, or I use it for a new (but not defined) funciton.
 * Errors:
   - Unit ... not found: 
     - Make sure that FPC is installed correctly, if needed, download and build FPC from source code.
@@ -136,27 +138,9 @@ Just ignore it.<br>
     - If the missing unit is maths, you should compile this unit before compile the application.
   - ; expected but else found: <br>
     - see the [example.](https://user-images.githubusercontent.com/77564176/142801380-1e273b0c-54ea-4219-90a7-3077d3839f13.png)
-    - In if..else, before else you must not leave any ; including it is used to separate command lines (in this case you should place these code to begin...end block.).  
+    - In if..else, before else you must not leave any ; that inside the if... including it is used to separate command lines (in this case you should place these code to begin...end block.).  
   - Numbers is not defined or something else similar (C#):
     - This should be fixed now - if you still see this error, report it to me. You also can archive the current code - this may be easier to fix.    
-      
-## What's new:
-*For the latest stable release, find it [here.](https://github.com/lebao3105/app1cli/releases/) There also some app1-1.0.28 builds for you.* <br>
-* In this time (2022/02/05 +0700), I have some fixes here:
-	* Fixed arguments not working with ParamStr(n) = 'cal'	
-	* Update languages
-	* Removed Whats new from About 
-
-* Also for C# edition. Why not?
-  * Removed Whats new from About
-  * Successfully apply new menu style
-  * Fixed many build problems (null-value numbers, or function errors...)
-
-* In version 1.0.28
-- [x] Create a library for C# version do the same things as the Pascal one (this will improve my C# skill!) (almost done)
-- [x] Apply color and 1.0.27's enhancements to C# version (almost done!)
-- [x] Access app1 easily with [command-line arguments](https://stackoverflow.com/questions/25891529/command-line-args-in-pascal) (may only in Pascal, do some basic things...) (almost done)<br>
-- [x] Add Multi-language support (almost done with English and Vietnamese)
 
 ## Contribute
 If you want to contribute to this application, here's what you can do:

@@ -65,6 +65,6 @@ Interface
             + '         multiple : Nhan hai so' + sLineBreak
             + '         div      : Chia hai so' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
-            + 'app1 version 1.0.28 - Do many calculations and compare with app1.'
+            + 'app1 version 1.0.29-Alpha - Do many calculations and compare with app1.'
 IMPLEMENTATION
 end.	

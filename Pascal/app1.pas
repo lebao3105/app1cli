@@ -45,7 +45,7 @@ begin
     writeln(Startup_appname);
     delay(500);
     TextColor(2);
-    writeln(Startup_appver, '1.0.28');
+    writeln(Startup_appver, '1.0.29-Alpha');
     TextColor(White);
     delay(1000);
     clrscr;

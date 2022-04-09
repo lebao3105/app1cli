@@ -1,4 +1,4 @@
-% app1(1) app1 1.0.28
+% app1(1) app1 1.0.29-Alpha
 % Le Bao Nguyen
 % March 2022
 

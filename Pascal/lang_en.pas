@@ -65,7 +65,7 @@ const // you should use const instead of var
             + '         multiple : The first number * the second one' + sLineBreak
             + '         div      : The first number / the second one' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
-            + 'app1 version 1.0.28 - Do many calculations and compare with app1.'
+            + 'app1 version 1.0.29-Alpha - Do many calculations and compare with app1.'
 IMPLEMENTATION
 // nothing here
 end. // EOF

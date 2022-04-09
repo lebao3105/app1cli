@@ -21,6 +21,7 @@
 using System;
 using System.IO; 
 using utilsLib;
+using language;
 
 namespace app1cli
 {
@@ -28,6 +29,7 @@ namespace app1cli
     {
         static void Main()
         {
+            var lang = new lang();
             var test = new utilsLibrary();
             Console.WriteLine("app1 version 1.0.29-Alpha", ConsoleColor.Green);
             Console.WriteLine("The current time is: " + DateTime.Now);

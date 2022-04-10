@@ -1,30 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <!-- utilsLib -->
+  <!-- import utilsLib -->
   <ItemGroup>
     <ProjectReference Include="..\utilsLib\utilsLib.csproj" />
   </ItemGroup>
 
-  <!-- language targets 
-    Default is English -->
-  <Target Name="BeforeBuild">
-    <Message Text="No other build target specified. Will use English as default language..."/>
-    <ItemGroup>
-      <ProjectReference Include="..\lang_en\lang_en.csproj" />
-    </ItemGroup>
-  </Target>
+  <!-- language targets -->
 
   <Target Name="Eng_lang">
-    <Message Text="No other build target specified. Will use English as default language..."/>
     <ItemGroup>
-      <ProjectReference Include="..\lang_en\lang_en.csproj" />
+      <Compile Include="..\lang_en\language.cd" />
     </ItemGroup>
   </Target>
 
   <Target Name="Vi_lang">
-    <Message Text="No other build target specified. Will use English as default language..."/>
     <ItemGroup>
-      <ProjectReference Include="..\lang_vi\lang_vi.csproj" />
+      <Compile Include="..\lang_vi\language.cs" />
     </ItemGroup>
   </Target>
 
@@ -34,6 +25,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <BuildDependsOn>BeforeBuild;Eng_lang;Vi_lang</BuildDependsOn>
+    <AssemblyName>app1</AssemblyName>
+    <RootNamespace>app1</RootNamespace>
   </PropertyGroup>
 </Project>

@@ -5,8 +5,3 @@
 /Pascal/*.o
 # Make Deb output
 ./app1cli*.deb
-# C# build outputs
-/C#/app1cli/bin/*
-/C#/app1cli/obj/*
-/C#/utilsLib/bin/*
-/C#/utilsLib/obj/*

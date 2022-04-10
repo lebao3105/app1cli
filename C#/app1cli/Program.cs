@@ -29,21 +29,22 @@ namespace app1cli
     {
         static void Main()
         {
-            var lang = new lang();
+            var lang_init = new lang();
             var test = new utilsLibrary();
-            Console.WriteLine("app1 version 1.0.29-Alpha", ConsoleColor.Green);
+            Console.WriteLine("app1 " + lang_init.ver + ConsoleColor.Green);
             Console.WriteLine("The current time is: " + DateTime.Now);
-            Console.WriteLine("Program's path: {0}");  
-            Console.Clear();
-            Console.WriteLine("Welcome back! Choose an option to start now: ");    
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine("Program's path: " + path);  
+            //Console.Clear();
+            Console.WriteLine(lang_init.welcome_header);    
         // Main menu
           home: 
           { 
             Console.WriteLine(" ______________________________");
-            Console.WriteLine("|         1.Compare            |");
-            Console.WriteLine("|        2.Calculator          |");
-            Console.WriteLine("|          3.About             |");
-            Console.WriteLine("|          4.Exit              |");
+            Console.WriteLine("|         1."+lang_init.compare+"            |");
+            Console.WriteLine("|        2."+lang_init.calculator+"          |");
+            Console.WriteLine("|          3."+lang_init.about+"             |");
+            Console.WriteLine("|          4."+lang_init.exit+"              |");
             Console.WriteLine("|______________________________|");
             Console.Write("Enter your choice here: ");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -53,10 +54,10 @@ namespace app1cli
             { goto cal; }
             else if (choice == 3)
             {
-                Console.WriteLine("app1 version 1.0.29-Alpha by Le Bao Nguyen.");
+                Console.WriteLine("app1 version 1.0.29 Alpha Build");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("This C# version do same things as the Pascal version.\n");
-                Console.WriteLine("Program's path: {0}");
+                Console.WriteLine("Program's path: ", path);
                 Console.WriteLine("-------------------------------------------------");
                 // Never translate these line!
                 Console.WriteLine("Copyright (C) 2021-2022 Le Bao Nguyen");

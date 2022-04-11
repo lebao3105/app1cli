@@ -38,7 +38,7 @@ procedure help();
 	   write(Startup_appname, Startup_appver);
      textgreenln(' 1.0.29-Alpha');
      TextColor(White);
-     writeln(Help);
+     writeln(Helper);
   end;
 
   (* Write colored line. 

@@ -132,15 +132,17 @@ Just ignore it.<br>
   - Comparison might be always false due to range of constant and expression : This is about the functions
   - Local variables not used : some variables I'm not cleared yet, or I use it for a new (but not defined) funciton.
 * Errors:
-  - Unit ... not found: 
+  - Unit ... not found (Pascal): 
     - Make sure that FPC is installed correctly, if needed, download and build FPC from source code.
     - Make sure that the unit is not corrupted. If the missing unit is maths, try to clone the source code again.
     - If the missing unit is maths, you should compile this unit before compile the application.
-  - ; expected but else found: <br>
+  - ; expected but else found (Pascal): <br>
     - see the [example.](https://user-images.githubusercontent.com/77564176/142801380-1e273b0c-54ea-4219-90a7-3077d3839f13.png)
     - In if..else, before else you must not leave any ; that inside the if... including it is used to separate command lines (in this case you should place these code to begin...end block.).  
   - Numbers is not defined or something else similar (C#):
-    - This should be fixed now - if you still see this error, report it to me. You also can archive the current code - this may be easier to fix.    
+    - This should be fixed now - if you still see this error, report it to me.
+  - String constant too long while ansistrings are disabled (Pascal):
+    - I found this while building 1.0.29, and it starts from Help (now it's Helper) in lang_*.pas because of multiline of string. Compile again with -Mdelphi will fix it.
 
 ## Contribute
 If you want to contribute to this application, here's what you can do:

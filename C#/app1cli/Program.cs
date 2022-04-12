@@ -29,13 +29,16 @@ namespace app1cli
     {
         static void Main()
         {
+            /* Call libraries, and make some local variables */
             var lang_init = new lang();
             var test = new utilsLibrary();
-            Console.WriteLine("app1 " + lang_init.ver + ConsoleColor.Green);
-            Console.WriteLine("The current time is: " + DateTime.Now);
             string path = Directory.GetCurrentDirectory();
-            Console.WriteLine("Program's path: " + path);  
-            //Console.Clear();
+            int miliseconds = 2350;
+            Console.WriteLine("app1 " + lang_init.ver);
+            Console.WriteLine("The current time is: " + DateTime.Now);
+            Console.WriteLine("Program's path: {0}" , path);  
+            Thread.Sleep(miliseconds);
+            Console.Clear();
             Console.WriteLine(lang_init.welcome_header);    
         // Main menu
           home: 

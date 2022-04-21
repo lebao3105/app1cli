@@ -18,8 +18,11 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore --project C#/app1cli
+      run: dotnet restore
+      working-directory: C#/app1cli
     - name: Build
-      run: dotnet build --no-restore --project C#/app1cli
+      run: dotnet build --no-restore
+      working-directory: C#/app1cli
     - name: Test
-      run: dotnet test --no-build --verbosity normal C#/app1cli
+      run: dotnet test --no-build --verbosity normal
+      working-directory: C#/app1cli

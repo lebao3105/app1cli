@@ -17,11 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
-    - name: Go to main source code folder
-      run: cd C#/app1cli
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore --project C#/app1cli
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore --project C#/app1cli
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal C#/app1cli

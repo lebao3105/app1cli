@@ -1,34 +1,16 @@
-# This is a basic workflow to compile the dev version of app1
+# This is a basic workflow to compile app1
 # with Pascal programming language.
 
-name: Pascal (Current Dev branch)
+name: Pascal 
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the choosen branch
-  push:
-    branches: [ 1.0.29 ]
-  pull_request:
-    branches: [ 1.0.29 ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
-  # Install what we need first
-  setup:
-    runs-on: macos-latest
-    
-    steps:
-      # Install fpc
-      - name: Install fpc
-        run: brew install fpc
-      # And sed
-      - name: Get gnu-sed
-        run: brew install gnu-sed
-        
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -36,6 +18,15 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Install fpc
+      - name: Install fpc
+        run: brew install fpc
+      # And sed
+      - name: Get gnu-sed
+        run: |
+          brew install gnu-sed
+          echo PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH" > ~/.bashrc
+          source ~/.bashrc
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       # Compile

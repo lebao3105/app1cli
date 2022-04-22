@@ -30,7 +30,7 @@ jobs:
         run: brew install fpc
       # And sed
       - name: Get gnu-sed
-        run: brew install gnu-sed --with-default-names
+        run: brew install gnu-sed
       # Compile
       - name: Compile the program (with English language resources)
         run: fpc app1.pas

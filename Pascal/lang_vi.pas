@@ -46,7 +46,7 @@ Interface
     Exit_out = 'Dang thoat...';
     (* Misc *)
     Argv_cpr = 'Chuan bi so sanh ';
-    Argv_fatal = 'Loi:';
+    Argv_fatal = 'Loi: ';
     Argv_warm_num = 'Chung toi can them mot so nua de lam viec nay.';
     Argv_abort = 'Da huy cong viec dinh lam.';
     Clr = 'Dang lam trang man hinh...'; 
@@ -55,7 +55,7 @@ Interface
     Switch = 'Dang chuyen sang Menu chinh...';
     Argv_cal = 'Ban dang chay che do May tinh cua app1.';
     Argv_exit = 'De thoat ung dung bat ki luc nao, su dung Ctrl + Z (*NIX) hoac Ctrl + C (Windows).';
-    Help = 'Cu phap:' + sLineBreak; // xuong dong
+    Helper = 'Cu phap:' + sLineBreak // xuong dong
             + 'app1 [cpr/cal] [function phu] [2 so]' + sLineBreak
             + 'Voi: ' + sLineBreak
             + 'cpr : So sanh 2 so' + sLineBreak
@@ -65,6 +65,6 @@ Interface
             + '         multiple : Nhan hai so' + sLineBreak
             + '         div      : Chia hai so' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
-            + 'app1 version 1.0.28 - Do many calculations and compare with app1.'
+            + 'Mo ta: - Lam nhieu phep tinh va so sanh 2 so voi app1.';
 IMPLEMENTATION
 end.	

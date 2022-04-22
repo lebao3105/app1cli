@@ -3,21 +3,8 @@
   <!-- import utilsLib -->
   <ItemGroup>
     <ProjectReference Include="..\utilsLib\utilsLib.csproj" />
+    <ProjectReference Include="..\lang_en\lang.csproj" />
   </ItemGroup>
-
-  <!-- language targets -->
-
-  <Target Name="Eng_lang">
-    <ItemGroup>
-      <Compile Include="..\lang_en\language.cd" />
-    </ItemGroup>
-  </Target>
-
-  <Target Name="Vi_lang">
-    <ItemGroup>
-      <Compile Include="..\lang_vi\language.cs" />
-    </ItemGroup>
-  </Target>
 
   <!-- output type and depends on build targets -->
   <PropertyGroup>

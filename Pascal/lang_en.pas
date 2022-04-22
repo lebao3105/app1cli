@@ -57,7 +57,7 @@ const // you should use const instead of var
     Argv_exit = 'To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows).';
     // use sLineBreak to move the cursor to the next line,
     // also use , to link texts
-    Help = 'Syntax:' + sLineBreak
+    Helper = 'Syntax:' + sLineBreak
             + 'app1 [cpr/cal] [sub-function] [2 numbers]' + sLineBreak
             + 'With: ' + sLineBreak
             + 'cpr : Compare 2 numbers' + sLineBreak
@@ -67,7 +67,7 @@ const // you should use const instead of var
             + '         multiple : The first number * the second one' + sLineBreak
             + '         div      : The first number / the second one' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
-            + 'app1 version 1.0.28 - Do many calculations and compare with app1.';
+            + 'Description: Do many calculations and compare with app1.';
 IMPLEMENTATION
 // nothing here
 end. // EOF

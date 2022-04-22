@@ -1,14 +1,15 @@
-# This is a basic workflow to help you get started with Actions
+# This is a basic workflow to compile the dev version of app1
+# with Pascal programming language.
 
-name: CI
+name: Pascal (Current Dev branch)
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ 1.0.29 ]
   pull_request:
-    branches: [ main ]
+    branches: [ 1.0.29 ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,9 +28,17 @@ jobs:
       # Install fpc
       - name: Install fpc
         run: brew install fpc
+      # And sed
+      - name: Get gnu-sed
+        run: brew install gnu-sed --with-default-names
       # Compile
-      - name: Compile the program
+      - name: Compile the program (with English language resources)
         run: fpc app1.pas
+        working-directory: Pascal
+      - name: Compile the program (with Vietnamese language resources)
+        run: | 
+          sed -i 's/lang_en/lang_vi/g' *.pas
+          fpc app1.pas
         working-directory: Pascal
       # Clean the outputs
       - name: Clean

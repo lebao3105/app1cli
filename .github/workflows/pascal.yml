@@ -31,12 +31,12 @@ jobs:
       - uses: actions/checkout@v3
       # Compile
       - name: Compile the program (with English language resources)
-        run: fpc app1.pas
+        run: fpc app1.pas -Mdelphi
         working-directory: Pascal
       - name: Compile the program (with Vietnamese language resources)
         run: | 
           sed -i 's/lang_en/lang_vi/g' {app1{,_utils},maths}.pas
-          fpc app1.pas
+          fpc app1.pas -Mdelphi
         working-directory: Pascal
       # Clean the outputs
       - name: Clean

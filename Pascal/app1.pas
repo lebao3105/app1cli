@@ -1,5 +1,4 @@
 { 
-  app1.pas - Main Program file which links everything together 
   Copyright (C) 2021-2022 Le Bao Nguyen
 
   This program is free software: you can redistribute it and/or modify
@@ -15,6 +14,7 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ----------------------------------------------------------------------
+  app1.pas - Main Program file which links everything together 
   Possible future improvements are in TODO file, read it if you want.
 }
 

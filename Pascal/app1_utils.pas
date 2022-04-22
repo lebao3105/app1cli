@@ -1,5 +1,6 @@
-(* These are the ultilities for app1, 
+(* These are some "ultility" functions for app1, 
    you can get and customize it for your application. *)
+
 unit app1_utils;
 Interface
   procedure warm_num();
@@ -9,10 +10,11 @@ Interface
   procedure textgreenln(param:string);
   procedure textgreen(param:string);
   procedure textred(param:string);
+
 IMPLEMENTATION
   uses crt, lang_en;
 
-(* Warm the user if they don't have enough numbers to do action*)
+// Warm the user if they don't have enough numbers to do action 
 procedure warm_num();
   begin
 	   write(Startup_appname, Startup_appver);
@@ -23,6 +25,8 @@ procedure warm_num();
 	   writeln(Argv_abort);
      exit;
   end;
+
+// Notify the user that they are in Calculatormode
 procedure warm_cal();
   begin
 	   write(Startup_appname, Startup_appver);
@@ -32,7 +36,7 @@ procedure warm_cal();
      writeln(Argv_exit);
   end;
 
-(* Show the help box *)  
+// Show the help box 
 procedure help();
   begin
 	   write(Startup_appname, Startup_appver);
@@ -41,7 +45,7 @@ procedure help();
      writeln(Helper);
   end;
 
-  (* Write colored line. 
+  (* Write colored text line. 
      If you want to write multi lines , don't change the TextColor 
      to other color after run this function. *)
   procedure textredln(param:string);
@@ -56,7 +60,7 @@ procedure help();
       writeln(param); 
   end;
 
-  (* Just write a line and don't move cursor to the next line *)
+  // Just write a line and don't move cursor to the next line 
   procedure textred(param:string);
   begin
       TextColor(Red);

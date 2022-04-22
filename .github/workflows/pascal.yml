@@ -35,7 +35,7 @@ jobs:
         working-directory: Pascal
       - name: Compile the program (with Vietnamese language resources)
         run: | 
-          sed -i 's/lang_en/lang_vi/g' {app1{,_utils},maths}.pas
+          sed -i'' -e 's/lang_en/lang_vi/g' {app1{,_utils},maths}.pas
           fpc app1.pas -Mdelphi
         working-directory: Pascal
       # Clean the outputs

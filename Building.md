@@ -6,17 +6,18 @@
 * [What's new](#whats-new)
 * [Contribute](#contribute)
 
-## General info
+## General info & What's new
 OK, so welcome you to my building tutorial for app1.<br> 
 This document will talk about building progress, whats new and how do you can contribute app1.
 	
-## Recent changes in 1.0.28:
+### Recent changes in 1.0.28:
 * Make the application easier to read (I mean read the code:)) with if / case statement. See in the calculator mode;
 * Ready to "push" the arguments function to app1, but only launch the modes;
 * Added new units to set the color;
 * And the most interesting thing is added new Language and ~~a script to change the language before compile!~~
-* (and planted some new featues in 1.0.29 too)
 * Also apply new features to the C# edition
+
+See 1.0.29 changes in TODO file.
 
 ## Compile
 
@@ -45,13 +46,6 @@ Now you can go to Pascal folder for Pascal edition, or C# for C# edition. Let's 
 ```
 fpc <file name>.pas #if you want to compile a specific file
 ```
-The output should be like [this](https://user-images.githubusercontent.com/77564176/142795151-55a35239-1232-4794-adde-f0f86c5780b4.png) (not 100%):
-
-
-Explain the outputs:<br>
-  * maths.pas: maths.ppu (our needed unit), maths.o (object file), maths.bak ("backup" file)<br>
-  * app1.pas: app1.exe (the final output that can run). Others like .o and .bak are do the same as in maths.pas.<br>
-  * New in 1.0.28 : app1_utils.ppu: A unit like maths, but do other things like write colored line(s) or give us the usage of app1.<br>
 
 * With dotnet:
 Go to ```<project root>/C#/app1``` and try one of these commands:
@@ -145,8 +139,6 @@ Just ignore it.<br>
     - I found this while building 1.0.29, and it starts from Help (now it's Helper) in lang_*.pas because of multiline of string. Compile again with -Mdelphi will fix it.
 
 ## Contribute
-If you want to contribute to this application, here's what you can do:
-* Fork the repo and clone the forked one, then code and make a Pull request 
-* Clone the repo, try to debug and report any bugs you found;
-* Or make new language for app1 (require fork and make pull request)<br>
-You will need to create a GitHub account.
+It's great if you can help us for our projects! You can test, try some code, find bugs or make app1 use your language!
+
+Don't forget to make a issue/pull request to make me know about your contribution!

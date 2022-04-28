@@ -1,5 +1,6 @@
 Pascal/*.ppu
 Pascal/*.o
+Pascal/*.exe
 "C#/*/bin"
 "C#/*/obj"
 ./app1cli*.deb

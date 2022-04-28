@@ -25,7 +25,7 @@ jobs:
       - name: Get gnu-sed
         run: |
           brew install gnu-sed
-          echo PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH" > ~/.bashrc
+          echo PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH" >> ~/.bashrc
           source ~/.bashrc
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3

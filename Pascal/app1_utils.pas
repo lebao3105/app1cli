@@ -19,9 +19,9 @@ procedure warm_num();
   begin
 	   write(Startup_appname, Startup_appver);
      textgreenln(' 1.0.29-Alpha');
-     TextColor(White);
+     TextColor(Gray);
 	   textredln(Argv_fatal); 
-	   TextColor(White); writeln(Argv_warm_num);
+	   TextColor(Gray); writeln(Argv_warm_num);
 	   writeln(Argv_abort);
      exit;
   end;
@@ -31,7 +31,7 @@ procedure warm_cal();
   begin
 	   write(Startup_appname, Startup_appver);
      textgreenln(' 1.0.29-Alpha');
-     TextColor(White);
+     TextColor(Gray);
      writeln(Argv_cal);
      writeln(Argv_exit);
   end;
@@ -41,7 +41,7 @@ procedure help();
   begin
 	   write(Startup_appname, Startup_appver);
      textgreenln(' 1.0.29-Alpha');
-     TextColor(White);
+     TextColor(Gray);
      writeln(Helper);
   end;
 

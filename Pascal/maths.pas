@@ -85,27 +85,27 @@ uses crt, sysutils, lang_en;
     Function ask_2numbers(): integer;
     begin
        write(Ask_num1); TextColor(2); readln(number1);
-       TextColor(Gray);
+       TextColor(LightGray);
        write(Ask_num2); TextColor(2); readln(number2);
-       TextColor(Gray);
+       TextColor(LightGray);
     end;
 
     Function ask_3numbers(): integer;
     begin
         write(Ask_num1); TextColor(2); readln(number1);
-        TextColor(Gray);
+        TextColor(LightGray);
         write(Ask_num2); TextColor(2); readln(number2);
-        TextColor(Gray);
+        TextColor(LightGray);
         write(Ask_num3); TextColor(2); readln(number3);
-        TextColor(Gray);
+        TextColor(LightGray);
     end;
 
     Function ask_2real():real;
     begin
         write(Ask_num1); TextColor(2); readln(real1);
-        TextColor(Gray);
+        TextColor(LightGray);
         write(Ask_num2); TextColor(2); readln(real2);
-        TextColor(Gray);
+        TextColor(LightGray);
     end;
 
     // new calculator functions

@@ -40,13 +40,13 @@ begin
   if ParamCount = 0 then begin 
     TextColor(Red);
     writeln(Startup_opening);
-    TextColor(Gray);
+    TextColor(LightGray);
     delay(3000);
     writeln(Startup_appname);
     delay(500);
     TextColor(2);
     writeln(Startup_appver, '1.0.29-Alpha');
-    TextColor(Gray);
+    TextColor(LightGray);
     delay(1000);
     clrscr;
 
@@ -63,10 +63,10 @@ begin
     writeln('3.', Menu_item3);
     TextColor(Red);
     writeln('4.', Menu_item4);
-    TextColor(Gray);
+    TextColor(LightGray);
     write(Menu_ask);  
     readln(choice); // why this is not working???
-    TextColor(Gray);
+    TextColor(LightGray);
   end;
  //compare
 if choice = 1 then
@@ -89,12 +89,12 @@ if choice = 2 then begin
       writeln('4. /');
       TextColor(Red);
       writeln('5. ', Cancel);
-      TextColor(Gray);
+      TextColor(LightGray);
       writeln('6. ', Cal_Adv);
       write(Menu_ask); 
       TextColor(2); 
       readln(sub_choice_cal);
-      TextColor(Gray);
+      TextColor(LightGray);
     end;
     if (sub_choice_cal >=1) and (sub_choice_cal <=3) then begin
       ask_2numbers();
@@ -139,11 +139,11 @@ if choice = 2 then begin
         TextColor(Red);
         writeln('11.', Cancel);
         writeln('12.', Cal_Exit);
-        TextColor(Gray);
+        TextColor(LightGray);
         write(Menu_ask); 
         TextColor(2); 
         readln(sub_choice_cal);
-        TextColor(Gray);
+        TextColor(LightGray);
     if (sub_choice_cal >=1) and (sub_choice_cal <=10) then begin
     // ask the user
       case (sub_choice_cal) of
@@ -210,7 +210,7 @@ if choice = 2 then begin
       writeln('1.', Ask_home);
       TextColor(Red);
       writeln('2.', Menu_item4);
-      TextColor(Gray);
+      TextColor(LightGray);
       Write('Your choice [menu/exit]: '); readln(yes_no);
        if yes_no = 'menu' then goto start;
        if yes_no = 'exit' then goto exit_program;
@@ -231,7 +231,7 @@ i merged sub_menu_cal and sub_menu_cpr and now we have this: *)
      writeln('3.', Ask_back);
      TextColor(Red);
      WriteLn('4.', Ask_exit);
-     TextColor(Gray);
+     TextColor(LightGray);
      write(Ask_choice, ' [new/cpr/back/exit]: '); readln(yes_no);
        if yes_no = 'new' then goto cal
        else if yes_no = 'cpr' then goto cpr

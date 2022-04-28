@@ -5,6 +5,6 @@ C#: Enable some args for the program
 C#-utilsLib: Make functions for warnings and errors, like Pascal too
 C#-utilsLib: Replace some strings in ask_2nums() and ask_3nums()
 Pascal: Improve args code
-Pascal: Set color to white for FULL program, or change the changed color to gray (default) (Done!)
+Pascal: Set color to white for FULL program, or change the changed color to LightGray (default) (Done!)
 Pascal: Set the menu layout like C#
 All: Add license to help message

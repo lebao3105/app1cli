@@ -1,7 +1,5 @@
-# Pascal build outputs
 /Pascal/*.exe
 /Pascal/app1
 /Pascal/*.ppu
 /Pascal/*.o
-# Make Deb output
-./app1cli*.deb
+/.vscode

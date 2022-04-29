@@ -14,15 +14,16 @@ app1 (also called app1cli) is a (very) simple project written in C# and Pascal. 
 Read the [Building.md](Building.md) file for all steps and requirements.
 
 ## Choose your language
-app1 now support Vietnamese and English. To use it (Pascal only for this time), use:
-* UNIX with bash shell + sed (in macOS add ```''``` after ```-i``` -> ```-i''```): 
-```
-sed -i 's/lang_en/lang_vi/g' Pascal/{app1{,_utils},maths}.pas
-```
-* Other OSes: Manually change lang_en to lang_vi in all .pas files and so on.
+app1 now support Vietnamese and English. To use it (Pascal only for this time), change lang_en in the following files:
+* [Pascal/app1.pas](Pascal/app1.pas)
+* [Pascal/maths.pas](Pascal/maths.pas)
+* [Pascal/utils.pas](Pascal/app1_utils.pas)
+
+to lang_vi to change the default language to Vietnamese. (Re-)compile the project then run it. Change to lang_en to use English.
+
 
 ## What's new:
-*See the latest release [here](https://github.com/lebao3105/app1cli/releases/)*
+See the latest release [here.](https://github.com/lebao3105/app1cli/releases/)
 
 ## Screenshots:
 ![image](https://user-images.githubusercontent.com/77564176/139211727-06351e51-9b6b-4363-be7d-109b0597bca6.png)

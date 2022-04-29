@@ -1,9 +1,11 @@
 C#: Text color for the texts
 C#: Use case/if block like Pascal
 C#: Help message
+C#: (Just now) Fix program's path (Done!)
 C#: Enable some args for the program
 C#-utilsLib: Make functions for warnings and errors, like Pascal too
 C#-utilsLib: Replace some strings in ask_2nums() and ask_3nums()
+C#: (Just now - Working) Make a math library
 Pascal: Improve args code
 Pascal: Set color to white for FULL program, or change the changed color to LightGray (default) (Done!)
 Pascal: Set the menu layout like C#

@@ -3,7 +3,7 @@
   <!-- import utilsLib -->
   <ItemGroup>
     <ProjectReference Include="..\utilsLib\utilsLib.csproj" />
-    <ProjectReference Include="..\lang_en\lang.csproj" />
+    <ProjectReference Include="..\mathsLib\mathsLib.csproj" />
   </ItemGroup>
 
   <!-- output type and depends on build targets -->

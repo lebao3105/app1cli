@@ -17,4 +17,14 @@ public class mathsLibrary
             dev.WriteLine(line2 + (number1 / number2));
         } 
     }
+
+    public void compare(int number1, int number2) {
+        if (number1 > number2) {
+            dev.WriteLine("The first number is greater than the second number.");
+        } else if (number1 < number2) {
+            dev.WriteLine("The first number is less than the second one.");
+        } else if (number1 == number2) {
+            dev.WriteLine("The first number is equal to the second.");
+        }
+    }
 }

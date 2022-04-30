@@ -32,7 +32,7 @@ namespace app1cli
             var test = new utilsLibrary();
             string path = Directory.GetCurrentDirectory();
             int miliseconds = 2350;
-            Console.WriteLine("app1cli version 1.0.29 Alpha");
+            Console.WriteLine("app1cli version 1.0.29 Undefined Build (4/30/22)");
             Console.WriteLine("The current time is: " + DateTime.Now);
             Console.WriteLine("Program's path: {0}" , path);  
             Thread.Sleep(miliseconds);
@@ -55,17 +55,17 @@ namespace app1cli
             { goto cal; }
             else if (choice == 3)
             {
-                Console.WriteLine("app1 version 1.0.29 Alpha");
+                Console.WriteLine("app1 version 1.0.29 Undefined Build (4/30/22)");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("This C# version do same things as the Pascal version.\n");
                 Console.WriteLine("Program's path: {0)", path);
                 Console.WriteLine("-------------------------------------------------");
-                // Never translate these line!
+                // Never translate these 4 lines!
                 Console.WriteLine("Copyright (C) 2021-2022 Le Bao Nguyen");
                 Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.");
                 Console.WriteLine("This is free software, and you are welcome to redistribute it");
                 Console.WriteLine("under certain conditions; type `show c' for details.");
-                // End of the translate warning
+                // End of the short copyright notice
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("What this application can do:");
                 Console.WriteLine("1. Do many calculations");

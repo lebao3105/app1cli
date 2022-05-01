@@ -21,7 +21,6 @@
 using System;
 using System.IO; 
 using utilsLib;
-using language;
 
 namespace app1cli
 {
@@ -30,24 +29,23 @@ namespace app1cli
         static void Main()
         {
             /* Call libraries, and make some local variables */
-            var lang_init = new lang();
             var test = new utilsLibrary();
             string path = Directory.GetCurrentDirectory();
             int miliseconds = 2350;
-            Console.WriteLine("app1 " + lang_init.ver);
+            Console.WriteLine("app1cli version 1.0.29 Undefined Build (4/30/22)");
             Console.WriteLine("The current time is: " + DateTime.Now);
             Console.WriteLine("Program's path: {0}" , path);  
             Thread.Sleep(miliseconds);
             Console.Clear();
-            Console.WriteLine(lang_init.welcome_header);    
+            Console.WriteLine("Welcome to app1! Select something below:");    
         // Main menu
           home: 
           { 
             Console.WriteLine(" ______________________________");
-            Console.WriteLine("|         1."+lang_init.compare+"            |");
-            Console.WriteLine("|        2."+lang_init.calculator+"          |");
-            Console.WriteLine("|          3."+lang_init.about+"             |");
-            Console.WriteLine("|          4."+lang_init.exit+"              |");
+            Console.WriteLine("|         1.Compare            |");
+            Console.WriteLine("|        2.Calculator          |");
+            Console.WriteLine("|          3.About             |");
+            Console.WriteLine("|          4.Exit              |");
             Console.WriteLine("|______________________________|");
             Console.Write("Enter your choice here: ");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -57,22 +55,22 @@ namespace app1cli
             { goto cal; }
             else if (choice == 3)
             {
-                Console.WriteLine("app1 version 1.0.29 Alpha Build");
+                Console.WriteLine("app1 version 1.0.29 Undefined Build (4/30/22)");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("This C# version do same things as the Pascal version.\n");
-                Console.WriteLine("Program's path: ", path);
+                Console.WriteLine("Program's path: {0)", path);
                 Console.WriteLine("-------------------------------------------------");
-                // Never translate these line!
+                // Never translate these 4 lines!
                 Console.WriteLine("Copyright (C) 2021-2022 Le Bao Nguyen");
                 Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.");
                 Console.WriteLine("This is free software, and you are welcome to redistribute it");
                 Console.WriteLine("under certain conditions; type `show c' for details.");
-                // End of the translate warning
+                // End of the short copyright notice
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("What this application can do:");
                 Console.WriteLine("1. Do many calculations");
                 Console.WriteLine("2. Compare 2 numbers");
-                Console.WriteLine("3. Run from Command Prompt");
+                Console.WriteLine("3. Run in Command Prompt (no GUI)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("Press a key to exit...");
                 Console.ReadKey();
@@ -89,7 +87,8 @@ namespace app1cli
                 Console.WriteLine("You are typed 1 - compare.");
                 test.ask_2nums(test.target1, test.target2, "compare");  
                 goto ask; 
-              }  
+            }
+
             cal: {
                 Console.WriteLine("You are typed 2.");
                 Console.WriteLine("Choose something to do now:");
@@ -224,10 +223,11 @@ namespace app1cli
                 Console.WriteLine("3. Compare");
                 Console.WriteLine("2. Exit");
                 Console.WriteLine("-------------------------------------------------");
-                Console.WriteLine("Type your answer [b(ack)/c(al)/(com)p(are)/e(xit)]: ");
+                Console.WriteLine("Enter your answer [b(ack)/c(al)/(com)p(are)/e(xit)]: ");
                 ConsoleKeyInfo keycheck = new ConsoleKeyInfo();
                 while (!Console.KeyAvailable) {
                     keycheck = Console.ReadKey(true);
+                    Thread.Sleep(miliseconds);
                     switch (keycheck.Key) {
                         case ConsoleKey.C: goto cal;
                         case ConsoleKey.P: goto cpr;
@@ -237,24 +237,24 @@ namespace app1cli
                 }
           }  
           exit:
-              { Console.WriteLine("Are you sure want to exit?");
+            { Console.WriteLine("Are you sure want to exit?");
                 Console.WriteLine("1. Yes, do it and I will meet you later");
                 Console.WriteLine("2. No, come back to main menu");
                 Console.WriteLine("Anyway, this need your answer [y/n]: ");
-                ConsoleKeyInfo keyinfo = new ConsoleKeyInfo();
-                while (!Console.KeyAvailable) {
-                    keyinfo = Console.ReadKey(true);
-                    switch (keyinfo.Key) {
-                        case ConsoleKey.Y: 
-                            Console.WriteLine("Thank you for using this application! Exiting...");
-                            System.Environment.Exit(0);
-                            break;
-                        case ConsoleKey.N: goto home;
-                    }
+                string item = Convert.ToString(Console.ReadLine());
+                if (item == "y" || item == "Y" || item == "y")
+                {
+                    Console.WriteLine("Thank you for using the application! Exiting...");
+                    Thread.Sleep(miliseconds);
+                    Environment.Exit(0);
                 }
-              }      
+                else if (item == "no" || item == "n")
+                { goto home; }
+                else
+                { Console.WriteLine("Invaild answer. Please try again."); }
+            }      
           } // end of "home" label         
-        } // end of the main function
-    } // end of the class
+        } // end of main()
+    } // end of the main class
 } // and the program
 

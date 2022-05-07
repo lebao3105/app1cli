@@ -313,10 +313,13 @@ exit_program:
               goto cal;
           end
         end;
-      // others
+
+      // others parameters
       if ParamStr(n) = 'about' then 
               goto about
       else if ParamStr(n) = 'help' then 
-              help();
+              help()
+      else if ParamStr(n) = 'wrong-param' then
+              exit();
       end; // end of for .. do block
   end.

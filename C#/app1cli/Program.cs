@@ -130,16 +130,16 @@ namespace app1cli
                 {
                         Console.WriteLine("Select a function here:");
                         Console.WriteLine("__________________________");
-                        Console.WriteLine("1.x(a+b)");
-                        Console.WriteLine("2.x(a-b)");
-                        Console.WriteLine("3.x^2 - a^2");
-                        Console.WriteLine("4.x^2 + a^2");
-                        Console.WriteLine("5.(a+b)^2");
-                        Console.WriteLine("6.(a-b)^2");
-                        Console.WriteLine("7.a^3 + b^3");
-                        Console.WriteLine("8.a^3 - b^3");
-                        Console.WriteLine("9.(a+b)^3");
-                        Console.WriteLine("10.(a-b)^3");
+                        Console.WriteLine("        1. x(a+b)");
+                        Console.WriteLine("        2. x(a-b)");
+                        Console.WriteLine("        3. x^2 - a^2");
+                        Console.WriteLine("        4. x^2 + a^2");
+                        Console.WriteLine("        5. (a+b)^2");
+                        Console.WriteLine("        6. (a-b)^2");
+                        Console.WriteLine("        7. a^3 + b^3");
+                        Console.WriteLine("        8. a^3 - b^3");
+                        Console.WriteLine("        9. (a+b)^3");
+                        Console.WriteLine("        10. (a-b)^3");
                         Console.WriteLine("__________________________");
                         Console.WriteLine("11.Cancel");
                         Console.WriteLine("12.Exit");

@@ -188,16 +188,17 @@ if choice = 2 then begin
   about:
    begin
     writeln('About this app:');
-    writeln('   App1 Version 1.0.29-Alpha.'); 
-    writeln('Copyright (C) 2022 Le Bao Nguyen');
+    writeln('---------------------------------------------------------------------------');
+    writeln('App1 Version 1.0.29-Alpha.'); 
+    writeln(Applocation, paramStr(0));
+    writeln('This is a simple calculator app which can do some basic calculations + compare.');
+    writeln('---------------------------------------------------------------------------');
+    writeln('Copyright (C) 2022 Le Bao Nguyen.');
+    // Don't translate this!
     writeln('This program comes with ABSOLUTELY NO WARRANTY; for details type show w,');
     writeln('This is free software, and you are welcome to redistribute it');
     writeln('under certain conditions; type show c for details.');
-    writeln(Applocation, paramStr(0));
-    writeln('What can this application do:');
-    writeln('   Do many calculations and compare;');
-    writeln('   Portable and no installation needed;');
-    writeln('   Run from Terminal (Command Prompt)');
+    // Now you can do translate like the normal
     writeln(Press_Enter);
     Readln();
     delay(1350);
@@ -280,21 +281,21 @@ exit_program:
                     warm_num()
               else if ParamStr(n+3) = '' then
                     warm_num()
-              else Add(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
+              else add(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
           end
           else if ParamStr(n+1) = 'sub' then begin
               if ParamStr(n+2) = '' then 
                     warm_num()
               else if ParamStr(n+3) = '' then
                     warm_num()
-              else Minus(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
+              else minus(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
           end
           else if ParamStr(n+1) = 'multiple' then begin
               if ParamStr(n+2) = '' then 
                     warm_num()
               else if ParamStr(n+3) = '' then
                     warm_num()
-              else Multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+              else multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
           end
       	  else if ParamStr(n+1) = 'div' then begin
               if ParamStr(n+2) = '' then 
@@ -304,7 +305,7 @@ exit_program:
               else begin
                     real1 := StrToInt(ParamStr(n+2)) + 0.0;
                     real2 := StrToInt(ParamStr(n+3)) + 0.0;
-                    writeln(Divide(real1, real2));
+                    writeln(divide(real1, real2));
               end;
           end  
           else if ParamStr(n+1) = '' then 

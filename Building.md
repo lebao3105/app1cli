@@ -14,7 +14,7 @@ This document will talk about building progress, whats new and how do you can co
 * Make the application easier to read (I mean read the code:)) with if / case statement. See in the calculator mode;
 * Ready to "push" the arguments function to app1, but only launch the modes;
 * Added new units to set the color;
-* And the most interesting thing is added new Language and ~~a script to change the language before compile!~~
+* And the most interesting thing is added new Language ~~and a script to change the language before compile!~~
 * Also apply new features to the C# edition
 
 See 1.0.29 changes in TODO file.
@@ -48,7 +48,7 @@ fpc <file name>.pas #if you want to compile a specific file
 ```
 
 * With dotnet:
-Go to ```<project root>/C#/app1``` and try one of these commands:
+Go to ```<project root>/CSharp/app1cli``` and try one of these commands:
 ```
 dotnet run // build and run the application
 dotnet clean // clean the project

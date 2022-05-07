@@ -25,14 +25,17 @@ namespace app1cli
 {
     class Program
     {
+        public static int number1;
+        public static int number2;
+        public static int number3;
+
         static void Main()
         {
             /* Call libraries, and make some local variables */
-            var test = new utilsLibrary();
+            var util = new utilsLibrary();
             var math = new mathsLibrary();
             string path = Directory.GetCurrentDirectory();
             int miliseconds = 2350;
-            int number1, number2, number3;
 
             Console.WriteLine("app1cli version 1.0.29 Undefined Build (4/30/22)");
             Console.WriteLine("The current time is: " + DateTime.Now);
@@ -87,7 +90,8 @@ namespace app1cli
         // yeah, I moved the "labels" here:)
             cpr: {
                 Console.WriteLine("You are choosed 1 - compare.");
-                test.ask_2nums(number1, number2, null);
+                util.ask_2nums(number1, number2, null);
+                math.compare(number1, number2);
                 goto ask; 
             }
 
@@ -107,25 +111,25 @@ namespace app1cli
                 if (answer == 1)
                 {
                         Console.WriteLine("You are typed 1 - plus.");
-                        test.ask_2nums(test.target1, test.target2, "add");
+                        util.ask_2nums(number1, number2, "add");
                         goto ask;
                 }        
                 else if (answer == 2)
                 {
                         Console.WriteLine("You are typed 2 - minus.");
-                        test.ask_2nums(test.target1, test.target2, "minus");
+                        util.ask_2nums(number1, number2, "minus");
                         goto ask;       
                 }
                 else if (answer == 3)
                 {
                         Console.WriteLine("You are typed 3 - multiple.");
-                        test.ask_2nums(test.target1, test.target2, "multiple");
+                        util.ask_2nums(number1, number2, "multiple");
                         goto ask;       
                 }
                 else if (answer == 4)
                 {
                         Console.WriteLine("You are typed 4 - divide.");
-                        test.ask_2nums(test.target1, test.target2, "div");
+                        util.ask_2nums(number1, number2, "div");
                         goto ask;       
                 }
                 else if (answer == 5)
@@ -150,60 +154,60 @@ namespace app1cli
                         if (answer_2 == 1)
                         {
                             Console.WriteLine("You are typed 1 - x(a+b).");
-                            test.ask_3nums(test.target1, test.target2, test.target3, "1");
+                            util.ask_3nums(number1, number2, number3, "1");
                             goto ask;    
                         }
                         else if (answer_2 == 2)
                         {
                             Console.WriteLine("You are typed 2 - x(a-b).");
-                            test.ask_3nums(test.target1, test.target2, test.target3, "2");
+                            util.ask_3nums(number1, number2, number3, "2");
                             goto ask;    
                         }
                         else if (answer_2 == 3)
                         {
                             Console.WriteLine("You are typed 3 - x^2-a^2).");
-                            test.ask_2nums(test.target1, test.target2, "a");
+                            util.ask_2nums(number1, number2, "a");
                             goto ask;    
                         }
                         else if (answer_2 == 4) {
                             Console.WriteLine("You are typed 4 - x^2+a^2).");
-                            test.ask_2nums(test.target1, test.target2, "b");
+                            util.ask_2nums(number1, number2, "b");
                             goto ask;
                         }
                         else if (answer_2 == 5)
                         {
                             Console.WriteLine("You are typed 5 - (a+b)^2.");
-                            test.ask_2nums(test.target1, test.target2, "c");
+                            util.ask_2nums(number1, number2, "c");
                             goto ask;    
                         }
                         else if (answer_2 == 6)
                         {
                             Console.WriteLine("You are typed 6 - (a-b)^2.");
-                            test.ask_2nums(test.target1, test.target2, "d");
+                            util.ask_2nums(number1, number2, "d");
                             goto ask;    
                         }
                         else if (answer_2 == 7)
                         {
                             Console.WriteLine("You are typed 7 - a^3+b^3.");
-                            test.ask_2nums(test.target1, test.target2, "e");
+                            util.ask_2nums(number1, number2, "e");
                             goto ask;    
                         }
                         else if (answer_2 == 8)
                         {
                             Console.WriteLine("You are typed 8 - a^3-b^3.");
-                            test.ask_2nums(test.target1, test.target2, "f");
+                            util.ask_2nums(number1, number2, "f");
                             goto ask;    
                         }
                         else if (answer_2 == 9)
                         {
                             Console.WriteLine("You are typed 9 - (a+b)^3.");
-                            test.ask_2nums(test.target1, test.target2, "g");
+                            util.ask_2nums(number1, number2, "g");
                             goto ask;    
                         }
                         else if (answer_2 == 10)
                         {
                             Console.WriteLine("You are typed 10 - (a-b)^3.");
-                            test.ask_2nums(test.target1, test.target2, "h");
+                            util.ask_2nums(number1, number2, "h");
                             goto ask;    
                         }
                         else if (answer_2 == 11)

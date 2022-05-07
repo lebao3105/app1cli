@@ -5,14 +5,10 @@ namespace utilsLib;
 
 public class utilsLibrary
 {
-    // make 3 public number for the main program
-    public int target1;
-    public int target2;
-    public int target3;
     // set result
     public int result;
     // functions
-    public int ask_2nums(int num1, int num2, string? check) {
+    public void ask_2nums(int num1, int num2, string? check) {
         dev.Write("Enter a value for the first target: ");
         num1 = Convert.ToInt32(dev.ReadLine());
         dev.Write("And the second target too: ");

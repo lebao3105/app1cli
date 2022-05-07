@@ -12,11 +12,11 @@ public class utilsLibrary
     // set result
     public int result;
     // functions
-    public void ask_2nums(int target1, int target2, string? check) {
+    public int ask_2nums(int num1, int num2, string? check) {
         dev.Write("Enter a value for the first target: ");
-        target1 = Convert.ToInt32(dev.ReadLine());
+        num1 = Convert.ToInt32(dev.ReadLine());
         dev.Write("And the second target too: ");
-        target2 = Convert.ToInt32(dev.ReadLine());
+        num2 = Convert.ToInt32(dev.ReadLine());
     }
 
     public void ask_3nums(int target1, int target2, int target3, string? check) {

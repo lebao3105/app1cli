@@ -18,9 +18,8 @@
   Possible future improvements are in TODO file, read it if you want.
 */
 
-using System;
-using System.IO; 
 using utilsLib;
+using mathsLib;
 
 namespace app1cli
 {
@@ -30,8 +29,11 @@ namespace app1cli
         {
             /* Call libraries, and make some local variables */
             var test = new utilsLibrary();
+            var math = new mathsLibrary();
             string path = Directory.GetCurrentDirectory();
             int miliseconds = 2350;
+            int number1, number2, number3;
+
             Console.WriteLine("app1cli version 1.0.29 Undefined Build (4/30/22)");
             Console.WriteLine("The current time is: " + DateTime.Now);
             Console.WriteLine("Program's path: {0}" , path);  
@@ -84,8 +86,8 @@ namespace app1cli
 
         // yeah, I moved the "labels" here:)
             cpr: {
-                Console.WriteLine("You are typed 1 - compare.");
-                test.ask_2nums(test.target1, test.target2, "compare");  
+                Console.WriteLine("You are choosed 1 - compare.");
+                test.ask_2nums(number1, number2, null);
                 goto ask; 
             }
 

@@ -65,7 +65,10 @@ const // you should use const instead of var
             + '         multiple : The first number * the second one' + sLineBreak
             + '         div      : The first number / the second one' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
-            + 'app1 version 1.0.29-Alpha - Do many calculations and compare with app1.';
+            + 'New: wrong-param  : If you run wrong parameter, use this to ignore all ' + sLineBreak
+            + '                    parameters. The program will show nothing.' + sLineBreak
+            + '-----------------------------------------------------------------------' + sLineBreak
+            + 'app1cli - Do many calculations and compare with app1.';
 IMPLEMENTATION
 // nothing here
 end. // EOF

@@ -65,6 +65,9 @@ Interface
             + '         multiple : Nhan hai so' + sLineBreak
             + '         div      : Chia hai so' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
-            + 'app1 version 1.0.29-Alpha - Do many calculations and compare with app1.';
+            + 'Moi : wrong-param : Neu ban nhap sai tham so, app1 se bo qua chung va' + sLineBreak
+            + '                    khong hien cai gi ca.' + sLineBreak
+            + '-----------------------------------------------------------------------' + sLineBreak
+            + 'app1cli - Lam nhieu phep toan va so sanh voi app1.' + sLineBreak;
 IMPLEMENTATION
 end.	

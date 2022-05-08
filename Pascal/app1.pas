@@ -252,14 +252,14 @@ exit_program:
    writeln(Exit_ask);
    writeln(Exit_ask_2);
    write(Ask_choice ,'[yes/no]: '); readln(yes_no);
-    if yes_no = 'yes' and yes_no = 'y' then
+    if (yes_no = 'yes') and (yes_no = 'y') then
      begin
       writeln(Exit_bye);
       writeln(Exit_out);
       delay(1300);
       exit;
      end
-    else if yes_no = 'no' and yes_no = 'n' then
+    else if (yes_no = 'no') and (yes_no = 'n') then
       writeln(Switch);
       delay(1000);
       goto start;

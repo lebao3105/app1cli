@@ -19,7 +19,7 @@
 }
 
 Program App1;
-{$mode objFPC}
+{$mode Delphi}
 uses
     crt,
     sysutils, 

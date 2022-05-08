@@ -45,7 +45,7 @@ begin
     writeln(Startup_appname);
     delay(500);
     TextColor(2);
-    writeln(Startup_appver, '1.0.29-Alpha');
+    writeln(Startup_appver, '1.0.29');
     TextColor(LightGray);
     delay(1000);
     clrscr;
@@ -58,11 +58,13 @@ begin
     writeln(Applocation, paramStr(0));
     writeln(Menu_welcome);
     TextColor(2);
-    writeln('1.', Menu_item1);
-    writeln('2.', Menu_item2);
-    writeln('3.', Menu_item3);
+    writeln('------------------------------');
+    writeln('       1.', Menu_item1);
+    writeln('       2.', Menu_item2);
+    writeln('       3.', Menu_item3);
     TextColor(Red);
-    writeln('4.', Menu_item4);
+    writeln('       4.', Menu_item4);
+    writeln('------------------------------');
     TextColor(LightGray);
     write(Menu_ask);  
     readln(choice); // why this is not working???
@@ -83,14 +85,16 @@ if choice = 2 then begin
     begin
       writeln(Select, 'Or you can get more with ', Cal_Adv);
       TextColor(2);
-      writeln('1. +');
-      writeln('2. -');
-      writeln('3. *');
-      writeln('4. /');
+      writeln('----------------');
+      writeln('     1. +');
+      writeln('     2. -');
+      writeln('     3. *');
+      writeln('     4. /');
       TextColor(Red);
-      writeln('5. ', Cancel);
+      writeln('     5. ', Cancel);
       TextColor(LightGray);
-      writeln('6. ', Cal_Adv);
+      writeln('     6. ', Cal_Adv);
+      writeln('----------------');
       write(Menu_ask); 
       TextColor(2); 
       readln(sub_choice_cal);
@@ -126,16 +130,18 @@ if choice = 2 then begin
       begin
         writeln(Select);
         TextColor(2);
-        writeln('1.x(a+b)');
-        writeln('2.x(a-b)');
-        writeln('3.x^2 - a^2');
-        writeln('4.x^2 + a^2'); // add new formula
-        writeln('5.(a+b)^2');
-        writeln('6.(a-b)^2');
-        writeln('7.a^3 + b^3');
-        writeln('8.a^3 - b^3');
-        writeln('9.(a-b)^3');
-        writeln('10.(a+b)^3 ');
+        writeln('____________________________');
+        writeln('         1. x(a+b)');
+        writeln('         2. x(a-b)');
+        writeln('         3. x^2 - a^2');
+        writeln('         4. x^2 + a^2');
+        writeln('         5. (a+b)^2');
+        writeln('         6. (a-b)^2');
+        writeln('         7. a^3 + b^3');
+        writeln('         8. a^3 - b^3');
+        writeln('         9. (a-b)^3');
+        writeln('        10. (a+b)^3 ');
+        writeln('____________________________');
         TextColor(Red);
         writeln('11.', Cancel);
         writeln('12.', Cal_Exit);
@@ -189,7 +195,7 @@ if choice = 2 then begin
    begin
     writeln('About this app:');
     writeln('---------------------------------------------------------------------------');
-    writeln('App1 Version 1.0.29-Alpha.'); 
+    writeln('App1 Version 1.0.29.'); 
     writeln(Applocation, paramStr(0));
     writeln('This is a simple calculator app which can do some basic calculations + compare.');
     writeln('---------------------------------------------------------------------------');

@@ -67,7 +67,7 @@ begin
     writeln('------------------------------');
     TextColor(LightGray);
     write(Menu_ask);  
-    readln(choice); // why this is not working???
+    readln(choice); 
     TextColor(LightGray);
   end;
  //compare

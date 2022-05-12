@@ -1,9 +1,5 @@
-Pascal/*.ppu
-Pascal/*.o
-Pascal/*.exe
-"C#/*/bin"
-"C#/*/obj"
-./app1cli*.deb
-Pascal/test.pas
-Pascal/test
-Pascal/test.o
+/Pascal/*.exe
+/Pascal/app1
+/Pascal/*.ppu
+/Pascal/*.o
+/.vscode

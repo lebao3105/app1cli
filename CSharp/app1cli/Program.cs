@@ -1,5 +1,23 @@
-using System;
-using System.IO; 
+/* 
+  Copyright (C) 2021-2022 Le Bao Nguyen
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ----------------------------------------------------------------------
+  Program.cs - Main Program file which links everything together 
+  Possible future improvements are in TODO file, read it if you want.
+*/
+
 using utilsLib;
 
 namespace app1cli
@@ -9,9 +27,12 @@ namespace app1cli
         static void Main()
         {
             var test = new utilsLibrary();
-            Console.WriteLine("app1 version 1.0.28", ConsoleColor.Green);
+            int milisecs = 2350;
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine("app1 version 1.0.29.");
             Console.WriteLine("The current time is: " + DateTime.Now);
-            Console.WriteLine("Program's path: {0}");  
+            Console.WriteLine("Program's path: {0}", path);  
+            Thread.Sleep(milisecs);
             Console.Clear();
             Console.WriteLine("Welcome back! Choose an option to start now: ");    
         // Main menu
@@ -31,19 +52,22 @@ namespace app1cli
             { goto cal; }
             else if (choice == 3)
             {
-                Console.WriteLine("app1 version 1.0.28 by Le Bao Nguyen.");
+                Console.WriteLine("app1 version 1.0.29");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
-                Console.WriteLine("Program's path: {0}");
+                Console.WriteLine("This C# version do same things as the Pascal version.\n");
+                Console.WriteLine("Program's path: {0)", path);
                 Console.WriteLine("-------------------------------------------------");
-                Console.WriteLine("This is NOT the Final version of app1 C# edition yet.");
-                Console.WriteLine("This program is a free software released under the terms of the GNU Generel Public License");
-                Console.WriteLine("You can edit, redistribution this application to others WITHOUT any WARRANTY.");
-                Console.WriteLine("This C# version do the same things as the Pascal version.\n");
+                // Never translate these 4 lines!
+                Console.WriteLine("Copyright (C) 2021-2022 Le Bao Nguyen");
+                Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.");
+                Console.WriteLine("This is free software, and you are welcome to redistribute it");
+                Console.WriteLine("under certain conditions; type `show c' for details.");
+                // End of the short copyright notice
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("What this application can do:");
                 Console.WriteLine("1. Do many calculations");
                 Console.WriteLine("2. Compare 2 numbers");
-                Console.WriteLine("3. Run from Command Prompt");
+                Console.WriteLine("3. Run in Command Prompt (no GUI)");
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("Press a key to exit...");
                 Console.ReadKey();
@@ -208,23 +232,23 @@ namespace app1cli
                 }
           }  
           exit:
-              { Console.WriteLine("Are you sure want to exit?");
+            { Console.WriteLine("Are you sure want to exit?");
                 Console.WriteLine("1. Yes, do it and I will meet you later");
                 Console.WriteLine("2. No, come back to main menu");
                 Console.WriteLine("Anyway, this need your answer [y/n]: ");
-                ConsoleKeyInfo keyinfo = new ConsoleKeyInfo();
-                while (!Console.KeyAvailable) {
-                    keyinfo = Console.ReadKey(true);
-                    switch (keyinfo.Key) {
-                        case ConsoleKey.Y: 
-                            Console.WriteLine("Thank you for using this application! Exiting...");
-                            System.Environment.Exit(0);
-                            break;
-                        case ConsoleKey.N: goto home;
-                    }
+                string item = Convert.ToString(Console.ReadLine());
+                if (item == "y" || item == "Y" || item == "y")
+                {
+                    Console.WriteLine("Thank you for using the application! Exiting...");
+                    Thread.Sleep(milisecs);
+                    Environment.Exit(0);
                 }
-              }      
-          } // end of "home" label         
+                else if (item == "no" || item == "n")
+                { goto home; }
+                else
+                { Console.WriteLine("Invaild answer. Please try again."); }
+            }      
+          } // end of "home" label          
         } // end of "static"
     } // end of the class
 } // and the program

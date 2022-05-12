@@ -55,6 +55,7 @@ const // you should use const instead of var
     Switch = 'Switching to main menu...';
     Argv_cal = 'You are running app1 in Calculator mode.';
     Argv_exit = 'To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows).';
+    Helper = 'Syntax:' + sLineBreak // go to the next line
     // use sLineBreak to move the cursor to the next line,
     // also use , to link texts
     Helper = 'Syntax:' + sLineBreak
@@ -67,7 +68,10 @@ const // you should use const instead of var
             + '         multiple : The first number * the second one' + sLineBreak
             + '         div      : The first number / the second one' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
-            + 'Description: Do many calculations and compare with app1.';
+            + 'New: wrong-param  : If you run wrong parameter, use this to ignore all ' + sLineBreak
+            + '                    parameters. The program will show nothing.' + sLineBreak
+            + '-----------------------------------------------------------------------' + sLineBreak
+            + 'app1cli - Do many calculations and compare with app1.';
 IMPLEMENTATION
 // nothing here
 end. // EOF

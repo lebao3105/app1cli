@@ -1,9 +1,8 @@
 ## Table of contents
 * [General info](#general-info)
 * [Building](#building)
-* [Install](#install)
 * [What's new](#whats-new)
-* [Images](#some-images)
+* [Screenshots](#screenshots)
 
 ## General info
 [![Build status for .Net version](https://github.com/lebao3105/app1cli/actions/workflows/dotnet.yml/badge.svg)](https://github.com/lebao3105/app1cli/actions/workflows/)
@@ -13,24 +12,23 @@ App1 (or app1cli) is a simple project written in C# and Pascal. It can:
 * Be a calculator
 * Compare 2 numbers
 * And run it from Terminal:)
-	
+
 ## Building
 Read [this](Building.md) file for all steps and requirements.
 
-## Install
-You can make your own .deb package directly. First copile the project, copy the application to ```<project root>/debian/bin/```folder then make the .deb package:
-```
-$ cd .. # if you are in the project folder
-$ dpkg-deb --build app1cli
-$ sudo dpkg -i app1cli*.deb
-```
-* To install app1 mannually, just compile the package, then copy it to any usable folder in $PATH (/usr/bin or /bin for system-wide).
-* If you are in Windows, get the installer from [Releases.](https://github.com/lebao3105/app1cli/releases)
+## Choose your language
+app1 now support Vietnamese and English. To use it (Pascal only for this time), change lang_en in the following files:
+* [Pascal/app1.pas](Pascal/app1.pas)
+* [Pascal/maths.pas](Pascal/maths.pas)
+* [Pascal/utils.pas](Pascal/app1_utils.pas)
+
+to lang_vi to change the default language to Vietnamese. (Re-)compile the project then run it. Change to lang_en to use English.
+
 
 ## What's new:
-*See in the latest release [here](https://github.com/lebao3105/app1cli/releases/)*
+See the latest release [here.](https://github.com/lebao3105/app1cli/releases/)
 
-## Some screenshots:
+## Screenshots:
 ![image](https://user-images.githubusercontent.com/77564176/139211727-06351e51-9b6b-4363-be7d-109b0597bca6.png)
 ![image](https://user-images.githubusercontent.com/77564176/138020987-e248b913-0680-40eb-8e90-d71848780e3f.png)
 ![image](https://user-images.githubusercontent.com/77564176/139212160-2cfd1b74-0f59-444d-af8f-517d3e5475df.png)

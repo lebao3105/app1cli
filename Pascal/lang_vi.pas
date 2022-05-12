@@ -65,6 +65,10 @@ Interface
             + '         multiple : Nhan hai so' + sLineBreak
             + '         div      : Chia hai so' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
+            + 'Moi : wrong-param : Neu ban nhap sai tham so, app1 se bo qua chung va' + sLineBreak
+            + '                    khong hien cai gi ca.' + sLineBreak
+            + '-----------------------------------------------------------------------' + sLineBreak
+            + 'app1cli - Lam nhieu phep toan va so sanh voi app1.' + sLineBreak;
             + 'Mo ta: - Lam nhieu phep tinh va so sanh 2 so voi app1.';
 IMPLEMENTATION
 end.	

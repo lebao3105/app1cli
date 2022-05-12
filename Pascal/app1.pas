@@ -1,5 +1,25 @@
+{ 
+  Copyright (C) 2021-2022 Le Bao Nguyen
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ----------------------------------------------------------------------
+  app1.pas - Main Program file which links everything together 
+  Possible future improvements are in TODO file, read it if you want.
+}
+
 Program App1;
-{$mode objFPC}
+{$mode Delphi}
 uses
     crt,
     sysutils, 
@@ -20,13 +40,13 @@ begin
   if ParamCount = 0 then begin 
     TextColor(Red);
     writeln(Startup_opening);
-    TextColor(White);
+    TextColor(LightGray);
     delay(3000);
     writeln(Startup_appname);
     delay(500);
     TextColor(2);
-    writeln(Startup_appver, '1.0.28');
-    TextColor(White);
+    writeln(Startup_appver, '1.0.29');
+    TextColor(LightGray);
     delay(1000);
     clrscr;
 
@@ -38,15 +58,17 @@ begin
     writeln(Applocation, paramStr(0));
     writeln(Menu_welcome);
     TextColor(2);
-    writeln('1.', Menu_item1);
-    writeln('2.', Menu_item2);
-    writeln('3.', Menu_item3);
+    writeln('------------------------------');
+    writeln('       1.', Menu_item1);
+    writeln('       2.', Menu_item2);
+    writeln('       3.', Menu_item3);
     TextColor(Red);
-    writeln('4.', Menu_item4);
-    TextColor(White);
+    writeln('       4.', Menu_item4);
+    writeln('------------------------------');
+    TextColor(LightGray);
     write(Menu_ask);  
-    readln(choice); // why this is not working???
-    TextColor(White);
+    readln(choice); 
+    TextColor(LightGray);
   end;
  //compare
 if choice = 1 then
@@ -63,18 +85,20 @@ if choice = 2 then begin
     begin
       writeln(Select, 'Or you can get more with ', Cal_Adv);
       TextColor(2);
-      writeln('1. +');
-      writeln('2. -');
-      writeln('3. *');
-      writeln('4. /');
+      writeln('----------------');
+      writeln('     1. +');
+      writeln('     2. -');
+      writeln('     3. *');
+      writeln('     4. /');
       TextColor(Red);
-      writeln('5. ', Cancel);
-      TextColor(White);
-      writeln('6. ', Cal_Adv);
+      writeln('     5. ', Cancel);
+      TextColor(LightGray);
+      writeln('     6. ', Cal_Adv);
+      writeln('----------------');
       write(Menu_ask); 
       TextColor(2); 
       readln(sub_choice_cal);
-      TextColor(White);
+      TextColor(LightGray);
     end;
     if (sub_choice_cal >=1) and (sub_choice_cal <=3) then begin
       ask_2numbers();
@@ -106,24 +130,26 @@ if choice = 2 then begin
       begin
         writeln(Select);
         TextColor(2);
-        writeln('1.x(a+b)');
-        writeln('2.x(a-b)');
-        writeln('3.x^2 - a^2');
-        writeln('4.x^2 + a^2'); // add new formula
-        writeln('5.(a+b)^2');
-        writeln('6.(a-b)^2');
-        writeln('7.a^3 + b^3');
-        writeln('8.a^3 - b^3');
-        writeln('9.(a-b)^3');
-        writeln('10.(a+b)^3 ');
+        writeln('____________________________');
+        writeln('         1. x(a+b)');
+        writeln('         2. x(a-b)');
+        writeln('         3. x^2 - a^2');
+        writeln('         4. x^2 + a^2');
+        writeln('         5. (a+b)^2');
+        writeln('         6. (a-b)^2');
+        writeln('         7. a^3 + b^3');
+        writeln('         8. a^3 - b^3');
+        writeln('         9. (a-b)^3');
+        writeln('        10. (a+b)^3 ');
+        writeln('____________________________');
         TextColor(Red);
         writeln('11.', Cancel);
         writeln('12.', Cal_Exit);
-        TextColor(White);
+        TextColor(LightGray);
         write(Menu_ask); 
         TextColor(2); 
         readln(sub_choice_cal);
-        TextColor(White);
+        TextColor(LightGray);
     if (sub_choice_cal >=1) and (sub_choice_cal <=10) then begin
     // ask the user
       case (sub_choice_cal) of
@@ -168,14 +194,17 @@ if choice = 2 then begin
   about:
    begin
     writeln('About this app:');
-    writeln('   App1 Version 1.0.28.'); 
-    writeln('   This application is released under the GNU GPL V3.');
-    writeln('   You can edit it, or redistribution it to everyone.');
+    writeln('---------------------------------------------------------------------------');
+    writeln('App1 Version 1.0.29.'); 
     writeln(Applocation, paramStr(0));
-    writeln('What can this application do:');
-    writeln('   Do many calculations and compare;');
-    writeln('   Portable and no installation needed; (you can do it if you want)');
-    writeln('   Run from Terminal (Command Prompt)');
+    writeln('This is a simple calculator app which can do some basic calculations + compare.');
+    writeln('---------------------------------------------------------------------------');
+    writeln('Copyright (C) 2022 Le Bao Nguyen.');
+    // Don't translate this!
+    writeln('This program comes with ABSOLUTELY NO WARRANTY; for details type show w,');
+    writeln('This is free software, and you are welcome to redistribute it');
+    writeln('under certain conditions; type show c for details.');
+    // Now you can do translate like the normal
     writeln(Press_Enter);
     Readln();
     delay(1350);
@@ -188,7 +217,7 @@ if choice = 2 then begin
       writeln('1.', Ask_home);
       TextColor(Red);
       writeln('2.', Menu_item4);
-      TextColor(White);
+      TextColor(LightGray);
       Write('Your choice [menu/exit]: '); readln(yes_no);
        if yes_no = 'menu' then goto start;
        if yes_no = 'exit' then goto exit_program;
@@ -209,7 +238,7 @@ i merged sub_menu_cal and sub_menu_cpr and now we have this: *)
      writeln('3.', Ask_back);
      TextColor(Red);
      WriteLn('4.', Ask_exit);
-     TextColor(White);
+     TextColor(LightGray);
      write(Ask_choice, ' [new/cpr/back/exit]: '); readln(yes_no);
        if yes_no = 'new' then goto cal
        else if yes_no = 'cpr' then goto cpr
@@ -223,14 +252,14 @@ exit_program:
    writeln(Exit_ask);
    writeln(Exit_ask_2);
    write(Ask_choice ,'[yes/no]: '); readln(yes_no);
-    if yes_no = 'yes' then
+    if (yes_no = 'yes') and (yes_no = 'y') then
      begin
       writeln(Exit_bye);
       writeln(Exit_out);
       delay(1300);
       exit;
      end
-    else if yes_no = 'no' then
+    else if (yes_no = 'no') and (yes_no = 'n') then
       writeln(Switch);
       delay(1000);
       goto start;
@@ -258,21 +287,21 @@ exit_program:
                     warm_num()
               else if ParamStr(n+3) = '' then
                     warm_num()
-              else Add(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
+              else add(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
           end
           else if ParamStr(n+1) = 'sub' then begin
               if ParamStr(n+2) = '' then 
                     warm_num()
               else if ParamStr(n+3) = '' then
                     warm_num()
-              else Minus(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
+              else minus(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
           end
           else if ParamStr(n+1) = 'multiple' then begin
               if ParamStr(n+2) = '' then 
                     warm_num()
               else if ParamStr(n+3) = '' then
                     warm_num()
-              else Multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+              else multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
           end
       	  else if ParamStr(n+1) = 'div' then begin
               if ParamStr(n+2) = '' then 
@@ -282,7 +311,7 @@ exit_program:
               else begin
                     real1 := StrToInt(ParamStr(n+2)) + 0.0;
                     real2 := StrToInt(ParamStr(n+3)) + 0.0;
-                    writeln(Divide(real1, real2));
+                    writeln(divide(real1, real2));
               end;
           end  
           else if ParamStr(n+1) = '' then 
@@ -291,10 +320,13 @@ exit_program:
               goto cal;
           end
         end;
-      // others
+
+      // others parameters
       if ParamStr(n) = 'about' then 
               goto about
       else if ParamStr(n) = 'help' then 
-              help();
+              help()
+      else if ParamStr(n) = 'wrong-param' then
+              exit();
       end; // end of for .. do block
   end.

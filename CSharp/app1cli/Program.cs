@@ -1,5 +1,4 @@
 /* 
-  app1.pas - Main Program file which links everything together 
   Copyright (C) 2021-2022 Le Bao Nguyen
 
   This program is free software: you can redistribute it and/or modify
@@ -15,34 +14,27 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ----------------------------------------------------------------------
+  Program.cs - Main Program file which links everything together 
   Possible future improvements are in TODO file, read it if you want.
 */
 
 using utilsLib;
-using mathsLib;
 
 namespace app1cli
 {
     class Program
     {
-        public static int number1;
-        public static int number2;
-        public static int number3;
-
         static void Main()
         {
-            /* Call libraries, and make some local variables */
-            var util = new utilsLibrary();
-            var math = new mathsLibrary();
+            var test = new utilsLibrary();
+            int milisecs = 2350;
             string path = Directory.GetCurrentDirectory();
-            int miliseconds = 2350;
-
-            Console.WriteLine("app1cli version 1.0.29 Undefined Build (4/30/22)");
+            Console.WriteLine("app1 version 1.0.29.");
             Console.WriteLine("The current time is: " + DateTime.Now);
-            Console.WriteLine("Program's path: {0}" , path);  
-            Thread.Sleep(miliseconds);
+            Console.WriteLine("Program's path: {0}", path);  
+            Thread.Sleep(milisecs);
             Console.Clear();
-            Console.WriteLine("Welcome to app1! Select something below:");    
+            Console.WriteLine("Welcome back! Choose an option to start now: ");    
         // Main menu
           home: 
           { 
@@ -60,7 +52,7 @@ namespace app1cli
             { goto cal; }
             else if (choice == 3)
             {
-                Console.WriteLine("app1 version 1.0.29 Undefined Build (4/30/22)");
+                Console.WriteLine("app1 version 1.0.29");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("This C# version do same things as the Pascal version.\n");
                 Console.WriteLine("Program's path: {0)", path);
@@ -89,12 +81,10 @@ namespace app1cli
 
         // yeah, I moved the "labels" here:)
             cpr: {
-                Console.WriteLine("You are choosed 1 - compare.");
-                util.ask_2nums(number1, number2, null);
-                math.compare(number1, number2);
+                Console.WriteLine("You are typed 1 - compare.");
+                test.ask_2nums(test.target1, test.target2, "compare");  
                 goto ask; 
-            }
-
+              }  
             cal: {
                 Console.WriteLine("You are typed 2.");
                 Console.WriteLine("Choose something to do now:");
@@ -111,41 +101,41 @@ namespace app1cli
                 if (answer == 1)
                 {
                         Console.WriteLine("You are typed 1 - plus.");
-                        util.ask_2nums(number1, number2, "add");
+                        test.ask_2nums(test.target1, test.target2, "add");
                         goto ask;
                 }        
                 else if (answer == 2)
                 {
                         Console.WriteLine("You are typed 2 - minus.");
-                        util.ask_2nums(number1, number2, "minus");
+                        test.ask_2nums(test.target1, test.target2, "minus");
                         goto ask;       
                 }
                 else if (answer == 3)
                 {
                         Console.WriteLine("You are typed 3 - multiple.");
-                        util.ask_2nums(number1, number2, "multiple");
+                        test.ask_2nums(test.target1, test.target2, "multiple");
                         goto ask;       
                 }
                 else if (answer == 4)
                 {
                         Console.WriteLine("You are typed 4 - divide.");
-                        util.ask_2nums(number1, number2, "div");
+                        test.ask_2nums(test.target1, test.target2, "div");
                         goto ask;       
                 }
                 else if (answer == 5)
                 {
                         Console.WriteLine("Select a function here:");
                         Console.WriteLine("__________________________");
-                        Console.WriteLine("        1. x(a+b)");
-                        Console.WriteLine("        2. x(a-b)");
-                        Console.WriteLine("        3. x^2 - a^2");
-                        Console.WriteLine("        4. x^2 + a^2");
-                        Console.WriteLine("        5. (a+b)^2");
-                        Console.WriteLine("        6. (a-b)^2");
-                        Console.WriteLine("        7. a^3 + b^3");
-                        Console.WriteLine("        8. a^3 - b^3");
-                        Console.WriteLine("        9. (a+b)^3");
-                        Console.WriteLine("        10. (a-b)^3");
+                        Console.WriteLine("1.x(a+b)");
+                        Console.WriteLine("2.x(a-b)");
+                        Console.WriteLine("3.x^2 - a^2");
+                        Console.WriteLine("4.x^2 + a^2");
+                        Console.WriteLine("5.(a+b)^2");
+                        Console.WriteLine("6.(a-b)^2");
+                        Console.WriteLine("7.a^3 + b^3");
+                        Console.WriteLine("8.a^3 - b^3");
+                        Console.WriteLine("9.(a+b)^3");
+                        Console.WriteLine("10.(a-b)^3");
                         Console.WriteLine("__________________________");
                         Console.WriteLine("11.Cancel");
                         Console.WriteLine("12.Exit");
@@ -154,60 +144,60 @@ namespace app1cli
                         if (answer_2 == 1)
                         {
                             Console.WriteLine("You are typed 1 - x(a+b).");
-                            util.ask_3nums(number1, number2, number3, "1");
+                            test.ask_3nums(test.target1, test.target2, test.target3, "1");
                             goto ask;    
                         }
                         else if (answer_2 == 2)
                         {
                             Console.WriteLine("You are typed 2 - x(a-b).");
-                            util.ask_3nums(number1, number2, number3, "2");
+                            test.ask_3nums(test.target1, test.target2, test.target3, "2");
                             goto ask;    
                         }
                         else if (answer_2 == 3)
                         {
                             Console.WriteLine("You are typed 3 - x^2-a^2).");
-                            util.ask_2nums(number1, number2, "a");
+                            test.ask_2nums(test.target1, test.target2, "a");
                             goto ask;    
                         }
                         else if (answer_2 == 4) {
                             Console.WriteLine("You are typed 4 - x^2+a^2).");
-                            util.ask_2nums(number1, number2, "b");
+                            test.ask_2nums(test.target1, test.target2, "b");
                             goto ask;
                         }
                         else if (answer_2 == 5)
                         {
                             Console.WriteLine("You are typed 5 - (a+b)^2.");
-                            util.ask_2nums(number1, number2, "c");
+                            test.ask_2nums(test.target1, test.target2, "c");
                             goto ask;    
                         }
                         else if (answer_2 == 6)
                         {
                             Console.WriteLine("You are typed 6 - (a-b)^2.");
-                            util.ask_2nums(number1, number2, "d");
+                            test.ask_2nums(test.target1, test.target2, "d");
                             goto ask;    
                         }
                         else if (answer_2 == 7)
                         {
                             Console.WriteLine("You are typed 7 - a^3+b^3.");
-                            util.ask_2nums(number1, number2, "e");
+                            test.ask_2nums(test.target1, test.target2, "e");
                             goto ask;    
                         }
                         else if (answer_2 == 8)
                         {
                             Console.WriteLine("You are typed 8 - a^3-b^3.");
-                            util.ask_2nums(number1, number2, "f");
+                            test.ask_2nums(test.target1, test.target2, "f");
                             goto ask;    
                         }
                         else if (answer_2 == 9)
                         {
                             Console.WriteLine("You are typed 9 - (a+b)^3.");
-                            util.ask_2nums(number1, number2, "g");
+                            test.ask_2nums(test.target1, test.target2, "g");
                             goto ask;    
                         }
                         else if (answer_2 == 10)
                         {
                             Console.WriteLine("You are typed 10 - (a-b)^3.");
-                            util.ask_2nums(number1, number2, "h");
+                            test.ask_2nums(test.target1, test.target2, "h");
                             goto ask;    
                         }
                         else if (answer_2 == 11)
@@ -229,11 +219,10 @@ namespace app1cli
                 Console.WriteLine("3. Compare");
                 Console.WriteLine("2. Exit");
                 Console.WriteLine("-------------------------------------------------");
-                Console.WriteLine("Enter your answer [b(ack)/c(al)/(com)p(are)/e(xit)]: ");
+                Console.WriteLine("Type your answer [b(ack)/c(al)/(com)p(are)/e(xit)]: ");
                 ConsoleKeyInfo keycheck = new ConsoleKeyInfo();
                 while (!Console.KeyAvailable) {
                     keycheck = Console.ReadKey(true);
-                    Thread.Sleep(miliseconds);
                     switch (keycheck.Key) {
                         case ConsoleKey.C: goto cal;
                         case ConsoleKey.P: goto cpr;
@@ -251,7 +240,7 @@ namespace app1cli
                 if (item == "y" || item == "Y" || item == "y")
                 {
                     Console.WriteLine("Thank you for using the application! Exiting...");
-                    Thread.Sleep(miliseconds);
+                    Thread.Sleep(milisecs);
                     Environment.Exit(0);
                 }
                 else if (item == "no" || item == "n")
@@ -259,8 +248,8 @@ namespace app1cli
                 else
                 { Console.WriteLine("Invaild answer. Please try again."); }
             }      
-          } // end of "home" label         
-        } // end of main()
-    } // end of the main class
+          } // end of "home" label          
+        } // end of "static"
+    } // end of the class
 } // and the program
 

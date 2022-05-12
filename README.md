@@ -14,7 +14,7 @@ App1 (or app1cli) is a simple project written in C# and Pascal. It can:
 * And run it from Terminal:)
 
 ## Building
-Read the [Building.md](Building.md) file for all steps and requirements.
+Read [this](Building.md) file for all steps and requirements.
 
 ## Choose your language
 app1 now support Vietnamese and English. To use it (Pascal only for this time), change lang_en in the following files:

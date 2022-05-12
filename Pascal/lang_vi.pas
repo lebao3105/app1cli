@@ -46,7 +46,7 @@ Interface
     Exit_out = 'Dang thoat...';
     (* Misc *)
     Argv_cpr = 'Chuan bi so sanh ';
-    Argv_fatal = 'Loi:';
+    Argv_fatal = 'Loi: ';
     Argv_warm_num = 'Chung toi can them mot so nua de lam viec nay.';
     Argv_abort = 'Da huy cong viec dinh lam.';
     Clr = 'Dang lam trang man hinh...'; 
@@ -69,5 +69,6 @@ Interface
             + '                    khong hien cai gi ca.' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
             + 'app1cli - Lam nhieu phep toan va so sanh voi app1.' + sLineBreak;
+            + 'Mo ta: - Lam nhieu phep tinh va so sanh 2 so voi app1.';
 IMPLEMENTATION
 end.	

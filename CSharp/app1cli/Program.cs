@@ -14,7 +14,10 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ----------------------------------------------------------------------
-  Program.cs - Main Program file which links everything together 
+  File name : Program.cs
+  This version of app1cli will be ended support in 10 June.
+  Consider to switch to Pascal version instead. If I can, this still 
+  can use .NET 7.
   Possible future improvements are in TODO file, read it if you want.
 */
 
@@ -31,7 +34,7 @@ namespace app1cli
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine("app1 version 1.0.29.");
             Console.WriteLine("The current time is: " + DateTime.Now);
-            Console.WriteLine("Program's path: {0}", path);  
+            //Console.WriteLine("Program's path: {0}", path);  // error occured with path format?
             Thread.Sleep(milisecs);
             Console.Clear();
             Console.WriteLine("Welcome back! Choose an option to start now: ");    
@@ -55,6 +58,7 @@ namespace app1cli
                 Console.WriteLine("app1 version 1.0.29");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("This C# version do same things as the Pascal version.\n");
+                Console.WriteLine("This is the final version of app1cli C# edition. Supports will be endded in 10 June.\n");
                 Console.WriteLine("Program's path: {0)", path);
                 Console.WriteLine("-------------------------------------------------");
                 // Never translate these 4 lines!
@@ -98,29 +102,15 @@ namespace app1cli
                 Console.WriteLine("__________________________");
                 Console.Write("Write answer: ");
                 int answer = Convert.ToInt32(Console.ReadLine());
-                if (answer == 1)
-                {
-                        Console.WriteLine("You are typed 1 - plus.");
-                        test.ask_2nums(test.target1, test.target2, "add");
-                        goto ask;
-                }        
-                else if (answer == 2)
-                {
-                        Console.WriteLine("You are typed 2 - minus.");
-                        test.ask_2nums(test.target1, test.target2, "minus");
-                        goto ask;       
-                }
-                else if (answer == 3)
-                {
-                        Console.WriteLine("You are typed 3 - multiple.");
-                        test.ask_2nums(test.target1, test.target2, "multiple");
-                        goto ask;       
-                }
-                else if (answer == 4)
-                {
-                        Console.WriteLine("You are typed 4 - divide.");
-                        test.ask_2nums(test.target1, test.target2, "div");
-                        goto ask;       
+                if (answer >= 1 || answer <= 4) {
+                    Console.WriteLine("You are typed {0}.", answer);
+                    switch (answer) {
+                        case 1: test.ask_2nums(test.target1, test.target2, "plus"); break;
+                        case 2: test.ask_2nums(test.target1, test.target2, "minus"); break;
+                        case 3: test.ask_2nums(test.target1, test.target2, "multiple"); break;
+                        case 4: test.ask_2nums(test.target1, test.target2, "div"); break;
+                    } 
+                    goto ask;
                 }
                 else if (answer == 5)
                 {
@@ -141,71 +131,20 @@ namespace app1cli
                         Console.WriteLine("12.Exit");
                         Console.Write("Answer key here -> : ");
                         int answer_2 = Convert.ToInt32(Console.ReadLine());
-                        if (answer_2 == 1)
-                        {
-                            Console.WriteLine("You are typed 1 - x(a+b).");
-                            test.ask_3nums(test.target1, test.target2, test.target3, "1");
-                            goto ask;    
+                        switch (answer_2) {
+                            case 1: test.ask_3nums(test.target1, test.target2, test.target3, "1"); break;
+                            case 2: test.ask_3nums(test.target1, test.target2, test.target3, "2"); break;
+                            case 3: test.ask_2nums(test.target1, test.target2, "a"); break;
+                            case 4: test.ask_2nums(test.target1, test.target2, "b"); break;
+                            case 5: test.ask_2nums(test.target1, test.target2, "c"); break;
+                            case 6: test.ask_2nums(test.target1, test.target2, "d"); break;
+                            case 7: test.ask_2nums(test.target1, test.target2, "e"); break;
+                            case 8: test.ask_2nums(test.target1, test.target2, "f"); break;
+                            case 9: test.ask_2nums(test.target1, test.target2, "g"); break;
+                            case 10: test.ask_2nums(test.target1, test.target2, "h"); break;
+                            case 11: goto cal;
+                            case 12: goto exit;
                         }
-                        else if (answer_2 == 2)
-                        {
-                            Console.WriteLine("You are typed 2 - x(a-b).");
-                            test.ask_3nums(test.target1, test.target2, test.target3, "2");
-                            goto ask;    
-                        }
-                        else if (answer_2 == 3)
-                        {
-                            Console.WriteLine("You are typed 3 - x^2-a^2).");
-                            test.ask_2nums(test.target1, test.target2, "a");
-                            goto ask;    
-                        }
-                        else if (answer_2 == 4) {
-                            Console.WriteLine("You are typed 4 - x^2+a^2).");
-                            test.ask_2nums(test.target1, test.target2, "b");
-                            goto ask;
-                        }
-                        else if (answer_2 == 5)
-                        {
-                            Console.WriteLine("You are typed 5 - (a+b)^2.");
-                            test.ask_2nums(test.target1, test.target2, "c");
-                            goto ask;    
-                        }
-                        else if (answer_2 == 6)
-                        {
-                            Console.WriteLine("You are typed 6 - (a-b)^2.");
-                            test.ask_2nums(test.target1, test.target2, "d");
-                            goto ask;    
-                        }
-                        else if (answer_2 == 7)
-                        {
-                            Console.WriteLine("You are typed 7 - a^3+b^3.");
-                            test.ask_2nums(test.target1, test.target2, "e");
-                            goto ask;    
-                        }
-                        else if (answer_2 == 8)
-                        {
-                            Console.WriteLine("You are typed 8 - a^3-b^3.");
-                            test.ask_2nums(test.target1, test.target2, "f");
-                            goto ask;    
-                        }
-                        else if (answer_2 == 9)
-                        {
-                            Console.WriteLine("You are typed 9 - (a+b)^3.");
-                            test.ask_2nums(test.target1, test.target2, "g");
-                            goto ask;    
-                        }
-                        else if (answer_2 == 10)
-                        {
-                            Console.WriteLine("You are typed 10 - (a-b)^3.");
-                            test.ask_2nums(test.target1, test.target2, "h");
-                            goto ask;    
-                        }
-                        else if (answer_2 == 11)
-                        { goto home; }
-                        else if (answer_2 == 12)
-                        { goto exit; }
-                        else 
-                        { Console.WriteLine("Invaild number. Please try again."); }
                 }
                 else if (answer == 6)
                 { goto home; }

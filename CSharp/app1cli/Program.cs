@@ -34,7 +34,7 @@ namespace app1cli
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine("app1 version 1.0.29.");
             Console.WriteLine("The current time is: " + DateTime.Now);
-            //Console.WriteLine("Program's path: {0}", path);  // error occured with path format?
+            Console.WriteLine("Program's path: {0}", path);  
             Thread.Sleep(milisecs);
             Console.Clear();
             Console.WriteLine("Welcome back! Choose an option to start now: ");    
@@ -59,14 +59,12 @@ namespace app1cli
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("This C# version do same things as the Pascal version.\n");
                 Console.WriteLine("This is the final version of app1cli C# edition. Supports will be endded in 10 June.\n");
-                Console.WriteLine("Program's path: {0)", path);
+                //Console.WriteLine("Program's path: {0)", path); // error occured with path format?
                 Console.WriteLine("-------------------------------------------------");
-                // Never translate these 4 lines!
                 Console.WriteLine("Copyright (C) 2021-2022 Le Bao Nguyen");
                 Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.");
                 Console.WriteLine("This is free software, and you are welcome to redistribute it");
                 Console.WriteLine("under certain conditions; type `show c' for details.");
-                // End of the short copyright notice
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("What this application can do:");
                 Console.WriteLine("1. Do many calculations");

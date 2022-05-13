@@ -1,5 +1,23 @@
-﻿using System;
-using System.IO;
+﻿/* 
+  Copyright (C) 2021-2022 Le Bao Nguyen
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  ----------------------------------------------------------------------
+  File name : utilsLib.cs
+  This file contains some functions needed for app1cli.
+  All changes are included in the /TODO file.
+*/
 using dev = System.Console;
 namespace utilsLib;
 
@@ -42,42 +60,42 @@ public class utilsLibrary
         else if (check == "a")
         {
             result = target1 * target1 - target2 * target2;
-            Console.WriteLine("The answer is: "+result);
+            dev.WriteLine("The answer is: "+result);
         } // x^2+a^2
         else if (check == "b")
         {
             result = target1 * target1 + target2 * target2;
-            Console.WriteLine("The answer is: "+result);   
+            dev.WriteLine("The answer is: "+result);   
         } // (a+b)^2
         else if (check == "c")
         {
             result = (target1 + target2) * (target2 + target1);
-            Console.WriteLine("The answer is: "+result);
+            dev.WriteLine("The answer is: "+result);
         } // (a-b)^2
         else if (check == "d") 
         {
             result = (target1 - target2) * (target1 - target2);
-            Console.WriteLine("The answer is: "+result);
+            dev.WriteLine("The answer is: "+result);
         } // a^3 + b^3
         else if (check == "e")
         {
             result = target1 * target1 * target1 + target2 * target2 * target2;
-            Console.WriteLine("The answer is: "+result);
+            dev.WriteLine("The answer is: "+result);
         } // a^3 - b^3
         else if (check == "f")
         {
             result = target1 * target1 * target1 - target2 * target2 * target2;
-            Console.WriteLine("The answer is: "+result);
+            dev.WriteLine("The answer is: "+result);
         } // (a+b)^3
         else if (check == "g")
         {
             result = (target1 + target2) * (target1 + target2) * (target1 + target2);
-            Console.WriteLine("The answer is: "+result);
+            dev.WriteLine("The answer is: "+result);
         } // (a-b)^3
         else if (check == "h")
         {
             result = (target1 - target2) * (target1 - target2) * (target1 - target2);
-            Console.WriteLine("The answer is: "+result);
+            dev.WriteLine("The answer is: "+result);
         }
     }
 
@@ -87,17 +105,15 @@ public class utilsLibrary
         target3 = Convert.ToInt32(dev.ReadLine());
         // x(a+b)
         if (check == "1")
-        {
-            
+        {   
             result = target1 * (target3 + target2);
-            Console.WriteLine("The answer is: "+result);
+            dev.WriteLine("The answer is: "+result);
         }
         // x(a-b)
         else if (check == "2")
         {
-
             result = target1 * (target3 - target2);
-            Console.WriteLine("The answer is: "+result);
+            dev.WriteLine("The answer is: "+result);
         }
     }
 

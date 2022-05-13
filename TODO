@@ -1,12 +1,13 @@
-C#: Text color for the texts
-C#: Use case/if block like Pascal
-C#: Help message
-C#: Fix program's path showing (Done!)
-C#: Enable some args for the program
-C#-utilsLib: Make functions for warnings and errors, like Pascal too
-C#-utilsLib: Replace some strings in ask_2nums() and ask_3nums()
-C#: (Working) Make a math library
+// 1.0.29
+C#: Text color for the texts (Failed)
+C#: Use case/if block like Pascal (Done!)
+C#: Help message (Canceled)
+C#: Fix program's path showing (Done! - but have problem in About?!)
+C#: Enable some args for the program (Canceled)
+C#-utilsLib: Make functions for warnings and errors, like Pascal too (Canceled - not needed)
+C#-utilsLib: Replace some strings in ask_2nums() and ask_3nums() (Failed)
+C#: (Working - Failed!) Make a math library
 Pascal: Improve args code (Nothing to do)
 Pascal: Set color to white for FULL program, or change the changed color to LightGray (default) (Done!)
 Pascal: Set the menu layout like C# (Done!)
-All: Add license to help message
+All: Add license to help message (Done!)

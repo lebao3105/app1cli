@@ -14,10 +14,14 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ----------------------------------------------------------------------
+<<<<<<< HEAD
   File name : Program.cs
   This version of app1cli will be ended support in 10 June.
   Consider to switch to Pascal version instead. If I can, this still 
   can use .NET 7.
+=======
+  Program.cs - Main Program file which links everything together 
+>>>>>>> origin/main
   Possible future improvements are in TODO file, read it if you want.
 */
 

@@ -2,6 +2,7 @@
    you can get and customize it for your application. *)
 
 unit app1_utils;
+{$mode delphi}
 Interface
   procedure warm_num();
   procedure warm_cal();

@@ -14,19 +14,35 @@ App1 (or app1cli) is a simple project written in C# and Pascal. It can:
 * And run it from Terminal:)
 
 ## Building
-Read [this](Building.md) file for all steps and requirements.
+Requirement(s) - only fpc needed now:
+* git to clone the repository (or get source code from the repository releases)
+* fpc (Free Pascal Compiler)
+* .NET SDK to build C# edition
 
-## Choose your language
-app1 now support Vietnamese and English. To use it (Pascal only for this time), change lang_en in the following files:
+Just run the following command in source_code_root/Pascal:
+```
+fpc app1.pas
+```
+
+Or in source_code_root/C#:
+```
+dotnet run
+# or dotnet run --project app1cli/app1cli.csproj
+# run without build (you built it before):
+# dotnet build --project app1cli/app1cli.csproj
+```
+
+## Change language
+There are 2 languages: Vietnamese and English (Default). Change language by changing lang_en to lang_vi (Vietnamese) in these files:
 * [Pascal/app1.pas](Pascal/app1.pas)
 * [Pascal/maths.pas](Pascal/maths.pas)
 * [Pascal/utils.pas](Pascal/app1_utils.pas)
 
-to lang_vi to change the default language to Vietnamese. (Re-)compile the project then run it. Change to lang_en to use English.
+(Re-)compile the file then run it. Change back to lang_en to use English.
 
 
-## What's new:
-See the latest release [here.](https://github.com/lebao3105/app1cli/releases/)
+## Download
+Get it [here.](https://github.com/lebao3105/app1cli/releases/)
 
 ## Screenshots:
 ![image](https://user-images.githubusercontent.com/77564176/139211727-06351e51-9b6b-4363-be7d-109b0597bca6.png)

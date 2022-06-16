@@ -55,7 +55,6 @@ const // you should use const instead of var
     Switch = 'Switching to main menu...';
     Argv_cal = 'You are running app1 in Calculator mode.';
     Argv_exit = 'To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows).';
-    Helper = 'Syntax:' + sLineBreak // go to the next line
     // use sLineBreak to move the cursor to the next line,
     // also use , to link texts
     Helper = 'Syntax:' + sLineBreak

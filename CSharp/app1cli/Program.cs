@@ -15,10 +15,8 @@
   along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ----------------------------------------------------------------------
   File name : Program.cs
-  This version of app1cli will be ended support in 10 June.
-  Consider to switch to Pascal version instead. If I can, this still 
-  can use .NET 7.
-  Possible future improvements are in TODO file, read it if you want.
+  I won't working on this version from 10 June.
+  All changes are added into TODO file.
 */
 
 using utilsLib;
@@ -58,7 +56,7 @@ namespace app1cli
                 Console.WriteLine("app1 version 1.0.29");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("This C# version do same things as the Pascal version.\n");
-                Console.WriteLine("This is the final version of app1cli C# edition. Supports will be endded in 10 June.\n");
+                Console.WriteLine("This is the final version of app1cli C# edition. I will no longer working on this version yet.\n");
                 //Console.WriteLine("Program's path: {0)", path); // error occured with path format?
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("Copyright (C) 2021-2022 Le Bao Nguyen");

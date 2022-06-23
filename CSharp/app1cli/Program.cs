@@ -15,7 +15,7 @@
   along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ----------------------------------------------------------------------
   File name : Program.cs
-  I won't working on this version from 10 June.
+  I won't working on this version from 10 July. # Extended
   All changes are added into TODO file.
 */
 

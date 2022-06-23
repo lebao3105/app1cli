@@ -18,84 +18,88 @@
   This file contains some functions needed for app1cli.
   All changes are included in the /TODO file.
 */
+
 using dev = System.Console;
+using _ = Math;
 namespace utilsLib;
 
 public class utilsLibrary
 {
     // make 3 target numbers
-    public int target1;
+    /*public int target1;
     public int target2;
-    public int target3;
-    // set result
+    public int target3;*/
+
+    // when we use _.Pow, doubles are required
+    public double pow1;
+    public double pow2;
+
+    // answer
+    const string ans = "The answer is: ";
+
+    // set results
     public int result;
+    public double rs;
+
     // functions
     public void ask_2nums(int target1, int target2, string? check) {
+        // ask for numbers.
         dev.Write("Enter a value for the first target: ");
         target1 = Convert.ToInt32(dev.ReadLine());
         dev.Write("And the second target too: ");
         target2 = Convert.ToInt32(dev.ReadLine());
-        // add a fix for no-value numbers
-        if (check == "compare") 
-        {
-            compare(target1, target2);
-        } 
-        else if (check == "add") 
-        {
-            dev.WriteLine("The answer is: "+(target1+target2));
-        } 
-        else if (check == "minus") 
-        {
-            dev.WriteLine("The answer is: "+(target1-target2));
-        } 
-        else if (check == "multiple") 
-        {
-            dev.WriteLine("The answer is: "+(target1*target2));
-        } 
-        else if (check == "div") 
-        {
-            dev.WriteLine("The answer is: "+(target1/target2));
+        
+        // basic maths
+        switch(check) {
+            case "compare": compare(target1, target2); break;
+            case "add": writeAns((target1+target2)); break;
+            case "minus": writeAns((target1-target2)); break;
+            case "multiple": writeAns((target1*target2)); break;
+            case "div": writeAns((target1/target2)); break;
         }
-        // x^2-a^2
-        else if (check == "a")
+
+        pow1 = Convert.ToDouble(target1);
+        pow2 = Convert.ToDouble(target2);
+
+        if (check == "a")
         {
-            result = target1 * target1 - target2 * target2;
-            dev.WriteLine("The answer is: "+result);
+            rs = sqr(pow1) - sqr(pow2);
+            dev.WriteLine(ans+rs);
         } // x^2+a^2
         else if (check == "b")
         {
-            result = target1 * target1 + target2 * target2;
-            dev.WriteLine("The answer is: "+result);   
+            rs = sqr(pow1)+ sqr(pow2);
+            dev.WriteLine(ans+rs;   
         } // (a+b)^2
         else if (check == "c")
         {
-            result = (target1 + target2) * (target2 + target1);
-            dev.WriteLine("The answer is: "+result);
+            rs = sqr(pow1 + pow2);
+            dev.WriteLine(ans+rs);
         } // (a-b)^2
         else if (check == "d") 
         {
-            result = (target1 - target2) * (target1 - target2);
-            dev.WriteLine("The answer is: "+result);
+            rs = sqr(pow1 - pow2);
+            dev.WriteLine(ans+rs);
         } // a^3 + b^3
         else if (check == "e")
         {
-            result = target1 * target1 * target1 + target2 * target2 * target2;
-            dev.WriteLine("The answer is: "+result);
+            rs = pow1 * pow1 * pow1 + pow2 * pow2 * pow2;
+            dev.WriteLine(ans+rs);
         } // a^3 - b^3
         else if (check == "f")
         {
-            result = target1 * target1 * target1 - target2 * target2 * target2;
-            dev.WriteLine("The answer is: "+result);
+            rs = pow1 * pow1 * pow1 - pow2 * pow2 * pow2;
+            dev.WriteLine(ans+rs);
         } // (a+b)^3
         else if (check == "g")
         {
-            result = (target1 + target2) * (target1 + target2) * (target1 + target2);
-            dev.WriteLine("The answer is: "+result);
+            rs = (pow1 + pow2) * (pow1 + pow2) * (pow1 + pow2);
+            dev.WriteLine(ans+rs);
         } // (a-b)^3
         else if (check == "h")
         {
-            result = (target1 - target2) * (target1 - target2) * (target1 - target2);
-            dev.WriteLine("The answer is: "+result);
+            rs = (pow1 - pow2) * (pow1 - pow2) * (pow1 - pow2);
+            dev.WriteLine(ans+rs);
         }
     }
 
@@ -107,13 +111,13 @@ public class utilsLibrary
         if (check == "1")
         {   
             result = target1 * (target3 + target2);
-            dev.WriteLine("The answer is: "+result);
+            dev.WriteLine(ans+result);
         }
         // x(a-b)
         else if (check == "2")
         {
             result = target1 * (target3 - target2);
-            dev.WriteLine("The answer is: "+result);
+            dev.WriteLine(ans+result);
         }
     }
 
@@ -127,6 +131,14 @@ public class utilsLibrary
         else if (target2 == target1) {
             dev.WriteLine("2 number are the same.");
         }
+    }
+
+    public void writeAns(int rs) {
+        dev.WriteLine(ans+rs);
+    }
+
+    public double sqr(double num) {
+        return _.Pow(num, 2);
     }
 }
 

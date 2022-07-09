@@ -28,7 +28,7 @@ namespace app1cli
         static void Main()
         {
             var test = new utilsLibrary();
-            int milisecs = 2350;
+            int milisecs = 2000;
             string path = Directory.GetCurrentDirectory();
             Console.WriteLine("app1 version 1.3.");
             Console.WriteLine("The current time is: " + DateTime.Now);
@@ -159,10 +159,10 @@ namespace app1cli
                 while (!Console.KeyAvailable) {
                     keycheck = Console.ReadKey(true);
                     switch (keycheck.Key) {
-                        case ConsoleKey.C: goto cal;
-                        case ConsoleKey.P: goto cpr;
-                        case ConsoleKey.B: goto home;
-                        case ConsoleKey.E: goto exit;   
+                        case ConsoleKey.C: Console.Clear(); goto cal;
+                        case ConsoleKey.P: Console.Clear(); goto cpr;
+                        case ConsoleKey.B: Console.Clear(); goto home;
+                        case ConsoleKey.E: Console.Clear(); goto exit;   
                     }
                 }
           }  
@@ -170,7 +170,7 @@ namespace app1cli
             { Console.WriteLine("Are you sure want to exit?");
                 Console.WriteLine("1. Yes, do it and I will meet you later");
                 Console.WriteLine("2. No, come back to main menu");
-                Console.WriteLine("Anyway, this need your answer [y/n]: ");
+                Console.Write("Anyway, this need your answer [y/n]: ");
                 string item = Convert.ToString(Console.ReadLine());
                 if (item == "y" || item == "Y" || item == "y")
                 {

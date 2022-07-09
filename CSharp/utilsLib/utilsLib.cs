@@ -20,15 +20,15 @@
 */
 
 using dev = System.Console;
-using _ = Math;
+using _ = System.Math;
 namespace utilsLib;
 
 public class utilsLibrary
 {
-    // make 3 target numbers
-    /*public int target1;
+    // make 3 integer numbers
+    public int target1;
     public int target2;
-    public int target3;*/
+    public int target3;
 
     // when we use _.Pow, double numbers are required
     public double pow1;
@@ -52,10 +52,10 @@ public class utilsLibrary
         // basic maths
         switch(check) {
             case "compare": compare(target1, target2); break;
-            case "add": writeAns((target1+target2)); break;
-            case "minus": writeAns((target1-target2)); break;
-            case "multiple": writeAns((target1*target2)); break;
-            case "div": writeAns((target1/target2)); break;
+            case "add": writeAns(Convert.ToDouble(target1+target2)); break;
+            case "minus": writeAns(Convert.ToDouble(target1-target2)); break;
+            case "multiple": writeAns(Convert.ToDouble(target1*target2)); break;
+            case "div": writeAns(Convert.ToDouble(target1/target2)); break;
         }
 
         pow1 = Convert.ToDouble(target1);
@@ -65,42 +65,42 @@ public class utilsLibrary
         if (check == "a")
         {
             rs = sqr(pow1) - sqr(pow2);
-            dev.WriteLine(ans+rs);
+            writeAns(rs);
         } // x^2+a^2
         else if (check == "b")
         {
             rs = sqr(pow1)+ sqr(pow2);
-            dev.WriteLine(ans+rs;   
+            writeAns(rs); 
         } // (a+b)^2
         else if (check == "c")
         {
             rs = sqr(pow1 + pow2);
-            dev.WriteLine(ans+rs);
+            writeAns(rs);
         } // (a-b)^2
         else if (check == "d") 
         {
             rs = sqr(pow1 - pow2);
-            dev.WriteLine(ans+rs);
+            writeAns(rs);
         } // a^3 + b^3
         else if (check == "e")
         {
             rs = pow1 * pow1 * pow1 + pow2 * pow2 * pow2;
-            dev.WriteLine(ans+rs);
+            writeAns(rs);
         } // a^3 - b^3
         else if (check == "f")
         {
             rs = pow1 * pow1 * pow1 - pow2 * pow2 * pow2;
-            dev.WriteLine(ans+rs);
+            writeAns(rs);
         } // (a+b)^3
         else if (check == "g")
         {
             rs = (pow1 + pow2) * (pow1 + pow2) * (pow1 + pow2);
-            dev.WriteLine(ans+rs);
+            writeAns(rs);
         } // (a-b)^3
         else if (check == "h")
         {
             rs = (pow1 - pow2) * (pow1 - pow2) * (pow1 - pow2);
-            dev.WriteLine(ans+rs);
+            writeAns(rs);
         }
     }
 
@@ -124,18 +124,18 @@ public class utilsLibrary
 
     public void compare(int target1, int target2) {
         if (target1 < target2) { 
-            dev.WriteLine("The first number < the second one / "+target2.CompareTo(target1));
+            dev.WriteLine("The first number < the second one.");
         }
         else if (target2 < target1) {
-            dev.WriteLine("The second number < the first one / "+target1.CompareTo(target2));
+            dev.WriteLine("The second number < the first one");
         }
         else if (target2 == target1) {
             dev.WriteLine("2 number are the same.");
         }
     }
 
-    public void writeAns(int rs) {
-        return dev.WriteLine(ans+rs);
+    public void writeAns(double rs) {
+        dev.WriteLine(ans+Convert.ToInt32(rs));
     }
 
     public double sqr(double num) {

@@ -30,7 +30,7 @@ public class utilsLibrary
     public int target2;
     public int target3;*/
 
-    // when we use _.Pow, doubles are required
+    // when we use _.Pow, double numbers are required
     public double pow1;
     public double pow2;
 
@@ -61,6 +61,7 @@ public class utilsLibrary
         pow1 = Convert.ToDouble(target1);
         pow2 = Convert.ToDouble(target2);
 
+        // x^2 - a^2
         if (check == "a")
         {
             rs = sqr(pow1) - sqr(pow2);
@@ -111,22 +112,22 @@ public class utilsLibrary
         if (check == "1")
         {   
             result = target1 * (target3 + target2);
-            dev.WriteLine(ans+result);
+            writeAns(result);
         }
         // x(a-b)
         else if (check == "2")
         {
             result = target1 * (target3 - target2);
-            dev.WriteLine(ans+result);
+            writeAns(result);
         }
     }
 
     public void compare(int target1, int target2) {
         if (target1 < target2) { 
-            dev.WriteLine("The first number < the second one "+target2.CompareTo(target1));
+            dev.WriteLine("The first number < the second one / "+target2.CompareTo(target1));
         }
         else if (target2 < target1) {
-            dev.WriteLine("The second number < the first one "+target1.CompareTo(target2));
+            dev.WriteLine("The second number < the first one / "+target1.CompareTo(target2));
         }
         else if (target2 == target1) {
             dev.WriteLine("2 number are the same.");
@@ -134,7 +135,7 @@ public class utilsLibrary
     }
 
     public void writeAns(int rs) {
-        dev.WriteLine(ans+rs);
+        return dev.WriteLine(ans+rs);
     }
 
     public double sqr(double num) {

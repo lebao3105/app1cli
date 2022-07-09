@@ -15,8 +15,8 @@
   along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ----------------------------------------------------------------------
   File name : Program.cs
-  I won't working on this version from 10 July. # Extended
-  All changes are added into TODO file.
+  I will no longer working on this version from 10 July. # Extended
+  All changes are listed in /TODO file.
 */
 
 using utilsLib;
@@ -30,7 +30,7 @@ namespace app1cli
             var test = new utilsLibrary();
             int milisecs = 2350;
             string path = Directory.GetCurrentDirectory();
-            Console.WriteLine("app1 version 1.0.29.");
+            Console.WriteLine("app1 version 1.3.");
             Console.WriteLine("The current time is: " + DateTime.Now);
             Console.WriteLine("Program's path: {0}", path);  
             Thread.Sleep(milisecs);
@@ -53,10 +53,10 @@ namespace app1cli
             { goto cal; }
             else if (choice == 3)
             {
-                Console.WriteLine("app1 version 1.0.29");
+                Console.WriteLine("app1 version 1.3");
                 Console.WriteLine("The current time is: " + DateTime.Now);  
                 Console.WriteLine("This C# version do same things as the Pascal version.\n");
-                Console.WriteLine("This is the final version of app1cli C# edition. I will no longer working on this version yet.\n");
+                Console.WriteLine("This is the final version of app1cli C# edition. I will no longer working on this version on July 10.\n");
                 //Console.WriteLine("Program's path: {0)", path); // error occured with path format?
                 Console.WriteLine("-------------------------------------------------");
                 Console.WriteLine("Copyright (C) 2021-2022 Le Bao Nguyen");

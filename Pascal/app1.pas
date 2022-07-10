@@ -195,9 +195,9 @@ if choice = 2 then begin
   //About
   about:
    begin
-    writeln('About this app:');
+    writeln(Aboutl);
     writeln('---------------------------------------------------------------------------');
-    writeln('App1 Version 1.3-dev.'); 
+    writeln('App1 '+Startup_appver+'1.3-dev.'); 
     writeln(Applocation, paramStr(0));
     writeln('This is a simple console application which can do some basic calculations + compare.');
     writeln('---------------------------------------------------------------------------');
@@ -262,9 +262,11 @@ exit_program:
       exit;
      end
     else if (yes_no = 'no') or (yes_no = 'n') then
+    begin
       writeln(Switch);
       delay(1000);
       goto start;
+    end;
   end
   else 
    (* Parse the arguments! But now its working only with some basic maths *)

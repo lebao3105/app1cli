@@ -1,6 +1,4 @@
 (* English translation resource file for app1 
-   You may want to run change_lang script to set 
-   the language before compile and run app1.
    The default language is English. *)
 unit lang_en;
 Interface
@@ -55,6 +53,8 @@ const // you should use const instead of var
     Switch = 'Switching to main menu...';
     Argv_cal = 'You are running app1 in Calculator mode.';
     Argv_exit = 'To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows).';
+    // about
+    Aboutl = 'About this application:';
     // use sLineBreak to move the cursor to the next line,
     // also use , to link texts
     Helper = 'Syntax:' + sLineBreak
@@ -67,8 +67,8 @@ const // you should use const instead of var
             + '         multiple : The first number * the second one' + sLineBreak
             + '         div      : The first number / the second one' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
-            + 'New: wrong-param  : If you run wrong parameter, use this to ignore all ' + sLineBreak
-            + '                    parameters. The program will show nothing.' + sLineBreak
+            + 'wrong-param  : If you run wrong parameter, use this to ignore all ' + sLineBreak
+            + '                    parameters. The program will return nothing.' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
             + 'app1cli - Do many calculations and compare with app1.';
 IMPLEMENTATION

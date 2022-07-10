@@ -1,4 +1,6 @@
 /Pascal/*.exe
+/Pascal/*.rsj
+/Pascal/po/*/*.mo
 /Pascal/app1
 /Pascal/*.ppu
 /Pascal/*.o

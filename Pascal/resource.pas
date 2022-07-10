@@ -1,7 +1,3 @@
-(* English translation resource file for app1 
-   You may want to run change_lang script to set 
-   the language before compile and run app1.
-   The default language is English. *)
 unit resource;
 Interface
 resourcestring
@@ -55,6 +51,8 @@ resourcestring
     Switch = 'Switching to main menu...';
     Argv_cal = 'You are running app1 in Calculator mode.';
     Argv_exit = 'To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows).';
+    // about
+    Aboutl = 'About this application:';
     // use sLineBreak to move the cursor to the next line,
     // also use , to link texts
     Helper = 'Syntax:' + sLineBreak

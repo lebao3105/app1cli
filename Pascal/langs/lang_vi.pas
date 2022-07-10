@@ -55,6 +55,7 @@ Interface
     Switch = 'Dang chuyen sang Menu chinh...';
     Argv_cal = 'Ban dang chay che do May tinh cua app1.';
     Argv_exit = 'De thoat ung dung bat ki luc nao, su dung Ctrl + Z (*NIX) hoac Ctrl + C (Windows).';
+    Aboutl = 'Ve ung dung nay:';
     Helper = 'Cu phap:' + sLineBreak // xuong dong
             + 'app1 [cpr/cal] [function phu] [2 so]' + sLineBreak
             + 'Voi: ' + sLineBreak
@@ -65,7 +66,7 @@ Interface
             + '         multiple : Nhan hai so' + sLineBreak
             + '         div      : Chia hai so' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
-            + 'Moi : wrong-param : Neu ban nhap sai tham so, app1 se bo qua chung va' + sLineBreak
+            + 'wrong-param : Neu ban nhap sai tham so, app1 se bo qua chung va' + sLineBreak
             + '                    khong hien cai gi ca.' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
             + 'app1cli - Lam nhieu phep toan va so sanh voi app1.' + sLineBreak

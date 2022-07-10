@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-10 14:24+0700\n"
+"POT-Creation-Date: 2022-07-10 21:45+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,189 +17,192 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: resource.startup_opening
-msgid "Starting..."
+#: lang_vi.startup_opening
+msgid "Dang khoi chay..."
 msgstr ""
 
-#: resource.startup_appname
-msgid "app1 from Le Bao Nguyen."
+#: lang_vi.startup_appname
+msgid "app1 tu Le Bao Nguyen"
 msgstr ""
 
-#: resource.startup_appver
-msgid "Version "
+#: lang_vi.startup_appver
+msgid "Phien ban "
 msgstr ""
 
-#: resource.applocation
-msgid "The current program location is: "
+#: lang_vi.applocation
+msgid "Vi tri chuong trinh hien tai: "
 msgstr ""
 
-#: resource.timedate
-msgid "The current time: "
+#: lang_vi.timedate
+msgid "Thoi gian hien tai la: "
 msgstr ""
 
-#: resource.menu_welcome
-msgid "Welcome to app1! Choose a function below to start: "
-msgstr ""
-
-#: resource.menu_item1
-msgid "Compare"
-msgstr ""
-
-#: resource.menu_item2
-msgid "Calculator"
-msgstr ""
-
-#: resource.menu_item3
-msgid "Infomation"
-msgstr ""
-
-#: resource.menu_item4
-msgid "Exit"
-msgstr ""
-
-#: resource.menu_ask
-msgid "Enter your answer here: "
-msgstr ""
-
-#: resource.select
-msgid "Select a formula now: "
-msgstr ""
-
-#: resource.cancel
-msgid "Cancel"
-msgstr ""
-
-#: resource.cal_adv
-msgid "Advenced maths"
-msgstr ""
-
-#: resource.cal_exit
-msgid "Force exit"
-msgstr ""
-
-#: resource.cal_ans
-msgid "The answer is: "
-msgstr ""
-
-#: resource.cpr_smaller
-msgid "The first number < the second one"
-msgstr ""
-
-#: resource.cpr_bigger
-msgid "The first number > the second one"
-msgstr ""
-
-#: resource.cpr_both
-msgid "These given numbers are the same"
-msgstr ""
-
-#: resource.ask_num1
-msgid "Give the first number a value: "
-msgstr ""
-
-#: resource.ask_num2
-msgid "The second number here: "
-msgstr ""
-
-#: resource.ask_num3
-msgid "The third number too: "
-msgstr ""
-
-#: resource.ask_cal
-msgid "Try to calculation"
-msgstr ""
-
-#: resource.ask_back
-msgid "Return to Main Menu"
-msgstr ""
-
-#: resource.ask_exit
-msgid "Exit the program"
-msgstr ""
-
-#: resource.ask_home
-msgid "Go to Main Menu"
-msgstr ""
-
-#: resource.ask_choice
-msgid "Enter your choice here: "
-msgstr ""
-
-#: resource.ask_other
-msgid "Are you want to go to Main Menu to do other actions, or exit?"
-msgstr ""
-
-#: resource.exit_ask
-msgid "Are you sure want to exit the program?"
-msgstr ""
-
-#: resource.exit_ask_2
-msgid "You will be redirected back to the main menu if you choose no"
-msgstr ""
-
-#: resource.exit_bye
-msgid "Thank you for using my application. Have a good day!"
-msgstr ""
-
-#: resource.exit_out
-msgid "Exitting..."
-msgstr ""
-
-#: resource.argv_cpr
-msgid "You are about to compare "
-msgstr ""
-
-#: resource.argv_fatal
-msgid "Fatal:"
-msgstr ""
-
-#: resource.argv_warm_num
-msgid "We need one more number to do this action."
-msgstr ""
-
-#: resource.argv_abort
-msgid "Action aborted."
-msgstr ""
-
-#: resource.clr
-msgid "Clearing the screen..."
-msgstr ""
-
-#: resource.press_enter
-msgid "Press Enter to continue..."
-msgstr ""
-
-#: resource.enter_exit
-msgid "All done. Press Enter to exit..."
-msgstr ""
-
-#: resource.switch
-msgid "Switching to main menu..."
-msgstr ""
-
-#: resource.argv_cal
-msgid "You are running app1 in Calculator mode."
-msgstr ""
-
-#: resource.argv_exit
+#: lang_vi.menu_welcome
 msgid ""
-"To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows)."
+"Chao mung den voi app1! Vui long chon mot tinh nang duoi day de bat dau: "
 msgstr ""
 
-#: resource.helper
+#: lang_vi.menu_item1
+msgid "So sanh"
+msgstr ""
+
+#: lang_vi.menu_item2
+msgid "May tinh"
+msgstr ""
+
+#: lang_vi.menu_item3
+msgid "Thong tin"
+msgstr ""
+
+#: lang_vi.menu_item4
+msgid "Thoat"
+msgstr ""
+
+#: lang_vi.menu_ask lang_vi.ask_choice
+msgid "Go lua chon cua ban tai day: "
+msgstr ""
+
+#: lang_vi.select
+msgid "Su dung mot trong cac lua chon sau:"
+msgstr ""
+
+#: lang_vi.cancel
+msgid "Huy"
+msgstr ""
+
+#: lang_vi.cal_adv
+msgid "Phep toan nang cao"
+msgstr ""
+
+#: lang_vi.cal_exit
+msgid "Buoc thoat"
+msgstr ""
+
+#: lang_vi.cal_ans
+msgid "Ket qua la: "
+msgstr ""
+
+#: lang_vi.cpr_bigger
+msgid "So thu nhat lon hon so thu hai"
+msgstr ""
+
+#: lang_vi.cpr_both
+msgid "Ca hai so duoc cho dau nhu nhau"
+msgstr ""
+
+#: lang_vi.cpr_smaller
+msgid "So thu nhat nho hon so thu hai"
+msgstr ""
+
+#: lang_vi.ask_num1
+msgid "Vui long nhap gia tri cho so thu nhat: "
+msgstr ""
+
+#: lang_vi.ask_num2
+msgid "Cho so thu hai o day: "
+msgstr ""
+
+#: lang_vi.ask_num3
+msgid "So thu ba nua: "
+msgstr ""
+
+#: lang_vi.ask_cal
+msgid "Thu thuc hien phep toan"
+msgstr ""
+
+#: lang_vi.ask_back
+msgid "Quay ve Menu chinh"
+msgstr ""
+
+#: lang_vi.ask_exit
+msgid "Thoat chuong trinh"
+msgstr ""
+
+#: lang_vi.ask_home
+msgid "Ve man hinh chinh"
+msgstr ""
+
+#: lang_vi.ask_other
+msgid "Ban co muon ve man hinh chinh de lam viec khac khong, hoac la thoat?"
+msgstr ""
+
+#: lang_vi.exit_ask
+msgid "Ban co muon thoat chuong trinh nay khong?"
+msgstr ""
+
+#: lang_vi.exit_ask_2
+msgid "Ban se duoc dua den man hinh chinh neu ban chon Khong"
+msgstr ""
+
+#: lang_vi.exit_bye
+msgid "Cam on ban da su dung ung dung nay. Chuc mot ngay tot lanh!"
+msgstr ""
+
+#: lang_vi.exit_out
+msgid "Dang thoat..."
+msgstr ""
+
+#: lang_vi.argv_cpr
+msgid "Chuan bi so sanh "
+msgstr ""
+
+#: lang_vi.argv_fatal
+msgid "Loi: "
+msgstr ""
+
+#: lang_vi.argv_warm_num
+msgid "Chung toi can them mot so nua de lam viec nay."
+msgstr ""
+
+#: lang_vi.argv_abort
+msgid "Da huy cong viec dinh lam."
+msgstr ""
+
+#: lang_vi.clr
+msgid "Dang lam trang man hinh..."
+msgstr ""
+
+#: lang_vi.press_enter
+msgid "Bam Enter de tiep tuc..."
+msgstr ""
+
+#: lang_vi.enter_exit
+msgid "Da xong. Bam Enter de thoat..."
+msgstr ""
+
+#: lang_vi.switch
+msgid "Dang chuyen sang Menu chinh..."
+msgstr ""
+
+#: lang_vi.argv_cal
+msgid "Ban dang chay che do May tinh cua app1."
+msgstr ""
+
+#: lang_vi.argv_exit
 msgid ""
-"Syntax:\n"
-"app1 [cpr/cal] [sub-function] [2 numbers]\n"
-"With: \n"
-"cpr : Compare 2 numbers\n"
-"cal : Calculator, with basic maths:\n"
-"         add      : Calculate the \"sum\" of numbers\n"
-"         sub      : Calculate the  \"difference\" of numbers\n"
-"         multiple : The first number * the second one\n"
-"         div      : The first number / the second one\n"
+"De thoat ung dung bat ki luc nao, su dung Ctrl + Z (*NIX) hoac Ctrl + C "
+"(Windows)."
+msgstr ""
+
+#: lang_vi.aboutl
+msgid "Ve ung dung nay:"
+msgstr ""
+
+#: lang_vi.helper
+msgid ""
+"Cu phap:\n"
+"app1 [cpr/cal] [function phu] [2 so]\n"
+"Voi: \n"
+"cpr : So sanh 2 so\n"
+"cal : May tinh, voi cac phep toan co ban:\n"
+"         add      : Tim tong hai so\n"
+"         sub      : Tim hieu hai so\n"
+"         multiple : Nhan hai so\n"
+"         div      : Chia hai so\n"
 "-----------------------------------------------------------------------\n"
-"New: wrong-param  : If you run wrong parameter, use this to ignore all \n"
-"                    parameters. The program will show nothing.\n"
+"wrong-param : Neu ban nhap sai tham so, app1 se bo qua chung va\n"
+"                    khong hien cai gi ca.\n"
 "-----------------------------------------------------------------------\n"
-"app1cli - Do many calculations and compare with app1."
+"app1cli - Lam nhieu phep toan va so sanh voi app1.\n"
+"Mo ta: - Lam nhieu phep tinh va so sanh 2 so voi app1."
 msgstr ""

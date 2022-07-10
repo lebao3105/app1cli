@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-10 14:24+0700\n"
+"POT-Creation-Date: 2022-07-10 20:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -184,6 +184,10 @@ msgstr ""
 #: resource.argv_exit
 msgid ""
 "To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows)."
+msgstr ""
+
+#: resource.aboutl
+msgid "About this application:"
 msgstr ""
 
 #: resource.helper

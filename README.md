@@ -24,21 +24,31 @@ Just run the following command in source_code_root/Pascal:
 fpc app1.pas
 ```
 
-Or in source_code_root/C#:
+Since version 1.3, gettext has been added to the project. Install gettext and make, then:
 ```
-dotnet run
-# or dotnet run --project app1cli/app1cli.csproj
-# run without build (you built it before):
-# dotnet build --project app1cli/app1cli.csproj
+make gen_mo
+make build
 ```
 
-## Change language
-There are 2 languages: Vietnamese and English (Default). Change language by changing lang_en to lang_vi (Vietnamese) in these files:
+If you don't want install these packages, you still can checkout steps in Changing languages.
+
+For C# version, simply run these in CSharp folder:
+```
+dotnet run
+# build only
+# dotnet build
+```
+
+## Changing language
+There are 2 languages: Vietnamese and English (Default). You can change language manually by changing resource to lang_en (English) or lang_vi (Vietnamese) from uses clause on these files:
 * [Pascal/app1.pas](Pascal/app1.pas)
 * [Pascal/maths.pas](Pascal/maths.pas)
 * [Pascal/utils.pas](Pascal/app1_utils.pas)
 
-(Re-)compile the file then run it. Change back to lang_en to use English.
+Since version 1.3, please add ```-Fulangs``` parameter to fpc, like this:
+```
+fpc app1.pas -Fulangs
+```
 
 
 ## Download

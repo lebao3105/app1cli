@@ -23,7 +23,8 @@ Program App1;
 uses
     crt,
     sysutils, 
-    lang_en,
+    resource,
+    gettext,
     app1_utils, 
     maths; 
 
@@ -37,6 +38,7 @@ var
     n : integer; 
 
 begin
+  translateresourcestrings('po/%s/app1cli.mo');
   if ParamCount = 0 then begin 
     TextColor(Red);
     writeln(Startup_opening);
@@ -195,12 +197,12 @@ if choice = 2 then begin
    begin
     writeln('About this app:');
     writeln('---------------------------------------------------------------------------');
-    writeln('App1 Version 1.0.29.'); 
+    writeln('App1 Version 1.3-dev.'); 
     writeln(Applocation, paramStr(0));
-    writeln('This is a simple calculator app which can do some basic calculations + compare.');
+    writeln('This is a simple console application which can do some basic calculations + compare.');
     writeln('---------------------------------------------------------------------------');
-    writeln('Copyright (C) 2022 Le Bao Nguyen.');
     // Don't translate this!
+    writeln('Copyright (C) 2022 Le Bao Nguyen.');
     writeln('This program comes with ABSOLUTELY NO WARRANTY; for details type show w,');
     writeln('This is free software, and you are welcome to redistribute it');
     writeln('under certain conditions; type show c for details.');
@@ -252,14 +254,14 @@ exit_program:
    writeln(Exit_ask);
    writeln(Exit_ask_2);
    write(Ask_choice ,'[yes/no]: '); readln(yes_no);
-    if (yes_no = 'yes') and (yes_no = 'y') then
+    if (yes_no = 'yes') or (yes_no = 'y') then
      begin
       writeln(Exit_bye);
       writeln(Exit_out);
       delay(1300);
       exit;
      end
-    else if (yes_no = 'no') and (yes_no = 'n') then
+    else if (yes_no = 'no') or (yes_no = 'n') then
       writeln(Switch);
       delay(1000);
       goto start;

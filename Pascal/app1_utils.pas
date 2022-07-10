@@ -13,7 +13,7 @@ Interface
   procedure textred(param:string);
 
 IMPLEMENTATION
-  uses crt, lang_en;
+  uses crt, resource;
 
 // Warm the user if they don't have enough numbers to do action 
 procedure warm_num();

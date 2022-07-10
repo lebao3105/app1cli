@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-10 14:24+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: resource.startup_opening
+msgid "Starting..."
+msgstr ""
+
+#: resource.startup_appname
+msgid "app1 from Le Bao Nguyen."
+msgstr ""
+
+#: resource.startup_appver
+msgid "Version "
+msgstr ""
+
+#: resource.applocation
+msgid "The current program location is: "
+msgstr ""
+
+#: resource.timedate
+msgid "The current time: "
+msgstr ""
+
+#: resource.menu_welcome
+msgid "Welcome to app1! Choose a function below to start: "
+msgstr ""
+
+#: resource.menu_item1
+msgid "Compare"
+msgstr ""
+
+#: resource.menu_item2
+msgid "Calculator"
+msgstr ""
+
+#: resource.menu_item3
+msgid "Infomation"
+msgstr ""
+
+#: resource.menu_item4
+msgid "Exit"
+msgstr ""
+
+#: resource.menu_ask
+msgid "Enter your answer here: "
+msgstr ""
+
+#: resource.select
+msgid "Select a formula now: "
+msgstr ""
+
+#: resource.cancel
+msgid "Cancel"
+msgstr ""
+
+#: resource.cal_adv
+msgid "Advenced maths"
+msgstr ""
+
+#: resource.cal_exit
+msgid "Force exit"
+msgstr ""
+
+#: resource.cal_ans
+msgid "The answer is: "
+msgstr ""
+
+#: resource.cpr_smaller
+msgid "The first number < the second one"
+msgstr ""
+
+#: resource.cpr_bigger
+msgid "The first number > the second one"
+msgstr ""
+
+#: resource.cpr_both
+msgid "These given numbers are the same"
+msgstr ""
+
+#: resource.ask_num1
+msgid "Give the first number a value: "
+msgstr ""
+
+#: resource.ask_num2
+msgid "The second number here: "
+msgstr ""
+
+#: resource.ask_num3
+msgid "The third number too: "
+msgstr ""
+
+#: resource.ask_cal
+msgid "Try to calculation"
+msgstr ""
+
+#: resource.ask_back
+msgid "Return to Main Menu"
+msgstr ""
+
+#: resource.ask_exit
+msgid "Exit the program"
+msgstr ""
+
+#: resource.ask_home
+msgid "Go to Main Menu"
+msgstr ""
+
+#: resource.ask_choice
+msgid "Enter your choice here: "
+msgstr ""
+
+#: resource.ask_other
+msgid "Are you want to go to Main Menu to do other actions, or exit?"
+msgstr ""
+
+#: resource.exit_ask
+msgid "Are you sure want to exit the program?"
+msgstr ""
+
+#: resource.exit_ask_2
+msgid "You will be redirected back to the main menu if you choose no"
+msgstr ""
+
+#: resource.exit_bye
+msgid "Thank you for using my application. Have a good day!"
+msgstr ""
+
+#: resource.exit_out
+msgid "Exitting..."
+msgstr ""
+
+#: resource.argv_cpr
+msgid "You are about to compare "
+msgstr ""
+
+#: resource.argv_fatal
+msgid "Fatal:"
+msgstr ""
+
+#: resource.argv_warm_num
+msgid "We need one more number to do this action."
+msgstr ""
+
+#: resource.argv_abort
+msgid "Action aborted."
+msgstr ""
+
+#: resource.clr
+msgid "Clearing the screen..."
+msgstr ""
+
+#: resource.press_enter
+msgid "Press Enter to continue..."
+msgstr ""
+
+#: resource.enter_exit
+msgid "All done. Press Enter to exit..."
+msgstr ""
+
+#: resource.switch
+msgid "Switching to main menu..."
+msgstr ""
+
+#: resource.argv_cal
+msgid "You are running app1 in Calculator mode."
+msgstr ""
+
+#: resource.argv_exit
+msgid ""
+"To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows)."
+msgstr ""
+
+#: resource.helper
+msgid ""
+"Syntax:\n"
+"app1 [cpr/cal] [sub-function] [2 numbers]\n"
+"With: \n"
+"cpr : Compare 2 numbers\n"
+"cal : Calculator, with basic maths:\n"
+"         add      : Calculate the \"sum\" of numbers\n"
+"         sub      : Calculate the  \"difference\" of numbers\n"
+"         multiple : The first number * the second one\n"
+"         div      : The first number / the second one\n"
+"-----------------------------------------------------------------------\n"
+"New: wrong-param  : If you run wrong parameter, use this to ignore all \n"
+"                    parameters. The program will show nothing.\n"
+"-----------------------------------------------------------------------\n"
+"app1cli - Do many calculations and compare with app1."
+msgstr ""

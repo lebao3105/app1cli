@@ -22,7 +22,7 @@ Function a3_add_b3(number1, number2: integer):integer;
 Function total2_3exp(number1,number2:integer):integer;
 Function minus2_3exp(number1,number2:integer):integer;
 IMPLEMENTATION
-uses crt, sysutils, lang_en;
+uses crt, sysutils, resource;
     Function add(number1, number2: Integer): integer;
     Begin
         answer := number1 + number2;

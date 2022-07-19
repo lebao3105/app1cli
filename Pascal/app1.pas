@@ -15,7 +15,7 @@
   along with this program.  If not, see <https://www.gnu.org/licenses/>.
   ----------------------------------------------------------------------
   app1.pas - Main Program file which links everything together 
-  Possible future improvements are in TODO file, read it if you want.
+  Future improvements are in /TODO file, read it if you want.
 }
 
 Program App1;
@@ -197,16 +197,15 @@ if choice = 2 then begin
    begin
     writeln(Aboutl);
     writeln('---------------------------------------------------------------------------');
-    writeln('App1 '+Startup_appver+'1.3-dev.'); 
+    writeln('App1 '+Startup_appver+'1.3-beta.'); 
     writeln(Applocation, paramStr(0));
-    writeln('This is a simple console application which can do some basic calculations + compare.');
+    writeln(About2);
     writeln('---------------------------------------------------------------------------');
     // Don't translate this!
     writeln('Copyright (C) 2022 Le Bao Nguyen.');
     writeln('This program comes with ABSOLUTELY NO WARRANTY; for details type show w,');
     writeln('This is free software, and you are welcome to redistribute it');
     writeln('under certain conditions; type show c for details.');
-    // Now you can do translate like the normal
     writeln(Press_Enter);
     Readln();
     delay(1350);
@@ -220,7 +219,7 @@ if choice = 2 then begin
       TextColor(Red);
       writeln('2.', Menu_item4);
       TextColor(LightGray);
-      Write('Your choice [menu/exit]: '); readln(yes_no);
+      Write(Ask_choice, ' [menu/exit]: '); readln(yes_no);
        if yes_no = 'menu' then goto start;
        if yes_no = 'exit' then goto exit_program;
   end;

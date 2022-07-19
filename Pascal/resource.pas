@@ -53,6 +53,7 @@ resourcestring
     Argv_exit = 'To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows).';
     // about
     Aboutl = 'About this application:';
+    About2 = 'A simple program that can do basic calculations and comparation.';
     // use sLineBreak to move the cursor to the next line,
     // also use , to link texts
     Helper = 'Syntax:' + sLineBreak

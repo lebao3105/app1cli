@@ -1,8 +1,6 @@
-(* English translation resource file for app1 
-   The default language is English. *)
 unit lang_en;
 Interface
-const // you should use const instead of var
+const
 	(* Some lines in startup *)
 	Startup_opening = 'Starting...';
 	Startup_appname = 'app1 from Le Bao Nguyen.';
@@ -45,7 +43,7 @@ const // you should use const instead of var
     (* Misc *)
     Argv_cpr = 'You are about to compare ';
     Argv_fatal = 'Fatal:';
-    Argv_warm_num = 'We need one more number to do this action.';
+    Argv_warm_num = 'We need number(s) to do this action.';
     Argv_abort = 'Action aborted.';
     Clr = 'Clearing the screen...'; 
     Press_Enter = 'Press Enter to continue...';
@@ -55,6 +53,7 @@ const // you should use const instead of var
     Argv_exit = 'To exit the application any time, use Ctr + Z (*NIX) or Ctrl + C (Windows).';
     // about
     Aboutl = 'About this application:';
+    About2 = 'A simple program that can do basic calculations and comparation.';
     // use sLineBreak to move the cursor to the next line,
     // also use , to link texts
     Helper = 'Syntax:' + sLineBreak
@@ -67,11 +66,11 @@ const // you should use const instead of var
             + '         multiple : The first number * the second one' + sLineBreak
             + '         div      : The first number / the second one' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
-            + 'wrong-param  : If you run wrong parameter, use this to ignore all ' + sLineBreak
-            + '                    parameters. The program will return nothing.' + sLineBreak
+            + 'New: wrong-param  : If you run wrong parameter, use this to ignore all ' + sLineBreak
+            + '                    parameters. The program will show nothing.' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
             + 'app1cli - Do many calculations and compare with app1.';
-IMPLEMENTATION
+Implementation
 // nothing here
 end. // EOF
 

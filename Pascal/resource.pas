@@ -43,7 +43,7 @@ resourcestring
     (* Misc *)
     Argv_cpr = 'You are about to compare ';
     Argv_fatal = 'Fatal:';
-    Argv_warm_num = 'We need one more number to do this action.';
+    Argv_warm_num = 'We need number(s) to do this action.';
     Argv_abort = 'Action aborted.';
     Clr = 'Clearing the screen...'; 
     Press_Enter = 'Press Enter to continue...';
@@ -70,7 +70,7 @@ resourcestring
             + '                    parameters. The program will show nothing.' + sLineBreak
             + '-----------------------------------------------------------------------' + sLineBreak
             + 'app1cli - Do many calculations and compare with app1.';
-IMPLEMENTATION
+Implementation
 // nothing here
 end. // EOF
 

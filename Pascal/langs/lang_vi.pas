@@ -4,7 +4,7 @@
    Tieng Viet nay se khong co dau *)
 unit lang_vi;
 Interface
-    const 
+const 
 	(* Some lines in startup / mot so 'dong' khi khoi dong *)
 	Startup_opening = 'Dang khoi chay...';
 	Startup_appname = 'app1 tu Le Bao Nguyen';
@@ -56,6 +56,7 @@ Interface
     Argv_cal = 'Ban dang chay che do May tinh cua app1.';
     Argv_exit = 'De thoat ung dung bat ki luc nao, su dung Ctrl + Z (*NIX) hoac Ctrl + C (Windows).';
     Aboutl = 'Ve ung dung nay:';
+    About2 = 'Mot chuong trinh co the lam nhung phep toan don gian + so sanh giua 2 so.';
     Helper = 'Cu phap:' + sLineBreak // xuong dong
             + 'app1 [cpr/cal] [function phu] [2 so]' + sLineBreak
             + 'Voi: ' + sLineBreak

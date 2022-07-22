@@ -1,5 +1,9 @@
 .PHONY: build gen_po gen_mo clean
-SHELL = /bin/bash
+
+ifndef OS
+	SHELL = /bin/bash
+endif
+
 gen_po: resource.pas
 	@echo This only requires resource.pas - it's English language!
 	@echo To use all languages, run compile_lang.sh instead. (only for UNIX)

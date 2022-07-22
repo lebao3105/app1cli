@@ -19,7 +19,7 @@
 }
 
 Program App1;
-{$mode Delphi}
+{$mode objFPC}
 uses
     crt,
     sysutils, 
@@ -31,11 +31,15 @@ uses
 label
     start, sub_menu, exit_program, cpr, cal, about;
 
+type
+	arr= array[0..3] of string;
+
 var
     choice : 1 .. 4;
     sub_choice_cal : 1 .. 11;
     yes_no : string;
-    n : integer; 
+    n, i : integer;
+	arrayd : arr;
 
 begin
   translateresourcestrings('po/%s/app1cli.mo');
@@ -47,31 +51,31 @@ begin
     writeln(Startup_appname);
     delay(500);
     TextColor(2);
-    writeln(Startup_appver, '1.0.29');
+    writeln(Startup_appver, '1.3');
     TextColor(LightGray);
     delay(1000);
     clrscr;
 
-// now let's begin
-  start:
-   begin
-    writeln (Timedate,DateTimeToStr(Now));
-    //Show the current program's path
-    writeln(Applocation, paramStr(0));
-    writeln(Menu_welcome);
-    TextColor(2);
-    writeln('------------------------------');
-    writeln('       1.', Menu_item1);
-    writeln('       2.', Menu_item2);
-    writeln('       3.', Menu_item3);
-    TextColor(Red);
-    writeln('       4.', Menu_item4);
-    writeln('------------------------------');
-    TextColor(LightGray);
-    write(Menu_ask);  
-    readln(choice); 
-    TextColor(LightGray);
-  end;
+	// now let's begin
+	start:
+   		begin
+    		writeln (Timedate,DateTimeToStr(Now));
+    		//Show the current program's path
+    		writeln(Applocation, paramStr(0));
+    		writeln(Menu_welcome);
+    		TextColor(2);
+    		writeln('------------------------------');
+    		writeln('       1.', Menu_item1);
+    		writeln('       2.', Menu_item2);
+    		writeln('       3.', Menu_item3);
+    		TextColor(Red);
+    		writeln('       4.', Menu_item4);
+    		writeln('------------------------------');
+    		TextColor(LightGray);
+    		write(Menu_ask);  
+    		readln(choice); 
+    		TextColor(LightGray);
+  		end;
  //compare
 if choice = 1 then
   cpr:
@@ -267,15 +271,19 @@ exit_program:
       goto start;
     end;
   end
-  else 
-   (* Parse the arguments! But now its working only with some basic maths *)
-     for n := 1 to ParamCount do begin
+
+  // this does not working property yet:(
+  else if ParamCount >= 1 then begin
+	// initialize the array
+  	arrayd[0] := 'add';
+  	arrayd[1] := 'minus';
+  	arrayd[2] := 'multiple';
+  	arrayd[3] := 'div';
+    for n := 1 to ParamCount do begin
       
-      // compare
+      	// compare
         if ParamStr(n) = 'cpr' then begin
-            if ParamStr(n+1) = '' then 
-                warm_num()
-            else if ParamStr(n+2) = '' then
+            if (ParamStr(n+1) = '') or (ParamStr(n+2) = '') then
                 warm_num()
             else begin
                 writeln(Argv_cpr, ParamStr(n+1), ' ', ParamStr(n+2));
@@ -283,53 +291,47 @@ exit_program:
             end;
         end;
 
-      // calculator
-        if ParamStr(n) = 'cal' then begin
-          if ParamStr(n+1) = 'add' then begin
-              if ParamStr(n+2) = '' then 
-                    warm_num()
-              else if ParamStr(n+3) = '' then
-                    warm_num()
-              else add(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
-          end
-          else if ParamStr(n+1) = 'sub' then begin
-              if ParamStr(n+2) = '' then 
-                    warm_num()
-              else if ParamStr(n+3) = '' then
-                    warm_num()
-              else minus(StrToInt( ParamStr(n+2) ), StrToInt( ParamStr(n+3) ));
-          end
-          else if ParamStr(n+1) = 'multiple' then begin
-              if ParamStr(n+2) = '' then 
-                    warm_num()
-              else if ParamStr(n+3) = '' then
-                    warm_num()
-              else multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
-          end
-      	  else if ParamStr(n+1) = 'div' then begin
-              if ParamStr(n+2) = '' then 
-                    warm_num()
-              else if ParamStr(n+3) = '' then
-                    warm_num()
-              else begin
-                    real1 := StrToInt(ParamStr(n+2)) + 0.0;
-                    real2 := StrToInt(ParamStr(n+3)) + 0.0;
-                    writeln(divide(real1, real2));
-              end;
-          end  
-          else if ParamStr(n+1) = '' then 
-          begin
-              warm_cal();
-              goto cal;
-          end
-        end;
+      	// calculator
+		if ParamStr(n) = 'cal' then
+		begin
+			// check if we are missing arguments
+			for i := 0 to 3 do begin
+				while ParamStr(n+1) = arrayd[i] do begin
+					if (ParamStr(n+2) = '') or (ParamStr(n+3) = '') then
+					begin
+						warm_num();
+						halt(1);
+					end;
+				end;
+			end;
 
-      // others parameters
-      if ParamStr(n) = 'about' then 
-              goto about
-      else if ParamStr(n) = 'help' then 
-              help()
-      else if ParamStr(n) = 'wrong-param' then
-              exit();
-      end; // end of for .. do block
-  end.
+			// now do math
+			case ParamStr(n+1) of
+				'add': add(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+				'minus': minus(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+				'multiple': multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+				'div': begin
+						real1 := StrToInt(ParamStr(n+2)) + 0.0;
+						real2 := StrToInt(ParamStr(n+3)) + 0.0;
+						divide(real1, real2);
+					end;
+			end;
+
+		end
+
+		else if ParamStr(n+1) = '' then
+		begin
+			warm_cal();
+			goto cal;
+		end;
+
+      	// others parameters
+      	if ParamStr(n) = 'about' then 
+            goto about
+      	else if ParamStr(n) = 'help' then 
+            help()
+      	else if ParamStr(n) = 'wrong-param' then
+            exit();
+    end; // end of for .. do block
+	end;
+end.

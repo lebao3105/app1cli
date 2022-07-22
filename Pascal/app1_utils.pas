@@ -1,6 +1,3 @@
-(* These are some "ultility" functions for app1, 
-   you can get and customize it for your application. *)
-
 unit app1_utils;
 {$mode delphi}
 Interface
@@ -12,14 +9,15 @@ Interface
   procedure textgreen(param:string);
   procedure textred(param:string);
 
-IMPLEMENTATION
+Implementation
   uses crt, resource;
 
 // Warm the user if they don't have enough numbers to do action 
 procedure warm_num();
   begin
-	   write(Startup_appname, Startup_appver);
-     textgreenln(' 1.0.29-Alpha');
+	   writeln(Startup_appname);
+     writeln(Startup_appver);
+     textgreenln('1.3');
      TextColor(LightGray);
 	   textredln(Argv_fatal); 
 	   TextColor(LightGray); writeln(Argv_warm_num);
@@ -27,11 +25,12 @@ procedure warm_num();
      exit;
   end;
 
-// Notify the user that they are in Calculatormode
+// Notify the user that they are in Calculator mode
 procedure warm_cal();
   begin
-	   write(Startup_appname, Startup_appver);
-     textgreenln(' 1.0.29-Alpha');
+	   writeln(Startup_appname);
+     writeln(Startup_appver);
+     textgreenln('1.3');
      TextColor(LightGray);
      writeln(Argv_cal);
      writeln(Argv_exit);
@@ -40,8 +39,9 @@ procedure warm_cal();
 // Show the help box 
 procedure help();
   begin
-	   write(Startup_appname, Startup_appver);
-     textgreenln(' 1.0.29-Alpha');
+	   writeln(Startup_appname);
+     writeln(Startup_appver);
+     textgreenln('1.3');
      TextColor(LightGray);
      writeln(Helper);
   end;

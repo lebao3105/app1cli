@@ -40,11 +40,11 @@ for items in $(ls -d po/*/); do
     # So I just change the charset
     for o in ${!attrs_before[@]}; do
         for p in ${!attrs_after[@]}; do
-            sed -i 's/${attrs_before[$o]}/${attrs_after[$p]}/g' ${items%%/}/app1cli.po
+            sed -i 's/$o/$p/g' ${items%%/}/app1cli.po
         done
     done
     # That's all.
-    sed -i 's/charset=CHARSET/charset=UTF-8/g' ${items%%/}/app1cli.po
+    #sed -i 's/charset=CHARSET/charset=UTF-8/g' ${items%%/}/app1cli.po
     msgfmt ${items%%/}/app1cli -o ${items%%/}/app1cli.mo
 done
 

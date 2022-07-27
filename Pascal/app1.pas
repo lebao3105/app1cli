@@ -106,7 +106,7 @@ if choice = 2 then begin
       readln(sub_choice_cal);
       TextColor(LightGray);
     end;
-    if (sub_choice_cal >=1) and (sub_choice_cal <=3) then begin
+    while (sub_choice_cal >=1) and (sub_choice_cal <=3) do begin
       ask_2numbers();
       case (sub_choice_cal) of
         1: Add(number1, number2);
@@ -156,7 +156,7 @@ if choice = 2 then begin
         TextColor(2); 
         readln(sub_choice_cal);
         TextColor(LightGray);
-    if (sub_choice_cal >=1) and (sub_choice_cal <=10) then begin
+    while (sub_choice_cal >=1) and (sub_choice_cal <=10) do begin
     // ask the user
       case (sub_choice_cal) of
         1 .. 2: ask_3numbers();
@@ -201,7 +201,7 @@ if choice = 2 then begin
    begin
     writeln(Aboutl);
     writeln('---------------------------------------------------------------------------');
-    writeln('App1 '+Startup_appver+'1.3-beta.'); 
+    writeln('App1 '+Startup_appver+'1.3.'); 
     writeln(Applocation, paramStr(0));
     writeln(About2);
     writeln('---------------------------------------------------------------------------');
@@ -296,7 +296,7 @@ exit_program:
 		begin
 			// check if we are missing arguments
 			for i := 0 to 3 do begin
-				while ParamStr(n+1) = arrayd[i] do begin
+				if ParamStr(n+1) = arrayd[i] then begin
 					if (ParamStr(n+2) = '') or (ParamStr(n+3) = '') then
 					begin
 						warm_num();

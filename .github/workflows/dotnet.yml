@@ -15,11 +15,8 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-      working-directory: CSharp/app1cli
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build
       working-directory: CSharp/app1cli
     - name: Test
       run: dotnet test --no-build --verbosity normal

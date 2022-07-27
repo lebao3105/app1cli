@@ -31,7 +31,7 @@ const
     Cpr_Smaller = 'So thu nhat nho hon so thu hai';
     (* Ask - Hoi *)
     Ask_num1 = 'Vui long nhap gia tri cho so thu nhat: ';
-    Ask_num2 = 'Cho so thu hai o day: ';
+    Ask_num2 = 'De so thu hai o day: ';
     Ask_num3 = 'So thu ba nua: ';
     Ask_cal = 'Thu thuc hien phep toan';
     Ask_back = 'Quay ve Menu chinh';

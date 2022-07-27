@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-19 14:57+0700\n"
+"POT-Creation-Date: 2022-07-27 16:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: lang_vi.startup_opening
@@ -99,7 +99,7 @@ msgid "Vui long nhap gia tri cho so thu nhat: "
 msgstr ""
 
 #: lang_vi.ask_num2
-msgid "Cho so thu hai o day: "
+msgid "De so thu hai o day: "
 msgstr ""
 
 #: lang_vi.ask_num3
@@ -186,6 +186,11 @@ msgstr ""
 
 #: lang_vi.aboutl
 msgid "Ve ung dung nay:"
+msgstr ""
+
+#: lang_vi.about2
+msgid ""
+"Mot chuong trinh co the lam nhung phep toan don gian + so sanh giua 2 so."
 msgstr ""
 
 #: lang_vi.helper

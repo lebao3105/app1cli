@@ -10,16 +10,16 @@ Interface
   procedure textred(param:string);
 
 Implementation
-  uses crt, resource;
+uses crt, resource;
 
 // Warm the user if they don't have enough numbers to do action 
 procedure warm_num();
   begin
 	   writeln(Startup_appname);
-     writeln(Startup_appver);
+     write(Startup_appver);
      textgreenln('1.3');
      TextColor(LightGray);
-	   textredln(Argv_fatal); 
+	   textred(Argv_fatal); 
 	   TextColor(LightGray); writeln(Argv_warm_num);
 	   writeln(Argv_abort);
      exit;
@@ -29,7 +29,7 @@ procedure warm_num();
 procedure warm_cal();
   begin
 	   writeln(Startup_appname);
-     writeln(Startup_appver);
+     write(Startup_appver);
      textgreenln('1.3');
      TextColor(LightGray);
      writeln(Argv_cal);

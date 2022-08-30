@@ -41,8 +41,9 @@ resourcestring
     Exit_bye = 'Thank you for using my application. Have a good day!'; // new too
     Exit_out = 'Exitting...';
     (* Misc *)
-    Argv_cpr = 'You are about to compare ';
+    Argv_cpr = 'You are going to compare ';
     Argv_fatal = 'Fatal:';
+    Wrong_arg = 'Wrong argument detected. Please check for typos, or use app1 help to see program''s syntax.';
     Argv_warm_num = 'We need number(s) to do this action.';
     Argv_abort = 'Action aborted.';
     Clr = 'Clearing the screen...'; 

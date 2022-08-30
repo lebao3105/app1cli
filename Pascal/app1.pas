@@ -20,6 +20,7 @@
 
 Program App1;
 {$mode objFPC}
+{$apptype console}
 uses
     crt,
     sysutils, 
@@ -102,9 +103,9 @@ if choice = 2 then begin
       writeln('     6. ', Cal_Adv);
       writeln('----------------');
       write(Menu_ask); 
-      TextColor(2); 
+      //TextColor(2); 
       readln(sub_choice_cal);
-      TextColor(LightGray);
+      //TextColor(LightGray);
     end;
     while (sub_choice_cal >=1) and (sub_choice_cal <=3) do begin
       ask_2numbers();
@@ -223,7 +224,7 @@ if choice = 2 then begin
       TextColor(Red);
       writeln('2.', Menu_item4);
       TextColor(LightGray);
-      Write(Ask_choice, ' [menu/exit]: '); readln(yes_no);
+      Write(Ask_choice, '[menu/exit] '); readln(yes_no);
        if yes_no = 'menu' then goto start;
        if yes_no = 'exit' then goto exit_program;
   end;
@@ -272,14 +273,15 @@ exit_program:
     end;
   end
 
-  // this does not working property yet:(
+  // this does not working normally yet:(
   else if ParamCount >= 1 then begin
-	// initialize the array
+	  // initialize the array
   	arrayd[0] := 'add';
   	arrayd[1] := 'minus';
   	arrayd[2] := 'multiple';
   	arrayd[3] := 'div';
-    for n := 1 to ParamCount do begin
+
+    for n := 1 to ParamCount do begin // loop (a)
       
       	// compare
         if ParamStr(n) = 'cpr' then begin
@@ -292,46 +294,45 @@ exit_program:
         end;
 
       	// calculator
-		if ParamStr(n) = 'cal' then
-		begin
-			// check if we are missing arguments
-			for i := 0 to 3 do begin
-				if ParamStr(n+1) = arrayd[i] then begin
-					if (ParamStr(n+2) = '') or (ParamStr(n+3) = '') then
-					begin
-						warm_num();
-						halt(1);
-					end;
-				end;
-			end;
+		    if ParamStr(n) = 'cal' then
+		    begin
+          if Length(ParamStr(n+1)) = 0 then
+          begin
+            writeln(Argv_cal);
+            goto cal;
+          end;
 
-			// now do math
-			case ParamStr(n+1) of
-				'add': add(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
-				'minus': minus(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
-				'multiple': multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
-				'div': begin
-						real1 := StrToInt(ParamStr(n+2)) + 0.0;
-						real2 := StrToInt(ParamStr(n+3)) + 0.0;
-						divide(real1, real2);
-					end;
-			end;
+			    // check if we are missing arguments
+			    for i := 0 to 3 do begin
+            if ParamStr(n+1) = arrayd[i] then begin
+					    if (ParamStr(n+2) = '') or (ParamStr(n+3) = '') then
+					      begin
+						      warm_num();
+						      halt(1);
+					      end;
+				    end;
+			    end;
 
-		end
+			    // now do math
+			    case ParamStr(n+1) of
+				    'add': add(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+				    'minus': minus(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+				    'multiple': multiple(StrToInt(ParamStr(n+2)), StrToInt(ParamStr(n+3)));
+				    'div': begin
+					    	real1 := StrToInt(ParamStr(n+2)) + 0.0;
+						    real2 := StrToInt(ParamStr(n+3)) + 0.0;
+						    divide(real1, real2);
+					    end;
+			    end;
+		    end;
 
-		else if ParamStr(n+1) = '' then
-		begin
-			warm_cal();
-			goto cal;
-		end;
-
-      	// others parameters
-      	if ParamStr(n) = 'about' then 
+        // others parameters
+        if ParamStr(n) = 'about' then 
             goto about
-      	else if ParamStr(n) = 'help' then 
+        else if ParamStr(n) = 'help' then 
             help()
-      	else if ParamStr(n) = 'wrong-param' then
+        else if ParamStr(n) = 'wrong-param' then
             exit();
-    end; // end of for .. do block
+    end; // end of (a) loop block
 	end;
 end.

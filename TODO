@@ -8,12 +8,12 @@ C#-utilsLib: Make functions for warnings and errors, like Pascal too (Canceled -
 C#-utilsLib: Replace some strings in ask_2nums() and ask_3nums() (Failed)
 C#: (Working - Failed!) Make a math library
 Pascal: Improve args code (Nothing to do)
-Pascal: Set color to white for FULL program, or change the changed color to LightGray (default) (Done!)
-Pascal: Set the menu layout like C# (Done!)
+Pascal: Change text color to LightGray (default color) after use text*(ln) (Done!)
+Pascal: Set menu layout like C# (Done!)
 All: Add license to help message (Done!)
 
 // 1.3
-Gettext support (almost done)
+Gettext support (almost done?)
 Translate About section (except GPL notes) (Done)
 Fix go to the main menu while choosing 'yes' (exit_program) (Done)
-Improve parements parsing (if needed)
+Improve parements parsing (Done!)

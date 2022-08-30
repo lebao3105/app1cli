@@ -1,6 +1,4 @@
 ## General info
-[![Build status for .Net/C# version](https://github.com/lebao3105/app1cli/actions/workflows/dotnet.yml/badge.svg)](https://github.com/lebao3105/app1cli/actions/workflows/)
-[![Build status for Pascal version](https://github.com/lebao3105/app1cli/actions/workflows/pascal.yml/badge.svg)](https://github.com/lebao3105/app1cli/actions/workflows/)
 
 App1 (or app1cli) is a simple project written in C# and Pascal. It can:
 * Be a calculator
@@ -43,7 +41,6 @@ Since version 1.3, please add ```-Fulangs``` parameter to fpc, like this:
 ```
 fpc app1.pas -Fulangs
 ```
-
 
 ## Download
 Get it [here.](https://github.com/lebao3105/app1cli/releases/)

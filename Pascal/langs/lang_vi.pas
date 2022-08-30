@@ -47,6 +47,7 @@ const
     (* Misc *)
     Argv_cpr = 'Chuan bi so sanh ';
     Argv_fatal = 'Loi: ';
+    Wrong_arg = 'Tham so khong hop le. Hay kiem tra loi chinh ta hoac xem cu phap voi app1 help.';
     Argv_warm_num = 'Chung toi can them mot so nua de lam viec nay.';
     Argv_abort = 'Da huy cong viec dinh lam.';
     Clr = 'Dang lam trang man hinh...'; 

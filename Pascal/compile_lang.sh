@@ -31,8 +31,8 @@ attrs_before=(
 attrs_after=(
     "charset=UTF-8"
     "2021-2022 Le Bao Nguyen"
-    "app1cli" "1.3-dev" "Le Bao Nguyen"
-    "<notshowedyet@address>" ", 2022."
+    "app1cli" "1.3" "Le Bao Nguyen"
+    "<bao12345yocoo@gmail.com>" ", 2022."
 )
 
 for items in $(ls -d po/*/); do

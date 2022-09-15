@@ -12,8 +12,12 @@ Pascal: Change text color to LightGray (default color) after use text*(ln) (Done
 Pascal: Set menu layout like C# (Done!)
 All: Add license to help message (Done!)
 
+// From version 1.3, works are for the Pascal version
 // 1.3
 Gettext support (almost done?)
 Translate About section (except GPL notes) (Done)
 Fix go to the main menu while choosing 'yes' (exit_program) (Done)
 Improve parements parsing (Done!)
+
+// 1.4
+Whetever to make to user choose their own language within the app?

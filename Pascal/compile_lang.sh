@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # A better version of make gen_po.
 # This will use all files on langs, which means we will use all available languages here.
 # I won't use msgmerge to generate .po

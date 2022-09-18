@@ -17,6 +17,7 @@ resourcestring
     Menu_ask = 'Enter your answer here: ';
     (* Calculator *)
     Select = 'Select a formula now: ';
+    Select2 = 'Or you can get more with ';
     Cancel = 'Cancel';
     Cal_Adv = 'Advenced maths';
     Cal_Exit = 'Force exit';

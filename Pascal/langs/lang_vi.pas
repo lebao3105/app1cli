@@ -21,6 +21,7 @@ const
     Menu_ask = 'Go lua chon cua ban tai day: ';
     (* Calculator - May tinh *)
     Select = 'Su dung mot trong cac lua chon sau:';
+    Select2 = 'Hoac lay them voi '
     Cancel = 'Huy';
     Cal_Adv = 'Phep toan nang cao';
     Cal_Exit = 'Buoc thoat';

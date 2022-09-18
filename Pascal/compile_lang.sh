@@ -36,7 +36,7 @@ attrs_after=(
 )
 
 for items in $(ls -d po/*/); do
-    # This part does not working yet
+    # This does not work.
     # So I just change the charset
     #for o in ${attrs_before[@]}; do
     #    for p in ${attrs_after[@]}; do

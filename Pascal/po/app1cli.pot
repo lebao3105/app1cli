@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-10 20:23+0700\n"
+"POT-Creation-Date: 2022-09-18 22:07+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,6 +63,10 @@ msgstr ""
 
 #: resource.select
 msgid "Select a formula now: "
+msgstr ""
+
+#: resource.select2
+msgid "Or you can get more with "
 msgstr ""
 
 #: resource.cancel
@@ -146,15 +150,21 @@ msgid "Exitting..."
 msgstr ""
 
 #: resource.argv_cpr
-msgid "You are about to compare "
+msgid "You are going to compare "
 msgstr ""
 
 #: resource.argv_fatal
 msgid "Fatal:"
 msgstr ""
 
+#: resource.wrong_arg
+msgid ""
+"Wrong argument detected. Please check for typos, or use app1 help to see "
+"program's syntax."
+msgstr ""
+
 #: resource.argv_warm_num
-msgid "We need one more number to do this action."
+msgid "We need number(s) to do this action."
 msgstr ""
 
 #: resource.argv_abort
@@ -190,20 +200,24 @@ msgstr ""
 msgid "About this application:"
 msgstr ""
 
+#: resource.about2
+msgid "A simple program that can do basic calculations and comparation."
+msgstr ""
+
 #: resource.helper
 msgid ""
-"Syntax:\n"
-"app1 [cpr/cal] [sub-function] [2 numbers]\n"
-"With: \n"
-"cpr : Compare 2 numbers\n"
-"cal : Calculator, with basic maths:\n"
-"         add      : Calculate the \"sum\" of numbers\n"
-"         sub      : Calculate the  \"difference\" of numbers\n"
-"         multiple : The first number * the second one\n"
-"         div      : The first number / the second one\n"
-"-----------------------------------------------------------------------\n"
-"New: wrong-param  : If you run wrong parameter, use this to ignore all \n"
-"                    parameters. The program will show nothing.\n"
-"-----------------------------------------------------------------------\n"
+"Syntax:\r\n"
+"app1 [cpr/cal] [sub-function] [2 numbers]\r\n"
+"With: \r\n"
+"cpr : Compare 2 numbers\r\n"
+"cal : Calculator, with basic maths:\r\n"
+"         add      : Calculate the \"sum\" of numbers\r\n"
+"         sub      : Calculate the  \"difference\" of numbers\r\n"
+"         multiple : The first number * the second one\r\n"
+"         div      : The first number / the second one\r\n"
+"-----------------------------------------------------------------------\r\n"
+"New: wrong-param  : If you run wrong parameter, use this to ignore all \r\n"
+"                    parameters. The program will show nothing.\r\n"
+"-----------------------------------------------------------------------\r\n"
 "app1cli - Do many calculations and compare with app1."
 msgstr ""

@@ -41,13 +41,9 @@ var
 	yes_no : string;
 	n, i : integer;
 	arrayd : arr;
+	whatlang : string = 'en';
 
 begin
-	{$ifdef LANG_EN}
-  	translateresourcestrings('po/en/app1cli.mo');
-	{$else ifdef LANG_VI}
-	translateresourcestrings('po/vi/app1cli.mo');
-	{$endif}
   if ParamCount = 0 then begin 
 	TextColor(Red);
 	writeln(Startup_opening);
@@ -64,6 +60,13 @@ begin
 	// now let's begin
 	start:
    		begin
+		// set the language first
+			if whatlang = 'en'
+			then
+  				translateresourcestrings('po/en/app1cli.mo')
+			else if whatlang = 'vi'
+			then
+				translateresourcestrings('po/vi/app1cli.mo');
 			writeln (Timedate,DateTimeToStr(Now));
 			//Show the current program's path
 			writeln(Applocation, paramStr(0));
@@ -339,10 +342,9 @@ exit_program:
 			exit()
 		else if ParamStr(n) = 'lang' then
 			if ParamStr(n+1) = 'eng' then
-				{$define LANG_EN:=yes}
+				whatlang := 'en'
 			else if ParamStr(n+1) = 'vi' then
-				{$define LANG_VI:=yes}
-				;
+				whatlang := 'vi';
 			goto start;
 	end; // end of (a) loop block
 	end;

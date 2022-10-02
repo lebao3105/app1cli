@@ -17,7 +17,7 @@ procedure warm_num();
 begin
 	writeln(Startup_appname);
 	write(Startup_appver);
-	textgreenln('1.3');
+	textgreenln('1.4');
 	TextColor(LightGray);
 	textred(Argv_fatal); 
 	TextColor(LightGray); writeln(Argv_warm_num);
@@ -30,7 +30,7 @@ procedure warm_cal();
 begin
 	writeln(Startup_appname);
 	write(Startup_appver);
-	textgreenln('1.3');
+	textgreenln('1.4');
 	TextColor(LightGray);
 	writeln(Argv_cal);
 	writeln(Argv_exit);
@@ -41,7 +41,7 @@ procedure help();
 begin
 	writeln(Startup_appname);
 	writeln(Startup_appver);
-	textgreenln('1.3');
+	textgreenln('1.4');
 	TextColor(LightGray);
 	writeln(Helper);
 end;

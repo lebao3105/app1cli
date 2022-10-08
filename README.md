@@ -16,13 +16,14 @@ Just run the following command in source_code_root/Pascal:
 fpc app1.pas
 ```
 
-Since version 1.3, gettext has been added to the project. Install gettext and make, then:
+Since version 1.3, gettext support has been added to the project. Install gettext and make, then:
 ```
 make gen_mo
 make build
 ```
+Only do this on *NIX.
 
-If you don't want install these packages, you still can checkout steps in Changing languages.
+If you don't want install these packages, you still can checkout steps in [Changing languages section](#changing-language).
 
 For C# version, simply run these in CSharp folder:
 ```

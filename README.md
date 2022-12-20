@@ -9,7 +9,7 @@ App1 (or app1cli) is a simple project written in C# and Pascal. It can:
 Requirement(s) - only fpc needed now:
 * git to clone the repository (or get source code from the repository releases)
 * fpc (Free Pascal Compiler)
-* .NET SDK to build C# edition
+* .NET SDK 6 to build C# edition
 
 Just run the following command in source_code_root/Pascal:
 ```
@@ -33,7 +33,7 @@ dotnet run
 ```
 
 ## Changing language
-There are 2 languages: Vietnamese and English (Default). You can change language manually by changing resource to lang_en (English) or lang_vi (Vietnamese) from uses clause on these files:
+There are 2 languages: Vietnamese and English (Default). You can change language manually by changing resource to lang_en (English) or lang_vi (Vietnamese) from uses clause in these files:
 * [Pascal/app1.pas](Pascal/app1.pas)
 * [Pascal/maths.pas](Pascal/maths.pas)
 * [Pascal/utils.pas](Pascal/app1_utils.pas)

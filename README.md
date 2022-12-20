@@ -1,11 +1,10 @@
-## General info
-
+## app1cli
 App1 (or app1cli) is a simple project written in C# and Pascal. It can:
 * Be a calculator
 * Compare 2 numbers
 * And run it from Terminal:)
 
-## Building
+## Build
 Requirement(s) - only fpc needed now:
 * git to clone the repository (or get source code from the repository releases)
 * fpc (Free Pascal Compiler)
@@ -32,7 +31,7 @@ dotnet run
 # dotnet build
 ```
 
-## Changing language
+## Switch between languages
 There are 2 languages: Vietnamese and English (Default). You can change language manually by changing resource to lang_en (English) or lang_vi (Vietnamese) from uses clause in these files:
 * [Pascal/app1.pas](Pascal/app1.pas)
 * [Pascal/maths.pas](Pascal/maths.pas)

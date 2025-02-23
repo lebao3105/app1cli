@@ -104,8 +104,8 @@ begin
 	writeln(Menu_welcome);
 
 	writeln(StringOfChar('-', 30));
-	writeln(StringOfChar(' ', 7), '1. *');
-	writeln(StringOfChar(' ', 7), '2. /');
+	writeln(StringOfChar(' ', 7), '1. ', Menu_multiply);
+	writeln(StringOfChar(' ', 7), '2. ', Menu_divide);
 	writeln(StringOfChar(' ', 7), '3. ', About1);
 	writeln(StringOfChar(' ', 7), '4. ', Ask_exit);
 	writeln(StringOfChar('-', 30));
@@ -148,10 +148,10 @@ begin
 	repeat
 		write(M_Mode, Ask_home);
 		readln(choice);
+
 		if lowercase(choice) = 'y' then
 		begin
 			EnterAndClear;
-			MainMenu;
 			break;
 		end;
 
@@ -162,7 +162,6 @@ begin
 
 	// blame;
 	EnterAndClear;
-	MainMenu;
 end;
 
 procedure TApp1.Route_D;
@@ -171,10 +170,10 @@ begin
 	repeat
 		write(D_Mode, Ask_home);
 		readln(choice);
+
 		if lowercase(choice) = 'y' then
 		begin
 			EnterAndClear;
-			MainMenu;
 			break;
 		end;
 
@@ -185,7 +184,6 @@ begin
 
 	// blame;
 	EnterAndClear;
-	MainMenu;
 end;
 
 var

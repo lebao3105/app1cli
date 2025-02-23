@@ -25,7 +25,7 @@ add_languages.sh
 fpc app1.pas
 ```
 
-Run the executable named `app1cli`.
+Run the executable named `app1`.
 
 For C# version, simply run these inside CSharp/:
 ```

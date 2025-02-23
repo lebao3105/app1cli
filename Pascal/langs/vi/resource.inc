@@ -9,7 +9,7 @@ begin
     Timedate := 'Bây giờ là: ';
 
     Menu_welcome := 'Chào mừng đến với app1! Chọn một trong các hướng đi bên dưới: ';
-    Menu_multiply := 'N';
+    Menu_multiply := 'Nhân';
     Menu_divide := 'Chia';
 
     M_Mode := 'Đang ở chế độ Nhân. ';

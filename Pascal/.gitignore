@@ -1,0 +1,6 @@
+*.rsj
+*.o
+*.ppu
+*.po
+*.mo
+resource_files.inc

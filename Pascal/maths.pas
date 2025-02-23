@@ -1,122 +1,124 @@
 Unit maths;
+{$mode objfpc}
 
 Interface
-var number1, number2, number3, answer: integer;
-    real1, real2, real_answer: real;
 
-function add(number1, number2: Integer): integer;
-function minus(number1, number2: Integer): integer;
-function multiple(number1, number2: Integer): integer;
-function divide(real1, real2:real): real;
-function compare(number1, number2:integer):integer;
-function one_for_total(number1, number2, number3: integer): integer;
-function one_for_minus(number1, number2, number3: integer): integer;
-function ask_2real():real;
-function ask_2numbers():integer;
-function ask_3numbers():integer;
-function a3_sub_b3(number1, number2:integer):integer;
-function a3_add_b3(number1, number2: integer):integer;
-function total2_3exp(number1,number2:integer):integer;
-function minus2_3exp(number1,number2:integer):integer;
+var
+    totalScore: integer = 100;
+
+    randomFirst: boolean;
+    randomSecond: boolean;
+
+    underTenOps: boolean;
+    bothUnderTenOps: boolean;
+
+    noRemainsDivision: boolean;
+
+    firstNumber, secondNumber, humanInput: integer;
+
+procedure ask;
+procedure doTheTask(divide: boolean);
+procedure blame;
 
 Implementation
+
 uses crt, sysutils, resource;
 
-    function add(number1, number2: Integer): integer;
-    Begin
-        answer := number1 + number2;
-        writeln(Cal_Ans, answer);
-    End;
+procedure ask;
+var booleanChoice: string;
+begin
+    // Settings
+    write(Ask_random2);
+    readln(booleanChoice);
 
-    function minus(number1, number2: Integer): integer;
-    Begin
-        answer := number1 - number2;
-        writeln(Cal_Ans, answer);
-    End;
+    randomSecond := lowercase(booleanChoice) = 'y';
 
-    function multiple(number1, number2: Integer): integer;
-    Begin
-        answer := number1 * number2;
-        writeln(Cal_Ans, answer);
-    End;
+    write(Ask_random1);
+    readln(booleanChoice);
 
-    function divide(real1, real2: real): real;
-    Begin
-        real_answer := real1 / real2;
-        writeln(Cal_Ans, real_answer);
-    End;
+    randomFirst := lowercase(booleanChoice) = 'y';
 
-    function one_for_total(number1, number2, number3: integer): integer;
-    Begin
-        answer := (number1 + number2) * number3;
-        writeln(Cal_Ans, answer);
+    write(Ask_number2Smaller);
+    readln(booleanChoice);
+    underTenOps := lowercase(booleanChoice) = 'y';
+
+    if underTenOps then begin
+        write(Ask_random1);
+        readln(booleanChoice);
+
+        bothUnderTenOps := lowercase(booleanChoice) = 'y';
     end;
 
-    function compare(number1, number2:integer):integer;
+    // Now pick numbers
+    if randomSecond then begin
+        if bothUnderTenOps or underTenOps then
+            repeat secondNumber := Random(9); until (secondNumber <> 0) and (secondNumber <> 1)
+        else
+            repeat secondNumber := Random(99); until (secondNumber <> 0) and (secondNumber <> 1);
+    end
+
+    else repeat begin
+        write(Ask_num2);
+        readln(secondNumber);
+    end until (secondNumber <> 0) and (secondNumber <> 1);
+
+    if randomFirst then begin
+        if bothUnderTenOps then
+            repeat firstNumber := Random(9); until firstNumber <> 0
+        else
+            repeat firstNumber := Random(99); until firstNumber <> 0;
+    end
+
+    else repeat begin
+        write(Ask_num1);
+        readln(firstNumber);
+    end until (firstNumber <> 0) and (firstNumber <> 1);
+
+    // Read the answer from the user
+    writeln(Format(NumsSummary, [ firstNumber, secondNumber ]));
+    write(CalInput);
+    readln(humanInput);
+end;
+
+procedure doTheTask(divide: boolean);
+var
+    res: integer;
+    lostPoints: integer;
+
+begin
+    if divide then begin
+        res := firstNumber div secondNumber;
+        
+        if noRemainsDivision and (firstNumber mod secondNumber > 0) then
+            raise Exception.Create(Format(DivRemains, [ firstNumber, secondNumber ]));
+    end
+    else res := firstNumber * secondNumber;
+
+    if res <> humanInput then
     begin
-        if number1 < number2 then
-            writeln(Cpr_Smaller);
-        if number1 > number2 then
-            writeln(Cpr_Bigger);
-        if number1 = number2 then
-            writeln(Cpr_Both);
-    end;
+        writeln(Wrong_Answer);
+        repeat lostPoints := Random(10); until (totalScore > lostPoints) and (lostPoints > 0);
+        totalScore := totalScore - lostPoints;
+        writeln(Format(Points_Lost, [ lostPoints ]));
+        writeln(Format(Points_Remaining, [ totalScore ]));
+    end
 
-    function one_for_minus(number1, number2, number3: integer): integer;
-    Begin
-        answer := (number1 - number2) * number3;
-        writeln(Cal_Ans, answer);
+    else begin
+        writeln();
+        if totalScore < 100 then begin
+            totalScore := totalScore + 5;
+            writeln(Format(Points_Gained + ' ' + Points_Remaining, [ totalScore ]));
+        end
+        else
+            writeln(Points_Same);
     end;
+end;
 
-    function a3_sub_b3(number1, number2: integer): integer;
-    begin
-        answer := number1*number1*number1 - number2*number2*number2;
-        writeln(Cal_Ans, answer);
-    end;
+procedure blame;
+begin
+    writeln('Go learn how to multiply and divide, kid!');
+    writeln('Are you kind of brainrotten? Think about it! Cry about it!');
+    writeln('These questions are so simple, but why you put the score a zero?');
+end;
 
-    function a3_add_b3(number1, number2: integer): integer;
-    begin
-        answer := number1*number1*number1 + number2*number2*number2;
-        writeln(Cal_Ans, answer);
-    end;
-
-    // ask the user for the numbers
-    function ask_2numbers(): integer;
-    begin
-       write(Ask_num1); TextColor(2); readln(number1);
-       TextColor(LightGray);
-       write(Ask_num2); TextColor(2); readln(number2);
-       TextColor(LightGray);
-    end;
-
-    function ask_3numbers(): integer;
-    begin
-        write(Ask_num1); TextColor(2); readln(number1);
-        TextColor(LightGray);
-        write(Ask_num2); TextColor(2); readln(number2);
-        TextColor(LightGray);
-        write(Ask_num3); TextColor(2); readln(number3);
-        TextColor(LightGray);
-    end;
-
-    function ask_2real():real;
-    begin
-        write(Ask_num1); TextColor(2); readln(real1);
-        TextColor(LightGray);
-        write(Ask_num2); TextColor(2); readln(real2);
-        TextColor(LightGray);
-    end;
-
-    // new calculator functions
-    function total2_3exp(number1,number2:integer):integer;
-    begin
-        answer := (number1 + number2) * (number1 + number2) * (number1 + number2);
-        writeln(Cal_Ans, answer);
-    end;
-
-    function minus2_3exp(number1,number2:integer):integer;
-    begin
-        answer := (number1 - number2) * (number1 - number2) * (number1 - number2);
-        writeln(Cal_Ans, answer);
-    end; 
-END.
+end.

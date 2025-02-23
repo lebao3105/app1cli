@@ -1,45 +1,37 @@
 ## app1cli
-App1 (or app1cli) is a simple project written in C# and Pascal. It can:
-* Be a calculator
-* Compare 2 numbers
+App1 (or app1cli) is a simple project written in C# and Pascal (they are different versions). It can:
+* Be a calculator (C# only)
+* Compare 2 numbers (C# only)
+* Give you, or your kids, a question to answer (Pascal only)
 * And run it from Terminal:)
 
-## Build
-Requirement(s) - only fpc needed now:
-* git to clone the repository (or get source code from the repository releases)
-* fpc (Free Pascal Compiler)
-* .NET SDK 6 to build C# edition
+## Build and run
+Requirement(s):
+* git - optional as you can download the source code as a zip
+* fpc (Free Pascal Compiler) for the Pascal version
+* make - optional, for the Pascal version
+* .NET SDK 6 for the C# version
 
-Just run the following command in source_code_root/Pascal:
+Just run the following command in the Pascal subdirectory:
 ```
+make
+```
+
+Or (still inside [Pascal/](Pascal/)):
+
+```
+# Use add_languages.bat if on Windows instead of the line below
+add_languages.sh
 fpc app1.pas
 ```
 
-Since version 1.3, gettext support has been added to the project. Install gettext and make, then:
-```
-make gen_mo
-make build
-```
-Only do this on *NIX.
+Run the executable named `app1cli`.
 
-If you don't want install these packages, you still can checkout steps in [Changing languages section](#changing-language).
-
-For C# version, simply run these in CSharp folder:
+For C# version, simply run these inside CSharp/:
 ```
 dotnet run
 # build only
 # dotnet build
-```
-
-## Switch between languages
-There are 2 languages: Vietnamese and English (Default). You can change language manually by changing resource to lang_en (English) or lang_vi (Vietnamese) from uses clause in these files:
-* [Pascal/app1.pas](Pascal/app1.pas)
-* [Pascal/maths.pas](Pascal/maths.pas)
-* [Pascal/utils.pas](Pascal/app1_utils.pas)
-
-Since version 1.3, please add ```-Fulangs``` parameter to fpc, like this:
-```
-fpc app1.pas -Fulangs
 ```
 
 ## Download

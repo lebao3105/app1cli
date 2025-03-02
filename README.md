@@ -1,4 +1,5 @@
 ## app1cli
+
 App1 (or app1cli) is a simple project written in C# and Pascal (they are different versions). It can:
 * Be a calculator (C# only)
 * Compare 2 numbers (C# only)
@@ -6,6 +7,7 @@ App1 (or app1cli) is a simple project written in C# and Pascal (they are differe
 * And run it from Terminal:)
 
 ## Build and run
+
 Requirement(s):
 * git - optional as you can download the source code as a zip
 * fpc (Free Pascal Compiler) for the Pascal version
@@ -27,12 +29,20 @@ fpc app1.pas
 
 Run the executable named `app1`.
 
-For C# version, simply run these inside CSharp/:
+For C# version (which is obviously outdated), simply run these inside CSharp/:
 ```
 dotnet run
 # build only
 # dotnet build
 ```
+
+## Settings (Pascal only)
+
+Create a `settings.json` in the folder where the executable exists.
+
+The JSON schema is [here](Pascal/settings.schema). Read it and write wanted settings into `settings.json`.
+
+Start the application. It should work.
 
 ## Download
 Get it [here.](https://github.com/lebao3105/app1cli/releases/)

@@ -14,7 +14,7 @@ var
 	Timedate: string = 'The current time: ';
 
 	(* Now we are in the main menu *)
-	Menu_welcome: string = 'Welcome to app1! Choose a route below to start: ';
+	Menu_welcome: string = 'Welcome to app1, %s! Choose a route below to start: ';
     Menu_multiply: string = 'Multiply';
     Menu_divide: string = 'Divide';
 
@@ -22,8 +22,8 @@ var
     D_Mode: string = 'Using Divide route. ';
 
     (* Ask *)
-    Ask_num1: string = 'Give the first number a value that is not 0 and 1: ';
-    Ask_num2: string = 'Give the second number a value that is not 0 and 1: ';
+    Ask_num1: string = '%s, give the first number a value that is not 0 and 1: ';
+    Ask_num2: string = '%s, give the second number a value that is not 0 and 1: ';
     Ask_exit: string = 'Exit the program';
     Ask_home: string = 'Back to the main menu? [y/n] ';
     Ask_choice: string = 'Your choice: ';
@@ -32,7 +32,7 @@ var
     Ask_number2Smaller: string = 'Make the second number smaller than 10? [y/n] ';
     
     NumsSummary: string = 'The first number is %d, the second number is %d.';
-    CalInput: string = 'Now tell us your calculation: ';
+    CalInput: string = 'Now tell us your calculation, %s: ';
 
     Wrong_Answer: string = 'Oops: wrong answer:) A random point will be gone now.';
     Right_Answer: string = 'Good job! Now you have more points now.';

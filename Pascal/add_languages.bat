@@ -1,5 +1,5 @@
 @echo off
 
-del resource_files.inc
+if exist resource_files.inc del resource_files.inc
 
-for /R %%i in (.\langs\*\*.inc) do echo {$include %%i} >> resource_files.inc
+for /r .\langs %%i in (*.inc) do echo {$include %%i} >> resource_files.inc

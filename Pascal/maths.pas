@@ -1,10 +1,14 @@
 Unit maths;
-{$mode objfpc}
+{$mode objfpc}{$H+}
 
 Interface
 
+uses fpjson, jsonparser;
+
 var
     totalScore: integer = 100;
+    humanName: string;
+    blameSentence: TJSONArray;
 
     randomFirst: boolean;
     randomSecond: boolean;
@@ -22,25 +26,39 @@ procedure blame;
 
 Implementation
 
-uses crt, sysutils, resource;
+uses crt, sysutils, resource, math, app1_utils;
+
+var
+    jsonData: TJSONObject;
+    jsonFile: TextFile;
+    readContent: string;
+    line: string;
+    rF, rS, uTO, bUTO, nRD: TJSONBoolean;
+    hN: TJSONString;
 
 procedure ask;
 var booleanChoice: string;
 begin
     // Settings
-    write(Ask_random2);
-    readln(booleanChoice);
+    if (not randomSecond) then begin
+        write(Ask_random2);
+        readln(booleanChoice);
 
-    randomSecond := lowercase(booleanChoice) = 'y';
+        randomSecond := lowercase(booleanChoice) = 'y';
+    end;
 
-    write(Ask_random1);
-    readln(booleanChoice);
+    if (not randomFirst) then begin
+        write(Ask_random1);
+        readln(booleanChoice);
 
-    randomFirst := lowercase(booleanChoice) = 'y';
+        randomFirst := lowercase(booleanChoice) = 'y';
+    end;
 
-    write(Ask_number2Smaller);
-    readln(booleanChoice);
-    underTenOps := lowercase(booleanChoice) = 'y';
+    if (not underTenOps) then begin
+        write(Ask_number2Smaller);
+        readln(booleanChoice);
+        underTenOps := lowercase(booleanChoice) = 'y';
+    end;
 
     if underTenOps then begin
         write(Ask_random1);
@@ -51,32 +69,31 @@ begin
 
     // Now pick numbers
     if randomSecond then begin
-        if bothUnderTenOps or underTenOps then
-            repeat secondNumber := Random(9); until (secondNumber <> 0) and (secondNumber <> 1)
-        else
-            repeat secondNumber := Random(99); until (secondNumber <> 0) and (secondNumber <> 1);
+        repeat secondNumber := Random(ifthen(bothUnderTenOps or underTenOps, 9, 99));
+        until (secondNumber <> 0) and (secondNumber <> 1);
     end
 
     else repeat begin
-        write(Ask_num2);
+        write(Format(Ask_num2, [ humanName ]));
         readln(secondNumber);
     end until (secondNumber <> 0) and (secondNumber <> 1);
 
     if randomFirst then begin
-        if bothUnderTenOps then
-            repeat firstNumber := Random(9); until firstNumber <> 0
+        if noRemainsDivision then
+            repeat firstNumber := Random(ifthen(bothUnderTenOps, 9, 99));
+            until (firstNumber <> 0) and (firstNumber mod secondNumber = 0)
         else
-            repeat firstNumber := Random(99); until firstNumber <> 0;
+            repeat firstNumber := Random(ifthen(bothUnderTenOps, 9, 99)); until firstNumber <> 0;
     end
 
     else repeat begin
-        write(Ask_num1);
+        write(Format(Ask_num1, [ humanName ]));
         readln(firstNumber);
     end until (firstNumber <> 0) and (firstNumber <> 1);
 
     // Read the answer from the user
     writeln(Format(NumsSummary, [ firstNumber, secondNumber ]));
-    write(CalInput);
+    write(Format(CalInput, [ humanName ]));
     readln(humanInput);
 end;
 
@@ -97,7 +114,10 @@ begin
     if res <> humanInput then
     begin
         writeln(Wrong_Answer);
+        textgreenln(IntToStr(res));
+
         repeat lostPoints := Random(10); until (totalScore > lostPoints) and (lostPoints > 0);
+        
         totalScore := totalScore - lostPoints;
         writeln(Format(Points_Lost, [ lostPoints ]));
         writeln(Format(Points_Remaining, [ totalScore ]));
@@ -115,10 +135,57 @@ begin
 end;
 
 procedure blame;
+var i: Integer;
 begin
-    writeln('Go learn how to multiply and divide, kid!');
-    writeln('Are you kind of brainrotten? Think about it! Cry about it!');
-    writeln('These questions are so simple, but why you put the score a zero?');
+    if blameSentence.Count > 0 then
+        for i := 0 to blameSentence.Count - 1 do begin
+            writeln(blameSentence.Strings[i]);
+            writeln(blameSentence.Strings[i]);
+            writeln(blameSentence.Strings[i]);
+        end;
+end;
+
+Initialization
+
+try
+    AssignFile(jsonFile, 'settings.json');
+    Reset(jsonFile);
+
+    while not EOF(jsonFile) do
+    begin
+        readln(jsonFile, line);
+        readContent := readContent + #13#10 + line;
+    end;
+
+    CloseFile(jsonFile);
+
+    jsonData := GetJSON(readContent) as TJSONObject;
+
+    if not jsonData.Find('name', hN) then
+        humanName := '???'
+    else
+        humanName := hN.AsString;
+    
+
+    if not jsonData.Find('blame', blameSentence) then
+        blameSentence := TJSONArray.Create;
+
+    jsonData.Find('randomFirst', rF);
+    jsonData.Find('randomSecond', rS);
+    jsonData.Find('underTenOps', uTO);
+    jsonData.Find('bothUnderTenOps', bUTO);
+    jsonData.Find('noRemainsDivision', nRD);
+
+    randomFirst := rF.AsBoolean;
+    randomSecond := rS.AsBoolean;
+    underTenOps := uTO.AsBoolean;
+    bothUnderTenOps := bUTO.AsBoolean;
+
+    jsonData.Free();
+
+except
+    on E: Exception do
+        writeln('Error reading settings.json: ', E.Message);
 end;
 
 end.

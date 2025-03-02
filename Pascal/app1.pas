@@ -101,7 +101,7 @@ var
 	choice: integer;
 
 begin
-	writeln(Menu_welcome);
+	writeln(Format(Menu_welcome, [ humanName ]));
 
 	writeln(StringOfChar('-', 30));
 	writeln(StringOfChar(' ', 7), '1. ', Menu_multiply);
@@ -129,7 +129,7 @@ begin
 			EnterAndClear;
 		end;
 
-		4: begin Terminate; Exit; end;
+		4: begin Terminate; halt(0); end;
 	end;
 end;
 
@@ -140,6 +140,7 @@ begin
 	writeln(Clr); Delay(500);
 	clrscr;
 	MainMenu;
+	Exit;
 end;
 
 procedure TApp1.Route_M;
@@ -152,7 +153,7 @@ begin
 		if lowercase(choice) = 'y' then
 		begin
 			EnterAndClear;
-			break;
+			Exit;
 		end;
 
 		ask;
@@ -160,7 +161,8 @@ begin
 		textgreenln(StringOfChar('=', 30));
 	until totalScore = 0;
 
-	// blame;
+	blame;
+	totalScore := 100;
 	EnterAndClear;
 end;
 
@@ -174,7 +176,7 @@ begin
 		if lowercase(choice) = 'y' then
 		begin
 			EnterAndClear;
-			break;
+			Exit;
 		end;
 
 		ask;
@@ -182,7 +184,8 @@ begin
 		textgreenln(StringOfChar('=', 30));
 	until totalScore = 0;
 
-	// blame;
+	blame;
+	totalScore := 100;
 	EnterAndClear;
 end;
 

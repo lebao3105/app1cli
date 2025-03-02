@@ -1,0 +1,40 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "App1 Settings",
+    "description": "description? NULL",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of your kid/grandkid/student/self who will use this program.",
+            "default": "???"
+        },
+        "randomFirst": {
+            "type": "boolean",
+            "description": "Randomize the first number."
+        },
+        "randomSecond": {
+            "type": "boolean",
+            "description": "Randomize the second number."
+        },
+        "underTenOps": {
+            "type": "boolean",
+            "description": "Make the second number smaller than 10."
+        },
+        "bothUnderTenOps": {
+            "type": "boolean",
+            "description": "Make both numbers smaller than 10."
+        },
+        "noRemainsDivision": {
+            "type": "boolean",
+            "description": "Do not allow divisions to leave remains."
+        },
+        "blame": {
+            "type": "array",
+            "description": "Blame the user for wrong answers.",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -8,15 +8,15 @@ begin
     Applocation := 'Đường dẫn đầy đủ của chương trình (hiện cho có): ';
     Timedate := 'Bây giờ là: ';
 
-    Menu_welcome := 'Chào mừng đến với app1! Chọn một trong các hướng đi bên dưới: ';
+    Menu_welcome := 'Chào mừng đến với app1, %s! Chọn một trong các hướng đi bên dưới: ';
     Menu_multiply := 'Nhân';
     Menu_divide := 'Chia';
 
     M_Mode := 'Đang ở chế độ Nhân. ';
     D_Mode := 'Đang ở chế độ Chia. ';
 
-    Ask_num1 := 'Nhập giá trị cho số  thứ nhất (khác 0 và 1): ';
-    Ask_num2 := 'Nhập giá trị cho số  thứ hai (khác 0 và 1): ';
+    Ask_num1 := '%s, nhập giá trị cho số  thứ nhất (khác 0 và 1): ';
+    Ask_num2 := '%s, nhập giá trị cho số  thứ hai (khác 0 và 1): ';
     Ask_exit := 'Thoát';
     Ask_home := 'Trở về menu chính? [y/n] ';
     Ask_choice := 'Lựa chọn của bạn: ';
@@ -25,7 +25,7 @@ begin
     Ask_number2Smaller := 'Khiến số thứ hai nhỏ hơn 10? [y/n] ';
     
     NumsSummary := 'Số thứ nhất là %d, thứ hai là %d.';
-    CalInput := 'Bây giờ nhập kết quả tính toán: ';
+    CalInput := '%s, bây giờ nhập kết quả tính toán: ';
 
     Wrong_Answer := 'Oops: sai mất rồi! Mất điểm!';
     Right_Answer := 'Làm tốt lắm! Bạn sẽ được thưởng điểm.';

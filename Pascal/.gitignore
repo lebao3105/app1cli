@@ -3,4 +3,11 @@
 *.ppu
 *.po
 *.mo
+app1
+*.exe
+*.dylib
+*.lib
+*.so
+*.dll
 resource_files.inc
+settings.json
